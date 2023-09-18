@@ -114,7 +114,7 @@ body {
 /* =============== */
 
 .stickey img {
-  margin: 15px 5px 15px 5px;
+  margin: 0px 5px 15px 5px;
   width: 50px;
   height: 50px;
   transition: transform 1s;
@@ -383,6 +383,55 @@ body {
   transition: 1s ease-in-out;
 }
 
+/* card 1 */
+
+.clg-project {
+  width: 27.5%;
+}
+.card-1 {
+  background-color: transparent !important;
+  background-image: linear-gradient(
+    to right,
+    rgba(132, 227, 249, 0.5),
+    rgba(140, 59, 246, 0.5)
+  );
+  box-shadow: 0px 0px 20px 1px rgba(255, 255, 255, 0.75) inset;
+  height: fit-content;
+  color: white;
+  backdrop-filter: blur(10px);
+  transition: 0.5s ease-in-out;
+}
+.card-1:hover {
+  background-image: linear-gradient(
+    to right,
+    rgba(132, 227, 249, 0.75),
+    rgba(140, 59, 246, 0.75)
+  );
+  transform: scale(1.2);
+  transition: 0.5s ease-in-out;
+}
+.card-2 {
+  background-color: transparent !important;
+  background-image: linear-gradient(
+    to right,
+    rgba(132, 227, 249, 0.5),
+    rgba(140, 59, 246, 0.5)
+  );
+  height: fit-content;
+  box-shadow: 0px 0px 20px 1px rgba(255, 255, 255, 0.75) inset;
+  color: white;
+  backdrop-filter: blur(10px);
+  transition: 0.5s ease-in-out;
+}
+.card-2:hover {
+  background-image: linear-gradient(
+    to right,
+    rgba(132, 227, 249, 0.75),
+    rgba(140, 59, 246, 0.75)
+  );
+  transform: scale(1.2);
+  transition: 0.5s ease-in-out;
+}
 /* ------------------ */
 .project-circle {
   width: 80px;
