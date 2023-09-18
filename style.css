@@ -77,7 +77,6 @@ body {
   animation: blink 1s infinite;
 }
 
-
 /* Define the blinking animation */
 @keyframes blink {
   0%,
@@ -397,4 +396,126 @@ body {
 .project-heading {
   font-size: 60px;
   color: rgb(255, 255, 255);
+}
+
+/* swiper */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.mySwiper2 {
+  height: 75%;
+  width: 100%;
+  padding: 25px 25px 25px 25px !important;
+}
+
+.mySwiper {
+  height: 100px;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--purple) !important;
+  font-weight: 800 !important;
+}
+
+/*  achivments  */
+
+.achievement-title-1 {
+  font-size: 40px;
+  color: var(--purple);
+}
+.achievement-subtitle-1 {
+  font-size: 20px;
+  color: var(--purple);
+}
+.achievement-title-2 {
+  font-size: 40px;
+  color: var(--blue);
+}
+.achievement-subtitle-2 {
+  font-size: 20px;
+  color: var(--blue);
+}
+.achievement-content {
+  opacity: 0;
+  transition: 1s ease-in-out;
+}
+
+/* achivement - 1 */
+.achievement-bar-1 {
+  height: 130px;
+  background-color: var(--blue);
+  transition: 1s ease-in-out;
+}
+.achievement-bar-1:hover {
+  height: 350px;
+  transition: 1s ease-in-out;
+}
+.achievement-bar-1:hover .achievement-content {
+  opacity: 1;
+  transition: 1s ease-in-out;
+}
+
+/* achivment 2 */
+.achievement-bar-2 {
+  height: 130px;
+  background-color: var(--purple);
+  transition: 1s ease-in-out;
+}
+.achievement-bar-2:hover {
+  height: 350px;
+  transition: 1s ease-in-out;
+}
+.achievement-bar-2:hover .achievement-content {
+  opacity: 1;
+  transition: 1s ease-in-out;
 }
