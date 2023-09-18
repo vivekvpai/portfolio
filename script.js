@@ -43,12 +43,24 @@ updateGreeting();
 
 // =================================================================================================
 
-const imageIds = ["image1", "image2", "image3", "image4"];
+const imageIds = [
+  "image1",
+  "image2",
+  "image3",
+  "image4",
+  "image5",
+  "image6",
+  "image7",
+  "image8",
+  "image9",
+  "image10",
+  "image11",
+];
 let zoom_index = 0;
 function zoomInAndOut() {
   const currentImageId = imageIds[zoom_index];
   const currentImage = document.getElementById(currentImageId);
-  currentImage.style.transform = "scale(1.2)";
+  currentImage.style.transform = "scale(1.25)";
   setTimeout(() => {
     currentImage.style.transform = "scale(1)";
     zoom_index = (zoom_index + 1) % imageIds.length;
