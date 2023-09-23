@@ -59,7 +59,7 @@ body {
   color: var(--blue);
 }
 .main-text {
-  height: 250px;
+  min-height: 250px;
 }
 .home-text-1 {
   color: var(--white);
@@ -590,9 +590,18 @@ footer {
 }
 
 @media only screen and (max-device-width: 425px) {
-  /* .stickey {
-    width: 100px;
-  } */
+  .main-text{
+    height: 300px !important;
+  }
+
+  .sticker-circle1 {
+    right: -25% !important;
+    top: 50% !important;
+  }
+  .sticker-circle2 {
+    right: 10%;
+    top: 100%;
+  }
 
   .project-heading {
     font-size: 40px !important;
@@ -601,4 +610,6 @@ footer {
   .clg-project {
     width: 100% !important;
   }
+
+
 }

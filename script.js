@@ -1,8 +1,8 @@
 const greetings = [
-  { text: " an Engeneer. ", color: "blue" },
-  { text: " a Web Developer. ", color: "red" },
-  { text: " an UI / UX Designer. ", color: "blue" },
-  { text: " a Freelancer. ", color: "red" },
+  { text: " an Engeneer. ", color: "#84e4f9" },
+  { text: " a Web Developer. ", color: "#8d3bf6" },
+  { text: " an UI / UX Designer. ", color: "#84e4f9" },
+  { text: " a Freelancer. ", color: "#8d3bf6" },
 ];
 const greetingElement = document.getElementById("greeting");
 let currentGreetingIndex = 0;
