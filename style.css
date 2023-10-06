@@ -638,13 +638,13 @@ footer {
 
   .sticker-circle1 {
     right: 10% !important;
-    top: 70% !important;
+    top: 90% !important;
     height: 250px !important;
     width: 250px !important;
   }
   .sticker-circle2 {
     left: 10%;
-    top: 100%;
+    top: 120%;
     height: 250px !important;
     width: 250px !important;
   }
