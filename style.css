@@ -179,8 +179,8 @@ body {
 
 .ddd-container .box .logo {
   position: absolute;
-  max-height: 500px;
-  max-width: 350px;
+  height: 350px;
+  width: 350px;
   transition: 0.5s;
   z-index: 11;
   transform-style: preserve-3d;
@@ -655,6 +655,17 @@ footer {
 
   .clg-project {
     width: 100% !important;
+  }
+
+  .ddd-container .box .logo {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    transition: 0.5s;
+    z-index: 11;
+    transform-style: preserve-3d;
+    transform: translate3d(0%, 0%, 50px);
+    margin-left: 10%;
   }
 
   /* --------------- */
