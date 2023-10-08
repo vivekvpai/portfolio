@@ -1,5 +1,5 @@
 const greetings = [
-  { text: " an Engeneer. ", color: "#84e4f9" },
+  { text: " an Engineer. ", color: "#84e4f9" },
   { text: " a Web Developer. ", color: "#8d3bf6" },
   { text: " an UI / UX Designer. ", color: "#84e4f9" },
   { text: " a Freelancer. ", color: "#8d3bf6" },
