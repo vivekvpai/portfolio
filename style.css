@@ -10,9 +10,13 @@ body {
   background-color: var(--black);
 }
 
+.top-margin--10 {
+  margin-top: 10rem !important;
+}
 .top-margin--20 {
   margin-top: 20rem !important;
 }
+
 .logo {
   height: 100px;
   width: 100px;
@@ -29,6 +33,7 @@ body {
   font-size: 20px;
   outline: none;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 .btn-style:hover {
