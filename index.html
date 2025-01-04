@@ -6,18 +6,22 @@
     <link rel="icon" type="image/x-icon" href="images/PI-logo.png" />
     <title>Vivek Pai</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="home.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Gugi&display=swap"
       rel="stylesheet"
+      type="text/css"
+      href="//fonts.googleapis.com/css?family=Aldrich"
     />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
@@ -30,915 +34,140 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
 
   <body>
-    <!-- navigation -->
-    <nav class="navbar navbar-expand-lg nav-color">
-      <div class="container">
-        <a class="navbar-brand"
-          ><img class="logo p-3" src="images/PI-logo.png" alt="" srcset=""
-        /></a>
-        <button
-          class="navbar-toggler btn-light"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
+    <section id="section-1" class="row p-0 m-0 align-items-center">
+      <div class="col-md-6">
+        <div class="code_box" data-aos="fade-down">
+          <div class="code_header d-flex align-items-center">
+            <div class="dots mx-1" style="background-color: red"></div>
+            <div class="dots mx-1" style="background-color: yellow"></div>
+            <div class="dots mx-1" style="background-color: green"></div>
+          </div>
+          <div class="code_body">
+            <p style="color: green">
+              // Welcome to My Portfolio <br />
+              // Get all the information about me
+            </p>
+            <p>
+              <span style="color: blue">function</span>
+              <span style="color: orange"> greetings()</span> <br />
+              <span style="color: orange">{</span> <br />
+              &nbsp;&nbsp;&nbsp;&nbsp; HI, I Am Vivek V Pai <br />
+
+              &nbsp;&nbsp;&nbsp;&nbsp; I'm
+              <span id="greeting" class=""> </span>
+              <span id="cursor"></span>
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="vivek_v_pai_cv.pdf" target="_blank" class="me-3 download"
+                >Download Resume
+                <img src="./images/arrow_l.gif" alt="" />
+                <!-- <i class="fa-solid fa-download"></i> -->
+              </a>
+              <br />
+              <span style="color: orange">}</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="skill_logo mt-5" data-aos="fade-right">
+          <img id="image1" src="images/angular.png" />
+          <img id="image2" src="images/ts.png" />
+          <img id="image3" src="images/react.png" />
+          <img id="image4" src="images/js.png" />
+          <img id="image5" src="images/html.png" />
+          <img id="image6" src="images/css.png" />
+          <img
+            style="width: 60px !important"
+            id="image7"
+            src="images/bootstrap.png"
+          />
+          <img
+            style="width: 100px !important"
+            id="image8"
+            src="images/PHP-logo.png"
+          />
+          <img id="image9" src="images/vs.png" />
+          <img id="image10" src="images/postman.png" />
+          <img id="image11" src="images/git.png" />
+
+          <a href="./journey.html" style="float: right" class="btn-style">
+            Next
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-6 text-center">
+        <button class="hamburger" id="showButton">
+          <i class="fa-solid fa-bars"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item ps-3 pe-3">
-              <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item ps-3 pe-3">
-              <a class="nav-link" href="#education">Education</a>
-            </li>
-            <li class="nav-item ps-3 pe-3">
-              <a class="nav-link" href="#achievements">Achievements</a>
-            </li>
 
-            <li class="nav-item ps-3 pe-3">
-              <a class="nav-link" href="#footer">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- main section -->
-    <section class="container mb-0">
-      <section id="home" class="row mt-5">
-        <div class="col-md-4">
-          <div class="main-text">
-            <p class="home-text-1">
-              Hi !!!!! <br />
-              I am Vivek V Pai
-            </p>
-            <span class="home-text-1">I Am, </span>
-            <span id="greeting" class=""> </span>
-            <span id="cursor"></span>
-          </div>
-
-          <section class="stickey d-none d-md-block mt-3">
-            <div class="">
-              <img id="image1" src="images/angular.png" />
-              <img id="image8" class="ms-3" src="images/ts.png" />
-            </div>
-
-            <div>
-              <img id="image2" src="images/react.png" />
-              <img id="image9" class="ms-3" src="images/js.png" />
-            </div>
-
-            <div>
-              <img id="image3" src="images/vs.png" />
-              <img id="image10" class="ms-3" src="images/postman.png" />
-            </div>
-
-            <div class="">
-              <img id="image4" src="images/html.png" />
-              <img id="image11" class="ms-3" src="images/git.png" />
-            </div>
-            <div>
-              <img id="image5" src="images/css.png" />
-            </div>
-
-            <div class="">
-              <img
-                style="width: 60px !important"
-                id="image6"
-                src="images/bootstrap.png"
-              />
-            </div>
-
-            <div>
-              <img
-                style="width: 100px !important"
-                id="image7"
-                src="images/PHP-logo.png"
-              />
-            </div>
-          </section>
-          <section class="stickey d-block d-md-none mt-3">
-            <img id="image1" src="images/angular.png" />
-            <img id="image8" class="ms-3" src="images/vs.png" />
-
-            <img id="image2" src="images/ts.png" />
-            <img id="image9" class="ms-3" src="images/postman.png" />
-
-            <img id="image3" src="images/js.png" />
-            <img id="image10" class="ms-3" src="images/figma.png" />
-
-            <img id="image4" src="images/html.png" />
-            <img id="image11" class="ms-3" src="images/git.png" />
-
-            <img id="image5" src="images/css.png" />
-            <img
-              style="width: 60px !important"
-              id="image6"
-              src="images/bootstrap.png"
-            />
-            <img
-              style="width: 100px !important"
-              id="image7"
-              src="images/PHP-logo.png"
-            />
-          </section>
-        </div>
-        <div class="col-md-8 text-center">
-          <div class="sticker-circle1"></div>
-          <div class="sticker-circle2"></div>
-          <div>
-            <img
-              class="img-fluid"
-              src="images/my-avatar.png"
-              alt="profile-pic"
-            />
-          </div>
-        </div>
-      </section>
-    </section>
-
-    <!-- profession section -->
-    <section class="container-fluid">
-      <div class="row align-items-center profession">
-        <div class="col-lg-4">
-          <p class="profession-title ps-5">Profession</p>
-        </div>
-        <div class="col-lg-8 profession-box-2 p-0 order-md-last order-first">
-          <p class="profession-description ps-3">
-            Innovator and Frontend developer at Metricdust
-          </p>
-        </div>
-      </div>
-
-      <p class="project-heading text-center text-uppercase mt-5 mb-3">
-        Professional Projects <span id="cursor"></span>
-      </p>
-      <div class="row justify-content-center align-items-center profession">
-        <div class="col-md-6 col-12 ddd-container pt-5">
-          <!-- <h2 class="name">METRICDUST</h2> -->
-          <div class="box">
-            <div class="circle"></div>
-            <img src="images/md.png" alt="" class="logo" />
-          </div>
-
-          <div class="text-center">
-            <button class="btn-style" onclick="open_link('metricdust')">
-              METRICDUST
-            </button>
-          </div>
-        </div>
-        <div class="col-md-6 col-12 pt-5 text-center">
-          <div class="row">
-            <div class="col-6">
-              <img
-                src="images/MR_Logo_new.png"
-                alt=""
-                class="img-fluid logo-bg mt-5"
-              />
-              <div class="text-end mt-3">
-                <button class="btn-style" onclick="open_link('metricrealties')">
-                  METRICREALTIES
-                </button>
-              </div>
-            </div>
-
-            <div class="col-6">
-              <img
-                src="images/intracrew-logo.png"
-                alt=""
-                class="img-fluid logo-bg mt-5"
-              />
-              <div class="text-end mt-3">
-                <button class="btn-style" onclick="open_link('intracrew')">
-                  INTRACREW
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-4">
-              <img src="images/nets.png" alt="" class="img-fluid mt-5" />
-            </div>
-            <div class="col-8">
-              <img
-                src="images/shopper_logo.svg"
-                alt=""
-                class="img-fluid logo-bg mt-5"
-              />
-              <div class="text-end mt-3">
-                <button class="btn-style" onclick="open_link('shopprop')">
-                  SHOPPROP
-                </button>
-              </div>
-            </div>
-          </div>
+        <div
+          class="sticker-circle1"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        ></div>
+        <div
+          class="sticker-circle2"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        ></div>
+        <div>
+          <img
+            data-aos="fade-up"
+            data-aos-duration="3000"
+            class="img-fluid"
+            src="images/avatar.png"
+            alt="profile-pic"
+          />
         </div>
       </div>
     </section>
 
-    <!-- road map -->
-    <section class="top-margin--10 row m-0">
-      <p class="project-heading text-center text-uppercase mt-3 mb-3">
-        Journey <span id="cursor"></span>
-      </p>
-      <!-- full time -->
-      <div class="col-md-3 text-end p-5 pt-0">
-        <p class="date">On Going</p>
-        <p class="date">July 2022</p>
-        <p class="duration" id="current-time"></p>
-      </div>
-      <div class="col-md-9 dotted-border p-5 pt-0">
-        <div class="circle"></div>
-        <h3 class="journey-heading">Innovator & Software Developer</h3>
-        <p class="organization">@ MetricDust</p>
-
-        <ul class="journey-details">
-          <li>
-            Contribute to project ORCA project open source porject for STORDIS.
-            Where worked on a feature called ORCAsk a ai enabled chat bot and
-            also cotributed to python library and backed
-          </li>
-
-          <li>
-            Engaged in the design and development of a fully functional SaaS
-            (Software as a Service) provider product named MetricRealties,
-            tailored to offer services specifically for real estate agents.
-          </li>
-          <li>
-            Engineered templates for creating customize public pages, offering a
-            range of design options.
-          </li>
-          <li>
-            Implemented the integration of AWS Lambda API gateways, enhancing
-            the product’s functionality and scalability.
-          </li>
-          <li>
-            Spearheaded the development of the 2.0 version of the dashboard,
-            incorporating advanced features and ensuring a user-friendly
-            interface.
-          </li>
-          <li>
-            Played a key role in the optimizing the storage and cost of the S3.
-          </li>
-        </ul>
-      </div>
-
-      <!-- intern 1 -->
-      <div class="col-md-3 text-end p-5">
-        <p class="date">June 2022</p>
-        <p class="date">October 2021</p>
-        <p class="duration">8 Months</p>
-      </div>
-      <div class="col-md-9 dotted-border p-5">
-        <div class="circle"></div>
-        <h3 class="journey-heading">Project intern</h3>
-        <p class="organization">@ MetricDust</p>
-
-        <ul class="journey-details">
-          <li>
-            Designed and developed the console dashboard where a agent or broker
-            can register his tenant and can develop his websites with
-            customization like his own logo, colors for website, details for
-            website i.e., home page details, about us, team, Services etc. and
-            select the predesigned template and publish.
-          </li>
-          <li>
-            Integrated the authentication for the security of the dashboard.
-          </li>
-          <li>
-            Designed and developed the dynamic forms where used can use that to
-            develop the customized website and fields
-          </li>
-        </ul>
-      </div>
-
-      <!-- intern 2 -->
-      <div class="col-md-3 text-end p-5">
-        <p class="date">September 2021</p>
-        <p class="date">October 2021</p>
-        <p class="duration">1 Months</p>
-      </div>
-      <div class="col-md-9 dotted-border p-5">
-        <div class="circle"></div>
-        <h3 class="journey-heading">Intern</h3>
-        <p class="organization">@ Let's Grow More</p>
-
-        <p class="journey-details">
-          I honed my skills in HTML, CSS, JS, and React JS. Throughout this
-          experience, I successfully developed two websites as part of project
-          tasks. These projects not only allowed me to apply theoretical
-          knowledge but also provided hands-on experience in web development.
-          Completing the internship has equipped me with practical skills and a
-          deeper understanding of front-end technologies.
-        </p>
-      </div>
-
-      <!-- intern 3 -->
-      <div class="col-md-3 text-end p-5">
-        <p class="date">September 2021</p>
-        <p class="date">August 2021</p>
-        <p class="duration">1 Months</p>
-      </div>
-      <div class="col-md-9 dotted-border p-5">
-        <div class="circle"></div>
-        <h3 class="journey-heading">Intern</h3>
-        <p class="organization">@ Sparks Foundation</p>
-
-        <p class="journey-details">
-          During my internship at Sparks Foundation, I spearheaded website
-          development projects for a Barrique Hotel, implementing features
-          tailored to their specific needs. Notably, I successfully integrated a
-          secure payment gateway into the website, ensuring seamless
-          transactions for customers. This experience allowed me to refine my
-          skills in web development and payment gateway integration, while also
-          gaining valuable insights into client requirements and project
-          management within a professional environment.
-        </p>
-      </div>
-
-      <!-- intern 4 -->
-      <div class="col-md-3 text-end p-5">
-        <p class="date">April 2021</p>
-        <p class="date">March 2021</p>
-        <p class="duration">2 Months</p>
-      </div>
-      <div class="col-md-9 dotted-border p-5">
-        <div class="circle"></div>
-        <h3 class="journey-heading">Machine Learning Inter</h3>
-        <p class="organization">@ PRINSTON SMART ENGINEERS</p>
-
-        <p class="journey-details">
-          During my internship in machine learning, I engaged in cutting-edge
-          projects aimed at implementing advanced algorithms for data analysis
-          and predictive modeling. Collaborating closely with senior
-          researchers, I gained hands-on experience in data preprocessing, model
-          development, and evaluation techniques. Additionally, I contributed to
-          the creation of innovative solutions for real-world problems, further
-          deepening my understanding of machine learning principles. Through
-          this internship, I not only expanded my technical skills but also
-          developed a keen insight into the practical applications of machine
-          learning in diverse domains.
-        </p>
+    <section class="sideNav" id="sideNav">
+      <div class="nav-items">
+        <button id="closeButton" class="hamburger text-danger">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <a class="items" href="./index.html">
+          <i class="fa-solid fa-house-chimney"></i>
+        </a>
+        <a class="items mt-5" href="./journey.html">
+          <i class="fa-solid fa-stairs"></i>
+        </a>
+        <a class="items mt-5" href="./projects.html">
+          <i class="fa-solid fa-briefcase"></i>
+        </a>
+        <a class="items mt-5" href="./education.html">
+          <i class="fa-solid fa-school"></i>
+        </a>
+        <a class="items mt-5" href="./achievements.html">
+          <i class="fa-solid fa-trophy"></i>
+        </a>
+        <a class="items mt-5" href="./certificates.html">
+          <i class="fa-solid fa-certificate"></i>
+        </a>
       </div>
     </section>
-
-    <!-- resume -->
-    <section class="d-flex align-items-center justify-content-center">
-      <p class="project-heading text-center text-uppercase mt-3 mb-3">
-        Download my resume -
-      </p>
-      <a
-        href="vivek_v_pai_cv.pdf"
-        target="_blank"
-        type="button"
-        class="ms-3 btn-style"
-        >Download <i class="fa-solid fa-download"></i>
-      </a>
-    </section>
-
-    <!-- projects -->
-    <section class="top-margin--10 row m-0" id="projects">
-      <p class="project-heading text-center text-uppercase mt-3 mb-3">
-        Projects <span id="cursor"></span> -
-        <a href="https://github.com/vivekvpai" target="_blank"
-          ><i class="fa-brands fa-github"></i
-        ></a>
-      </p>
-
-      <div class="col-md-8">
-        <div class="project-bar-1 d-flex align-items-center">
-          <div class="project-box-1">
-            <div class="project-title text-center d-none d-md-block">
-              SHOOT SHOOT STUDIO
-            </div>
-            <a
-              href="https://www.shootshootstudios.com/"
-              target="_blank"
-              class="d-block d-md-none project-title text-center"
-            >
-              SHOOT SHOOT STUDIO
-            </a>
-            <div class="project-content">
-              <p class="">
-                SHOOT SHOOT STUDIO - this is a short film making company. I
-                designed and developed the company website to them.
-              </p>
-
-              <a
-                href="https://www.shootshootstudios.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="mt-5"
-              >
-                SHOOT SHOOT STUDIO
-              </a>
-            </div>
-          </div>
-          <div class="project-box-2">
-            <img class="project-logo" src="images/sss.png" alt="" />
-          </div>
-        </div>
-
-        <div class="project-bar-2 d-flex align-items-center">
-          <div class="project-box-1">
-            <div class="project-title text-center d-none d-md-block">
-              UNIVERSAL ENTERPRISES
-            </div>
-
-            <a
-              href="https://universeenterprises.co.in/#/home"
-              target="_blank"
-              class="d-block d-md-none project-title text-center"
-            >
-              UNIVERSAL ENTERPRISES
-            </a>
-
-            <div class="project-content">
-              <p>
-                Universe Enterprises - is Proud to present itself as a top tier
-                label manufacture in India. I developed the company website to
-                them.
-              </p>
-
-              <a
-                href="https://universeenterprises.co.in/#/home"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="mt-5"
-              >
-                UNIVERSAL ENTERPRISES
-              </a>
-            </div>
-          </div>
-          <div class="project-box-2">
-            <img class="project-logo" src="images/UE Logo.png" alt="" />
-          </div>
-        </div>
-
-        <div class="project-bar-3 d-flex align-items-center">
-          <div class="project-box-1">
-            <div class="project-title text-center d-none d-md-block">
-              SPANDANA HOSPITAL
-            </div>
-
-            <a
-              href="https://spandanahospitalvijayapur.com/#/home"
-              target="_blank"
-              class="d-block d-md-none project-title text-center"
-            >
-              SPANDANA HOSPITAL
-            </a>
-
-            <div class="project-content">
-              <p class="text-white">
-                I developed the hospital website which has all the basic details
-                and first point of information.
-              </p>
-
-              <a
-                href="https://spandanahospitalvijayapur.com/#/home"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="mt-5"
-              >
-                SPANDANA HOSPITAL
-              </a>
-            </div>
-          </div>
-          <div class="project-box-2">
-            <img class="project-logo" src="images/SH Logo.png" alt="" />
-          </div>
-        </div>
-
-        <div class="project-bar-4 d-flex align-items-center">
-          <div class="project-box-1">
-            <div class="project-title text-center d-none d-md-block">
-              DBIT ALUMIN CONNECT
-            </div>
-
-            <a
-              href="https://dbit-alumni-connect.cyclic.app/"
-              target="_blank"
-              class="d-block d-md-none project-title text-center"
-            >
-              DBIT ALUMIN CONNECT
-            </a>
-
-            <div class="project-content">
-              <p>
-                I designed and developed the website which will collect the data
-                of alumin and stafs of the collage and connect them to telegram
-                group
-              </p>
-
-              <a
-                href="https://dbit-alumni-connect.cyclic.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="mt-5"
-              >
-                DBIT ALUMIN CONNECT
-              </a>
-            </div>
-          </div>
-          <div class="project-box-2">
-            <img class="project-logo" src="images/DBITAA logo.png" alt="" />
-          </div>
-        </div>
-
-        <div class="project-bar-5 d-flex align-items-center">
-          <div class="project-box-1">
-            <div class="project-title text-center d-none d-md-block">
-              SWAT KITCHEN
-            </div>
-
-            <a
-              href="https://vivekvpai.github.io/swatkitchen.github.io/"
-              target="_blank"
-              class="d-block d-md-none project-title text-center"
-            >
-              SWAT KITCHEN
-            </a>
-
-            <div class="project-content">
-              <p class="text-white">
-                This is a food blogging site where the respires and information
-                of some of the famous Indian dishes are available
-              </p>
-
-              <a
-                href="https://vivekvpai.github.io/swatkitchen.github.io/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="mt-5"
-              >
-                SWAT KITCHEN
-              </a>
-            </div>
-          </div>
-          <div class="project-box-2">
-            <img class="project-logo" src="images/sk.jpeg" alt="" />
-          </div>
-        </div>
-      </div>
-
-      <div class="clg-project">
-        <div class="card card-1">
-          <div class="card-body">
-            <p class="project-title text-center">Final Year Project</p>
-
-            <p class="">
-              Title -
-              <span class="achievement-subtitle-2">
-                Smart Surveyance System
-              </span>
-
-              Description - IoT-based technology for intelligent surveillance
-              that provides safety space . Face, motion, weapon, silverware, and
-              fire detection are just a few of the features that are collected.
-              <br />
-              Software - python, HTML, CSS, VNC server.
-            </p>
-          </div>
-        </div>
-
-        <div class="card card-2 mt-5">
-          <div class="card-body">
-            <p class="project-title text-center">MINI Project</p>
-
-            <p class="">
-              Title -
-              <span class="achievement-subtitle-2">
-                PN MANAGEMENT - WEB SITE
-              </span>
-
-              Description - Platform for manage and maintain the records of
-              school students and issues of pills and napkins and manipulate
-              them. <br />
-              Software - HTML/CSS, Bootstrap, JavaScript, PHP, and MY SQL.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- education -->
-    <section class="top-margin--20 mb-5" id="education">
-      <p class="project-heading text-center text-uppercase mt-5 mb-3">
-        EDUCATIONS <span id="cursor"></span>
-      </p>
-
-      <div
-        class="education mt-5 row justify-content-center align-items-center m-0 p-0"
-      >
-        <div class="col-lg-3">
-          <div class="row p-0 m-0 justify-content-center text-center">
-            <div class="edu-bar"></div>
-          </div>
-          <div class="edu-box text-center">
-            <p class="p-0 m-0 edu-text">MS in CS</p>
-            <p class="p-0 m-0 edu-text">CGPA - 7.5</p>
-            <p class="p-0 m-0 edu-text">Liverpool John Moores University</p>
-            <p class="p-0 m-0 edu-text">Ongoing</p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 text-center">
-          <div class="row p-0 m-0 justify-content-center">
-            <div class="edu-bar"></div>
-          </div>
-          <div class="edu-box text-center">
-            <p class="p-0 m-0 edu-text">BE in ISE</p>
-            <p class="p-0 m-0 edu-text">CGPA - 8.24</p>
-            <p class="p-0 m-0 edu-text">Don Bosco Institute of Technology</p>
-            <p class="p-0 m-0 edu-text">2022</p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 text-center">
-          <div class="row p-0 m-0 justify-content-center">
-            <div class="edu-bar"></div>
-          </div>
-          <div class="edu-box text-center">
-            <p class="p-0 m-0 edu-text">PUC - PCMCs</p>
-            <p class="p-0 m-0 edu-text">Percentage - 86</p>
-            <p class="p-0 m-0 edu-text">Cambridge PU Collage</p>
-            <p class="p-0 m-0 edu-text">2018</p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 text-center">
-          <div class="row p-0 m-0 justify-content-center">
-            <div class="edu-bar"></div>
-          </div>
-          <div class="edu-box text-center">
-            <p class="p-0 m-0 edu-text">SSLC</p>
-            <p class="p-0 m-0 edu-text">Percentage - 90</p>
-            <p class="p-0 m-0 edu-text">St Michels High School</p>
-            <p class="p-0 m-0 edu-text">2016</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- achievements -->
-    <section class="top-margin--20 mb-5" id="achievements">
-      <p class="project-heading text-center text-uppercase mt-5 mb-3">
-        Certification & Achievements <span id="cursor"></span>
-      </p>
-
-      <div class="row m-0">
-        <div class="col-md-8 col-12">
-          <div class="swiper mySwiper2">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="images/ang.png" />
-              </div>
-              <div class="swiper-slide">
-                <img src="images/free.jpg" />
-              </div>
-              <div class="swiper-slide">
-                <img src="images/react.jpg" />
-              </div>
-              <div class="swiper-slide">
-                <img src="images/python.jpg" />
-              </div>
-              <div class="swiper-slide">
-                <img src="images/boot.jpg" />
-              </div>
-              <div class="swiper-slide">
-                <img src="images/php.jpg" />
-              </div>
-              <div class="swiper-slide">
-                <img src="images/web.jpg" />
-              </div>
-              <div class="swiper-slide">
-                <img src="images/RPA.png" />
-              </div>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-          </div>
-          <div thumbsSlider="" class="swiper mySwiper mt-1">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="images/ang.png" />
-              </div>
-              <div class="swiper-slide">
-                <img src="images/free.jpg" />
-              </div>
-              <div class="swiper-slide">
-                <img src="images/react.jpg" />
-              </div>
-              <div class="swiper-slide">
-                <img src="images/python.jpg" />
-              </div>
-              <div class="swiper-slide">
-                <img src="images/boot.jpg" />
-              </div>
-              <div class="swiper-slide">
-                <img src="images/php.jpg" />
-              </div>
-              <div class="swiper-slide">
-                <img src="images/web.jpg" />
-              </div>
-              <div class="swiper-slide">
-                <img src="images/RPA.png" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 col-12 p-0">
-          <div class="achievement-bar-2">
-            <p class="achievement-title-2 p-3">
-              Silver Medalist & Young Achiever
-            </p>
-
-            <div class="achievement-content text-white ps-5 pe-5 mb-5">
-              University -
-              <span class="achievement-subtitle-2">
-                Don Bosco Institute of Technology - VTU
-              </span>
-              <br />
-
-              Accomplishment:
-              <ul>
-                <li>
-                  Honored with Silver medal for excellent performances in
-                  academics
-                </li>
-                <li>
-                  Honored as Young Achiever for recognizable achievements in
-                  young age
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="achievement-bar-1">
-            <p class="achievement-title-1 p-3">Team Leader</p>
-
-            <div class="achievement-content ps-5 pe-5 mb-5">
-              Team -
-              <span class="achievement-subtitle-1">
-                DBISEL Web development Team
-              </span>
-              <br />
-              Position - Team leader <br />
-              Accomplishment:
-              <ul>
-                <li>Handled the operation of the team</li>
-                <li>Gave Talk on Git and Git hub</li>
-                <li>Gave Talk on Mini project with web technology Using PHP</li>
-                <li>Gave Talk on hosting the website on domains</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="achievement-bar-2">
-            <p class="achievement-title-2 p-3">DISTRICT Level Winner - 3#</p>
-
-            <div class="achievement-content text-white ps-5 pe-5 mb-5">
-              Competition -
-              <span class="achievement-subtitle-2"> HINDI Speech </span>
-              <br />
-              BY - Ramanagara jila Panchayat (Bharath) <br />
-              Accomplishment -
-              <ol>
-                <li>won District level 3rd Place</li>
-                <li>won Taluk level 1st Place</li>
-                <li>won Hobli level 1st Place</li>
-              </ol>
-            </div>
-          </div>
-
-          <div class="achievement-bar-1">
-            <p class="achievement-title-1 p-3">Taluk Level Winner - 2#</p>
-
-            <div class="achievement-content ps-5 pe-5 mb-5">
-              Competition -
-              <span class="achievement-subtitle-1"> Volley Ball </span>
-              <br />
-              BY - Department of Undergraduate Education (Bharath)
-              <br />
-              Accomplishment -
-              <ol>
-                <li>won Taluk level 2nd Place</li>
-                <li>won Hobli level 1rd Place</li>
-              </ol>
-            </div>
-          </div>
-
-          <div class="achievement-bar-2">
-            <p class="achievement-title-2 p-3">National Level Workshop</p>
-
-            <div class="achievement-content text-white ps-5 pe-5 mb-5">
-              Participated in React JS national level workshop by
-              <span class="achievement-subtitle-2">
-                National Youth Council of India
-              </span>
-              <br />
-              Co collaborator - Brain O Vision Solutions In Pvt. Ltd. <br />
-              The workshop was held online and had very informative and hands on
-              experience on ReactJS technology.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- footer -->
-    <footer class="mt-5 pb-5" id="footer">
-      <div class="row m-0">
-        <p class="project-heading text-center text-uppercase mt-3 mb-3">
-          Contact Me <span id="cursor"></span>
-        </p>
-
-        <div class="col-md-12">
-          <div class="row justify-content-evenly text-center">
-            <div class="col-12 col-md-4 mt-3">
-              <img src="images/in.png" class="social-icon" alt="" />
-              <a
-                class="social-link"
-                target="_blank"
-                href="https://www.linkedin.com/in/vivek-v-pai-6b674b1b8"
-              >
-                &nbsp; &nbsp; - @vivek-v-pai-6b674b1b8</a
-              >
-            </div>
-            <div class="col-12 col-md-4 mt-3">
-              <img src="images/ig.png" class="social-icon" alt="" />
-              <a
-                class="social-link"
-                target="_blank"
-                href="https://instagram.com/i.m_pai_vivek?igshid=OGQ5ZDc2ODk2ZA=="
-              >
-                &nbsp; &nbsp; - @I.M_PAI_VIVEK</a
-              >
-            </div>
-            <div class="col-12 col-md-4 mt-3">
-              <img src="images/gm.png" class="social-icon" alt="" />
-              <a class="social-link" href="mailto:paivivek002@gmail.com">
-                &nbsp; &nbsp; - @paivivek002@gmail.com</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
   </body>
-  <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <script type="text/javascript" src="vanilla-tilt.min.js"></script>
-  <script type="text/javascript">
-    VanillaTilt.init(document.querySelector(".box"), {
-      max: 25,
-      speed: 400,
-    });
 
-    var swiper = new Swiper(".mySwiper", {
-      spaceBetween: 10,
-      slidesPerView: 4,
-      freeMode: true,
-      watchSlidesProgress: true,
-    });
-    var swiper2 = new Swiper(".mySwiper2", {
-      spaceBetween: 25,
-      // autoplay: {
-      //   delay: 5000,
-      //   disableOnInteraction: false,
-      // },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      thumbs: {
-        swiper: swiper,
-      },
-    });
-  </script>
+  <script src="./nav.js"></script>
+  <script src="./home.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <script
-    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"
   ></script>
   <script
     src="https://kit.fontawesome.com/751afc7438.js"
     crossorigin="anonymous"
   ></script>
+  <script type="text/javascript">
+    AOS.init();
+  </script>
 </html>

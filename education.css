@@ -90,10 +90,6 @@ body {
   height: 100vh;
 }
 
-.heading {
-  color: var(--blue);
-}
-
 .code_box {
   background-color: var(--theme2);
   border: 5px solid var(--border);
@@ -134,25 +130,8 @@ body {
   border-radius: 50%;
 }
 
-.date {
-  color: white;
-  font-size: 22px;
-}
-.duration {
-  color: var(--purple);
-  font-size: 14px;
-}
-
-.journey-heading {
+.heading {
   color: var(--blue);
-}
-.organization {
-  color: var(--blue);
-  font-size: 18px;
-}
-.journey-details {
-  color: var(--white);
-  font-size: 18px;
 }
 
 /* ========== */
