@@ -152,7 +152,6 @@
       }
       .lead {
         color: var(--muted);
-        max-width: 58ch;
       }
       .cta {
         margin-top: 14px;
@@ -172,6 +171,73 @@
       }
       .btn:active {
         transform: translateY(2px);
+      }
+      /* flashy highlights */
+      .flashy-highlights {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        padding: 20px;
+        margin-top: 20px;
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+        width: --webkit-fill-available;
+      }
+      .flashy-highlights .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        background: linear-gradient(90deg, #00f5ff, #a855f7, #ff0080);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: hueShift 4s linear infinite;
+      }
+      .highlights {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .highlight-item {
+        padding: 10px 15px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(8px);
+        color: #fff;
+        font-size: 0.9rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .highlight-item::after {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.15),
+          transparent 70%
+        );
+        animation: pulseFlash 3s infinite;
+      }
+      @keyframes pulseFlash {
+        0%,
+        100% {
+          transform: translate(0, 0) scale(1);
+          opacity: 0.7;
+        }
+        50% {
+          transform: translate(20%, 20%) scale(1.2);
+          opacity: 0.3;
+        }
+      }
+      @keyframes hueShift {
+        0% {
+          filter: hue-rotate(0deg);
+        }
+        100% {
+          filter: hue-rotate(360deg);
+        }
       }
 
       /* right column profile */
@@ -206,20 +272,19 @@
       }
 
       /* sections */
-      section {
-        margin-top: 18px;
-      }
       .section-title {
         font-size: 14px;
         color: var(--accent);
         margin-bottom: 12px;
       }
+      .skills-title {
+        margin: 24px 6px 12px 0px;
+        font-size: 15px;
+      }
 
       /* projects grid */
       .projects {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
+        display: block;
       }
       .project-card {
         padding: 14px;
@@ -463,7 +528,7 @@
           <div>
             <div style="font-weight: 700">Vivek V Pai</div>
             <div style="font-size: 12px; color: var(--muted)">
-              Full-Stack Software Engineer • React • Angular • Django
+              Software Engineer • JavaScript • TypeScript • Python
             </div>
           </div>
         </div>
@@ -476,35 +541,43 @@
           <a href="#contact">Contact</a>
         </nav>
       </header>
-
-      <section class="glass hero reveal" id="home">
-        <h1>Hi — I’m Vivek. I build performant web & mobile apps.</h1>
-        <p class="lead">
-          I focus on React, Angular, React Native (Expo), and Django. I love
-          turning complex problems into simple, beautiful user experiences —
-          optimizing APIs, architecting micro-frontends, and shipping reliable
-          products.
-        </p>
-        <div class="cta">
-          <a class="btn" href="#projects">See Projects</a>
-          <a
-            class="btn"
-            href="#contact"
-            style="
-              background: transparent;
-              border: 1px solid rgba(255, 255, 255, 0.06);
-              color: var(--accent);
-            "
-            >Download CV</a
-          >
-        </div>
-
-        <section style="margin-top: 18px">
-          <div class="section-title">Latest highlights</div>
-          <div style="display: flex; gap: 10px; flex-wrap: wrap">
-            <div class="chip">Property Search - 40% faster</div>
-            <div class="chip">ORCAsk - AI Chatbot</div>
-            <div class="chip">Expo App - AWS Cognito</div>
+      <section>
+        <section class="glass hero reveal" id="home">
+          <h1>Hi — I’m Vivek. I build performant web & mobile apps.</h1>
+          <p class="lead">
+            Software Engineer with 3+ years of experience in frontend, backend,
+            and testing , specializing in Angular and React for Frontend, React
+            Native Expo for mobile app and Django for backend development.
+            Proficient in JavaScript, TypeScript, Python, and basics of AWS,
+            with a strong focus on building scalable and user-centric web and
+            mobile applications. Experienced in writing effective test cases
+            using Pytest, Selenium, and Jest. Holds a Master of Science (MSc)
+            from Liverpool John Moores University and has served as a guest
+            lecturer in Angular at DBIT. Fluent in English and Hindi with
+            excellent communication skills and a proven track record in both
+            open-source and enterprise projects.
+          </p>
+          <div class="cta">
+            <a class="btn" href="#projects">See Projects</a>
+            <a
+              class="btn"
+              href="#contact"
+              style="
+                background: transparent;
+                border: 1px solid rgba(255, 255, 255, 0.06);
+                color: var(--accent);
+              "
+              >Download CV</a
+            >
+          </div>
+        </section>
+        <section class="glass flashy-highlights" id="latest-highlights">
+          <div class="section-title">Latest Highlights</div>
+          <div class="highlights">
+            <div class="highlight-item">
+              Currently leading ShopProp mobile app development, building EasyQ
+              app, and delivering innovative tech solutions.
+            </div>
           </div>
         </section>
       </section>
@@ -539,20 +612,16 @@
               >vivekvpai</a
             >
           </div>
+          <section style="margin-top: 18px">
+            <div class="section-title">Languages</div>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap">
+              <div class="chip">English</div>
+              <div class="chip">Hindi</div>
+              <div class="chip">Kannada</div>
+              <div class="chip">Konkani</div>
+            </div>
+          </section>
         </div>
-
-        <section style="margin-top: 12px">
-          <div class="section-title">Skills</div>
-          <div class="skills">
-            <div class="chip">React</div>
-            <div class="chip">Angular</div>
-            <div class="chip">React Native (Expo)</div>
-            <div class="chip">Django</div>
-            <div class="chip">AWS</div>
-            <div class="chip">TypeScript</div>
-            <div class="chip">Testing</div>
-          </div>
-        </section>
       </aside>
 
       <section class="glass reveal" id="projects">
@@ -565,53 +634,160 @@
             data-link="#"
           >
             <h3>ShopProp</h3>
-            <p>
-              Property search optimisations, micro-frontend architecture, map &
-              3D tour integrations.
-            </p>
+            <h4>Full-stack Real Estate Platform</h4>
+            <ul>
+              <li>
+                Currently leading the development of the ShopProp mobile app.
+              </li>
+              <li>
+                Optimized property search using Google address integration and
+                advanced filters.
+              </li>
+              <li>
+                Designed and built the user dashboard with personalized property
+                management features.
+              </li>
+            </ul>
           </div>
           <div
             class="project-card tilt"
             data-title="EasyQ"
-            data-desc="Expo app with secure authentication using AWS Cognito, and dashboard features."
+            data-desc="Consulting project with secure authentication, dashboard, and mobile app development."
             data-link="#"
           >
-            <h3>EasyQ (Expo)</h3>
-            <p>Security-first mobile app with AWS Cognito integration.</p>
-          </div>
-          <div
-            class="project-card tilt"
-            data-title="LLM Interaction Tool"
-            data-desc="ChatGPT-like UI interacting with local LLMs via Ollama, Flask API and React."
-            data-link="#"
-          >
-            <h3>LLM Interaction Tool</h3>
-            <p>Local model switching and conversational UI for devs.</p>
+            <h3>EasyQ Solutions (Consulting Project)</h3>
+            <h4>Dashboard & Mobile App</h4>
+            <ul>
+              <li>
+                Developed a feature-rich dashboard for EasyQ with a focus on
+                usability and security.
+              </li>
+              <li>Currently building the mobile app using Expo</li>
+              <li>
+                Collaborating on architecture planning to ensure scalability and
+                compliance with security best practices.
+              </li>
+            </ul>
           </div>
           <div
             class="project-card tilt"
             data-title="ORCAsk"
-            data-desc="AI-enabled chatbot contribution to ORCA open-source, including Django backend & React frontend."
+            data-desc="AI-enabled chatbot for ORCA open-source, including Django backend & React frontend."
             data-link="#"
           >
             <h3>ORCAsk</h3>
-            <p>
-              AI Chatbot for the ORCA ecosystem; backend & test coverage
-              included.
-            </p>
+            <h4>AI Chatbot for Network Management</h4>
+            <ul>
+              <li>
+                Built natural language processing-based network operations
+                chatbot.
+              </li>
+              <li>
+                Integrated chart and table generation for data visualization.
+              </li>
+              <li>
+                Enhanced backend APIs for better performance and error handling.
+              </li>
+            </ul>
+          </div>
+          <div
+            class="project-card tilt"
+            data-title="Web Builder"
+            data-desc="Drag-and-drop website creation tool with live preview and customization."
+            data-link="#"
+          >
+            <h3>Web Builder</h3>
+            <h4>Custom Website Creation Tool</h4>
+            <ul>
+              <li>Designed drag-and-drop UI with live preview capability.</li>
+              <li>Enabled template, color, and content customization.</li>
+              <li>Integrated easy publishing with AWS hosting.</li>
+            </ul>
+          </div>
+          <div
+            class="project-card tilt"
+            data-title="Nets and Turf"
+            data-desc="Sports facility booking system with drag-and-drop court management."
+            data-link="#"
+          >
+            <h3>Nets and Turf</h3>
+            <h4>Sports Facility Management Platform</h4>
+            <ul>
+              <li>
+                Implemented drag-and-drop court booking and timer tracking.
+              </li>
+              <li>
+                Built admin dashboard with booking history and group booking
+                support.
+              </li>
+              <li>
+                Developed mobile app for real-time booking and management.
+              </li>
+            </ul>
           </div>
         </div>
       </section>
 
       <section class="glass reveal" id="skills">
-        <div class="section-title">Tech & Tools</div>
+        <div class="section-title">Skills</div>
+
+        <div class="skills-title">Frontend</div>
+
         <div style="display: flex; gap: 12px; flex-wrap: wrap">
-          <div class="chip">Git / GitHub</div>
+          <div class="chip">React Native (Expo)</div>
+          <div class="chip">React</div>
+          <div class="chip">JavaScript</div>
+          <div class="chip">Angular</div>
+          <div class="chip">TypeScript</div>
+
+          <div class="chip">HTML</div>
+          <div class="chip">CSS</div>
+          <div class="chip">SCSS</div>
+          <div class="chip">Bootstrap</div>
+          <div class="chip">Tailwind CSS</div>
+        </div>
+
+        <div class="skills-title">Backend</div>
+
+        <div style="display: flex; gap: 12px; flex-wrap: wrap">
+          <div class="chip">PHP</div>
+          <div class="chip">MySQL</div>
+          <div class="chip">Django</div>
+          <div class="chip">MongoDB</div>
+        </div>
+
+        <div class="skills-title">Testing</div>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap">
+          <div class="chip">Pytest</div>
+          <div class="chip">Selenium</div>
+          <div class="chip">Jest</div>
+        </div>
+
+        <div class="skills-title">AI Tools</div>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap">
+          <div class="chip">Ollama</div>
+          <div class="chip">OpenAI</div>
+          <div class="chip">Gemini</div>
+        </div>
+
+        <div class="skills-title">Tools</div>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap">
+          <div class="chip">Git</div>
+          <div class="chip">GitHub</div>
+          <div class="chip">GitLab</div>
+          <div class="chip">AWS</div>
+          <div class="chip">Docker</div>
           <div class="chip">Postman</div>
           <div class="chip">Figma</div>
           <div class="chip">Canva</div>
-          <div class="chip">Pytest / Selenium / Jest</div>
-          <div class="chip">Ollama</div>
+        </div>
+
+        <div class="skills-title">IDE</div>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap">
+          <div class="chip">VSCode</div>
+          <div class="chip">Windsurf</div>
+          <div class="chip">IntelliJ</div>
+          <div class="chip">PyCharm</div>
         </div>
       </section>
 
