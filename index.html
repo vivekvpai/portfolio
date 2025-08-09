@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Vivek V Pai — Portfolio</title>
-    <link rel="icon" type="image/png" href="./images/favicon.png" />
+    <link rel="icon" type="image/png" href="./images/PI-logo.png" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -14,7 +14,8 @@
     <main class="container">
       <header class="site-header">
         <div class="brand">
-          <div class="logo">VP</div>
+          <img class="logo" src="./images/PI-logo.png" alt="" />
+
           <div>
             <div style="font-weight: 700">Vivek V Pai</div>
             <div style="font-size: 12px; color: var(--muted)">
@@ -53,7 +54,8 @@
             <a class="btn" href="#projects">See Projects</a>
             <a
               class="btn"
-              href="#contact"
+              target="_blank"
+              href="vivek_v_pai_resume.pdf"
               style="
                 background: transparent;
                 border: 1px solid rgba(255, 255, 255, 0.06);
@@ -230,7 +232,7 @@
             class="project-card tilt"
             data-title="ShopProp"
             data-desc="Full-stack real estate platform with property search, rebates, 3D tours, maps, and micro-frontends."
-            data-link="#"
+            data-link="https://shopprop.com/"
           >
             <h3>ShopProp</h3>
             <h4>Full-stack Real Estate Platform</h4>
@@ -248,31 +250,35 @@
               </li>
             </ul>
           </div>
+
           <div
             class="project-card tilt"
-            data-title="EasyQ"
-            data-desc="Consulting project with secure authentication, dashboard, and mobile app development."
-            data-link="#"
+            data-title="IntView"
+            data-desc="AI agent-based conversation solution platform with customizable question templates for better outcomes."
+            data-link="https://intview.io"
           >
-            <h3>EasyQ Solutions (Consulting Project)</h3>
-            <h4>Dashboard & Mobile App</h4>
+            <h3>IntView</h3>
+            <h4>AI Agent Conversation Platform</h4>
             <ul>
               <li>
-                Developed a feature-rich dashboard for EasyQ with a focus on
-                usability and security.
+                Built responsive and intuitive UI for seamless user experience.
               </li>
-              <li>Currently building the mobile app using Expo</li>
               <li>
-                Collaborating on architecture planning to ensure scalability and
-                compliance with security best practices.
+                Integrated backend APIs to deliver real-time AI-driven
+                interactions.
+              </li>
+              <li>
+                Developed and maintained test cases for ensuring quality and
+                stability.
               </li>
             </ul>
           </div>
+
           <div
             class="project-card tilt"
             data-title="ORCAsk"
             data-desc="AI-enabled chatbot for ORCA open-source, including Django backend & React frontend."
-            data-link="#"
+            data-link="https://github.com/STORDIS/orca_ui"
           >
             <h3>ORCAsk</h3>
             <h4>AI Chatbot for Network Management</h4>
@@ -289,11 +295,12 @@
               </li>
             </ul>
           </div>
+
           <div
             class="project-card tilt"
             data-title="Web Builder"
             data-desc="Drag-and-drop website creation tool with live preview and customization."
-            data-link="#"
+            data-link="https://builder.metricrealties.com/"
           >
             <h3>Web Builder</h3>
             <h4>Custom Website Creation Tool</h4>
@@ -303,27 +310,112 @@
               <li>Integrated easy publishing with AWS hosting.</li>
             </ul>
           </div>
+
           <div
             class="project-card tilt"
-            data-title="Nets and Turf"
-            data-desc="Sports facility booking system with drag-and-drop court management."
-            data-link="#"
+            data-title="Consulting Project"
+            data-desc="Consulting project with secure authentication, dashboard, and mobile app development."
+            data-link="https://easyqsolutions.com/"
           >
-            <h3>Nets and Turf</h3>
-            <h4>Sports Facility Management Platform</h4>
+            <h3>Consulting Project</h3>
+            <h4>Dashboard & Mobile App</h4>
             <ul>
               <li>
-                Implemented drag-and-drop court booking and timer tracking.
+                Developed a feature-rich dashboard for EasyQ with a focus on
+                usability and security.
               </li>
+              <li>Currently building the mobile app using Expo</li>
               <li>
-                Built admin dashboard with booking history and group booking
-                support.
-              </li>
-              <li>
-                Developed mobile app for real-time booking and management.
+                Collaborating on architecture planning to ensure scalability and
+                compliance with security best practices.
               </li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      <section class="glass reveal" id="project-links">
+        <div class="section-title">Project Links</div>
+        <div class="project-links-grid">
+          <!-- <a
+            class="project-link-card"
+            href="https://metricdust.com/"
+            target="_blank"
+          >
+            <img src="./images/md.png" alt="MetricDust" class="project-logo" />
+          </a> -->
+
+          <a
+            class="project-link-card"
+            href="https://shopprop.com/"
+            target="_blank"
+          >
+            <img
+              src="./images/shopprop.png"
+              alt="ShopProp"
+              class="project-logo"
+            />
+          </a>
+          <a
+            class="project-link-card"
+            href="https://intview.io/"
+            target="_blank"
+          >
+            <img src="./images/iw.png" alt="MetricDust" class="project-logo" />
+          </a>
+
+          <a
+            class="project-link-card"
+            href="https://github.com/STORDIS/orca_ui"
+            target="_blank"
+          >
+            <img src="./images/orca.png" alt="ORCA" class="project-logo" />
+          </a>
+          <a
+            class="project-link-card"
+            href="https://metricrealties.com/"
+            target="_blank"
+          >
+            <img
+              src="./images/MR_Logo_new.png"
+              alt="MetricRealties"
+              class="project-logo"
+            />
+          </a>
+          <a
+            class="project-link-card"
+            href="https://intracrew.com/"
+            target="_blank"
+          >
+            <img
+              src="./images/intracrew.png"
+              alt="IntraCrew"
+              class="project-logo"
+            />
+          </a>
+
+          <a
+            class="project-link-card"
+            href="https://www.netsandturf.com/"
+            target="_blank"
+          >
+            <img
+              src="./images/nets.png"
+              alt="Nets & Turf"
+              class="project-logo"
+            />
+          </a>
+          <!-- <a
+            class="project-link-card"
+            href="https://easyqsolutions.com/"
+            target="_blank"
+          >
+            <img
+              src="./images/eq.png"
+              alt="EasyQ Solutions"
+              class="project-logo"
+            />
+          </a> -->
         </div>
       </section>
 
@@ -332,30 +424,35 @@
         <div class="education-grid">
           <div class="edu-card">
             <h4>MSc, Software Engineering</h4>
-            <p>
-              Liverpool John Moores University & UpGrad (Sep 2023 - Mar 2025)
+            <p class="edu-institute">
+              Liverpool John Moores University & UpGrad
             </p>
-            <p>
+            <p class="edu-duration">Sep 2023 - Mar 2025</p>
+            <p class="edu-desc">
               Research: Efficiency and scalability of Micro Frontends in modern
               full-stack web development.
             </p>
           </div>
           <div class="edu-card">
             <h4>PG Diploma, Software Development</h4>
-            <p>IIIT Bangalore & UpGrad (Sep 2022 - Mar 2023)</p>
+            <p class="edu-institute">IIIT Bangalore & UpGrad</p>
+            <p class="edu-duration">Sep 2022 - Mar 2023</p>
           </div>
           <div class="edu-card">
             <h4>B.E., Computer Science</h4>
-            <p>Don Bosco Institute of Technology (Aug 2018 - Jun 2022)</p>
-            <p>Silver Medalist & Young Achiever</p>
+            <p class="edu-institute">Don Bosco Institute of Technology</p>
+            <p class="edu-duration">Aug 2018 - Jun 2022</p>
+            <p class="edu-desc">Silver Medalist & Young Achiever</p>
           </div>
           <div class="edu-card">
             <h4>Pre-University Course (PUC) - PCMCs</h4>
-            <p>Cambridge PU College (2016 - 2018)</p>
+            <p class="edu-institute">Cambridge PU College</p>
+            <p class="edu-duration">2016 - 2018</p>
           </div>
           <div class="edu-card">
             <h4>SSLC (10th Standard)</h4>
-            <p>BGS English School (2016)</p>
+            <p class="edu-institute">BGS English School</p>
+            <p class="edu-duration">2016</p>
           </div>
         </div>
       </section>
@@ -392,17 +489,11 @@
         </div>
       </section>
 
-      <section class="glass reveal" id="contact">
-        <div class="section-title">Contact</div>
+      <footer class="reveal">
+        © <span id="year"></span> Vivek V Pai — Built with ❤️ and a bit of CSS
+        magic.
+
         <div class="contact-form">
-          <div class="small">Prefer email? paivivek002@gmail.com</div>
-          <!-- <a
-            class="btn"
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=paivivek002@gmail.com&su=Portfolio Contact&body=Hi Vivek,"
-            target="_blank"
-          >
-            Mail Me
-          </a> -->
           <a
             class="contact-link"
             href="https://mail.google.com/mail/?view=cm&fs=1&to=paivivek002@gmail.com&su=Portfolio Contact&body=Hi Vivek,"
@@ -437,11 +528,6 @@
             @i.m_pai_vivek
           </a>
         </div>
-      </section>
-
-      <footer class="reveal">
-        © <span id="year"></span> Vivek V Pai — Built with ❤️ and a bit of CSS
-        magic.
       </footer>
     </main>
 
@@ -466,8 +552,8 @@
             padding: 18px;
             background: linear-gradient(
               180deg,
-              rgba(255, 255, 255, 0.02),
-              rgba(255, 255, 255, 0.01)
+              rgba(255, 255, 255, 0.2),
+              rgba(255, 255, 255, 0.1)
             );
             border: 1px solid rgba(255, 255, 255, 0.04);
           "
@@ -542,19 +628,6 @@
             );
         })
       );
-
-      // Download CV button (replace with real link if hosted)
-      document.getElementById("downloadBtn").addEventListener("click", (e) => {
-        e.preventDefault();
-        const link = document.createElement("a");
-        link.href = "/Vivek_V_Pai_Resume.pdf"; // replace if hosted elsewhere
-        link.download = "Vivek_V_Pai_Resume.pdf";
-        document.body.appendChild(link);
-        link.click();
-        link.remove();
-      });
-
-      // simple form handler (replace with real endpoint)
     </script>
   </body>
 </html>

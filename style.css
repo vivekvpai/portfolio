@@ -162,12 +162,12 @@ header {
   width: 40px;
   height: 40px;
   border-radius: 10px;
-  background: white;
+  background: rgba(255, 255, 255, 0.25);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #4fc3f7;
   font-weight: bold;
+  object-fit: contain;
 }
 .nav {
   display: flex;
@@ -340,8 +340,9 @@ h1 {
   gap: 6px;
 }
 .meta .line {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--muted);
+  margin: 6px 0;
 }
 
 /* sections */
@@ -360,12 +361,45 @@ h1 {
   display: block;
 }
 .project-card {
-  padding: 14px;
-  border-radius: 12px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
-  border: 1px solid rgba(255, 255, 255, 0.03);
-  transition: transform 0.18s, box-shadow 0.18s;
+  margin-top: 24px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.05)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
 }
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at center,
+    var(--accent) 0%,
+    transparent 60%
+  );
+  opacity: 0.04;
+  animation: rotateGlow 12s linear infinite;
+}
+@keyframes rotateGlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .project-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 40px rgba(8, 12, 24, 0.6);
@@ -397,11 +431,10 @@ h1 {
 
 /* Education card styles */
 .education-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
+  display: block;
 }
 .edu-card {
+  margin-top: 24px;
   background: linear-gradient(
     145deg,
     rgba(255, 255, 255, 0.02),
@@ -451,6 +484,17 @@ h1 {
   margin: 0 0 6px 0;
   font-size: 13px;
   color: var(--muted);
+}
+.edu-institute {
+  font-size: 14px !important;
+  margin: 12px 0 !important;
+}
+.edu-duration {
+  font-size: 16px !important;
+}
+.edu-desc {
+  font-size: 12px !important;
+  margin-top: 12px !important;
 }
 
 /* achievements */
@@ -517,12 +561,64 @@ h1 {
   font-size: 13px;
   color: var(--muted);
 }
+/* project links */
+.project-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/* project link cards */
+.project-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.project-link-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    145deg,
+    rgba(253, 253, 253, 0.05),
+    rgba(255, 255, 255, 0.25)
+  );
+  border-radius: 16px;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  height: 150px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.project-link-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+}
+
+.project-logo {
+  width: 60%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+}
+
+.project-link-card span {
+  font-size: 14px;
+  text-align: center;
+  font-weight: 600;
+}
 
 /* contact */
 .contact-form {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
 }
 .contact-link {
   font-size: 14px;
@@ -530,8 +626,7 @@ h1 {
   color: var(--accent);
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
-  margin-top: 8px;
+  margin-top: 24px;
 }
 
 .contact-icons {
