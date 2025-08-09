@@ -427,6 +427,13 @@ h1 {
   font-size: 13px;
   color: var(--muted);
   border: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+}
+.chip img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
 }
 
 /* Education card styles */
