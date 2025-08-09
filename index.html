@@ -12,7 +12,7 @@
     <div class="blob b2" aria-hidden></div>
 
     <main class="container">
-      <header>
+      <header class="site-header">
         <div class="brand">
           <div class="logo">VP</div>
           <div>
@@ -30,7 +30,9 @@
           <a href="#achievements">Achievements</a>
           <a href="#contact">Contact</a>
         </nav>
+        <div class="menu-toggle" id="mobile-menu">☰</div>
       </header>
+
       <section>
         <section class="glass hero reveal" id="home">
           <h1>Hi — I’m Vivek. I build performant web & mobile apps.</h1>
@@ -398,22 +400,39 @@
 
       <section class="glass reveal" id="contact">
         <div class="section-title">Contact</div>
-        <form class="contact-form" onsubmit="submitForm(event)">
-          <input type="text" id="name" placeholder="Your name" required />
-          <input type="email" id="email" placeholder="Your email" required />
-          <textarea id="message" placeholder="Message..." required></textarea>
-          <div
-            style="
-              display: flex;
-              gap: 10px;
-              justify-content: space-between;
-              align-items: center;
-            "
+        <div class="contact-form">
+          <div class="small">Prefer email? paivivek002@gmail.com</div>
+          <!-- <a
+            class="btn"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=paivivek002@gmail.com&su=Portfolio Contact&body=Hi Vivek,"
+            target="_blank"
           >
-            <div class="small">Prefer email? itspaivivek@gmail.com</div>
-            <button class="btn" type="submit">Send</button>
-          </div>
-        </form>
+            Mail Me
+          </a> -->
+          <a
+            class="contact-link"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=paivivek002@gmail.com&su=Portfolio Contact&body=Hi Vivek,"
+            target="_blank"
+          >
+            <img class="contact-icons" src="./images/gm.png" alt="" />
+            paivivek002@gmail.com
+          </a>
+          <a
+            class="contact-link"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=paivivek002@gmail.com&su=Portfolio Contact&body=Hi Vivek,"
+            target="_blank"
+          >
+            <img class="contact-icons" src="./images/ig.png" alt="" />
+            @paivivek002
+          </a>
+          <a
+            class="contact-link"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=paivivek002@gmail.com&su=Portfolio Contact&body=Hi Vivek," target="_blank"
+          >
+            <img class="contact-icons" src="./images/ig.png" alt="" />
+            @paivivek002
+          </a>
+        </div>
       </section>
 
       <footer class="reveal">
@@ -473,6 +492,20 @@
     </template>
 
     <script>
+      const mobileMenu = document.getElementById("mobile-menu");
+      const nav = document.querySelector(".nav");
+      const navLinks = document.querySelectorAll(".nav a");
+
+      mobileMenu.addEventListener("click", function () {
+        nav.classList.toggle("show");
+      });
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          nav.classList.remove("show");
+        });
+      });
+
       // small utilities
       document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -518,14 +551,6 @@
       });
 
       // simple form handler (replace with real endpoint)
-      function submitForm(e) {
-        e.preventDefault();
-        const n = document.getElementById("name").value;
-        const em = document.getElementById("email").value;
-        const msg = document.getElementById("message").value;
-        alert("Thanks " + n + "! Message sent. (This is a demo handler)");
-        e.target.reset();
-      }
     </script>
   </body>
 </html>
