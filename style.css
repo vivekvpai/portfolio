@@ -17,6 +17,7 @@
 html,
 body {
   font-family: sans-serif;
+  line-height: 1.5;
   color: #e6eef8;
   background: radial-gradient(
       1200px 600px at 10% 10%,
@@ -87,6 +88,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: var(--card-radius);
   padding: 22px;
+  /* height: fit-content; */
 }
 
 /* header */
@@ -122,7 +124,7 @@ header {
 .nav a {
   color: var(--muted);
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
   padding: 8px 12px;
   border-radius: 10px;
   transition: all 0.22s;
@@ -131,17 +133,6 @@ header {
   color: var(--accent);
   background: rgba(255, 255, 255, 0.02);
 }
-/* .site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 20px;
-  background: linear-gradient(90deg, #4fc3f7, #8e7bff);
-  border-bottom: none;
-  position: relative;
-  z-index: 1000;
-  color: white;
-} */
 .site-header {
   display: flex;
   justify-content: space-between;
@@ -152,6 +143,7 @@ header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   position: relative;
   z-index: 1000; /* Keep header and dropdown above all */
+  border-radius: var(--card-radius);
 }
 .brand {
   display: flex;
@@ -176,7 +168,7 @@ header {
 .nav a {
   color: white;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
   transition: opacity 0.2s;
 }
 .nav a:hover {
@@ -184,7 +176,7 @@ header {
 }
 .menu-toggle {
   display: none;
-  font-size: 1.5rem;
+  font-size: 16px;
   cursor: pointer;
   color: white;
 }
@@ -238,25 +230,31 @@ h1 {
   font-weight: 600;
   box-shadow: 0 8px 30px rgba(142, 123, 255, 0.08);
   transform: translateY(0);
-  transition: transform 0.12s;
+  transition: transform 0.2s ease, background-position 0.4s ease;
   text-align: center;
-  text-decoration: none;
+  background-size: 200% auto;
+  background-position: left center;
+}
+.btn:hover {
+  background-position: right center;
+  transform: translateY(-2px);
 }
 .btn:active {
-  transform: translateY(2px);
+  transform: translateY(1px) scale(0.98);
 }
+
 /* flashy highlights */
 .flashy-highlights {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
+  border-radius: var(--card-radius);
   padding: 20px;
   margin-top: 20px;
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
   width: --webkit-fill-available;
 }
-.flashy-highlights .section-title {
-  font-size: 1.5rem;
+.flashy-highlights-title {
+  font-size: 24px;
   margin-bottom: 15px;
   background: linear-gradient(90deg, #00f5ff, #a855f7, #ff0080);
   -webkit-background-clip: text;
@@ -270,12 +268,12 @@ h1 {
 }
 .highlight-item {
   padding: 10px 15px;
-  border-radius: 12px;
+  border-radius: var(--card-radius);
   background: rgba(255, 255, 255, 0.07);
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
   color: #fff;
-  font-size: 0.9rem;
+  font-size: 16px;
   position: relative;
   overflow: hidden;
 }
@@ -322,7 +320,7 @@ h1 {
 .avatar {
   width: 100%;
   height: 230px;
-  border-radius: 12px;
+  border-radius: var(--card-radius);
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.02),
@@ -340,20 +338,20 @@ h1 {
   gap: 6px;
 }
 .meta .line {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--muted);
   margin: 6px 0;
 }
 
 /* sections */
 .section-title {
-  font-size: 14px;
+  font-size: 18px;
   color: var(--accent);
   margin-bottom: 12px;
 }
 .skills-title {
   margin: 24px 6px 12px 0px;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 /* projects grid */
@@ -368,13 +366,14 @@ h1 {
     rgba(255, 255, 255, 0.05)
   );
   border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 16px;
+  border-radius: var(--card-radius);
   padding: 20px;
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 .project-card::before {
   content: "";
@@ -391,6 +390,9 @@ h1 {
   opacity: 0.04;
   animation: rotateGlow 12s linear infinite;
 }
+.project-card ul {
+  color: var(--muted);
+}
 @keyframes rotateGlow {
   0% {
     transform: rotate(0deg);
@@ -404,14 +406,13 @@ h1 {
   transform: translateY(-6px);
   box-shadow: 0 12px 40px rgba(8, 12, 24, 0.6);
 }
-.project-card h3 {
+.project-card h3, h4 {
   margin: 0 0 6px 0;
-  font-size: 15px;
 }
 .project-card p {
   margin: 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 16px;
 }
 
 /* skills */
@@ -424,7 +425,7 @@ h1 {
   padding: 8px 10px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.03);
-  font-size: 13px;
+  font-size: 16px;
   color: var(--muted);
   border: 1px solid rgba(255, 255, 255, 0.25);
   display: flex;
@@ -434,6 +435,22 @@ h1 {
   width: 20px;
   height: 20px;
   margin-right: 8px;
+}
+
+.chip-highlight {
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.chip-highlight:hover {
+  background: rgba(142, 123, 255, 0.2);
+  transform: translateY(-1px);
+}
+.chip-highlight.glow {
+  border: 1px solid var(--accent);
+  box-shadow: 0 0 6px var(--accent);
+}
+.chip-highlight.glow:hover {
+  box-shadow: 0 0 10px var(--accent-2);
 }
 
 /* Education card styles */
@@ -448,7 +465,7 @@ h1 {
     rgba(255, 255, 255, 0.05)
   );
   border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 16px;
+  border-radius: var(--card-radius);
   padding: 20px;
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
@@ -489,19 +506,12 @@ h1 {
 }
 .edu-card p {
   margin: 0 0 6px 0;
-  font-size: 13px;
+  font-size: 16px;
   color: var(--muted);
 }
-.edu-institute {
-  font-size: 14px !important;
-  margin: 12px 0 !important;
-}
+
 .edu-duration {
-  font-size: 16px !important;
-}
-.edu-desc {
-  font-size: 12px !important;
-  margin-top: 12px !important;
+  font-size: 14px !important;
 }
 
 /* achievements */
@@ -509,13 +519,13 @@ h1 {
   display: block;
 }
 .achievement-card {
-  margin-bottom: 28px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+  margin-top: 28px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent);
   border: 1px solid rgba(255, 255, 255, 0.03);
-  border-radius: 12px;
+  border-radius: var(--card-radius);
   padding: 14px;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 16px;
   transition: transform 0.18s, box-shadow 0.18s;
 }
 .achievement-card:hover {
@@ -524,14 +534,14 @@ h1 {
 }
 .achievement-card strong {
   color: #fff;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 /* Roadmap styles */
 .roadmap {
   position: relative;
   padding-left: 30px;
-  border-left: 2px solid var(--accent);
+  border-left: 2px solid var(--accent-2);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -540,7 +550,7 @@ h1 {
   position: relative;
   background: linear-gradient(180deg, var(--glass-1), var(--glass-2));
   border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 12px;
+  border-radius: var(--card-radius);
   padding: 14px;
   backdrop-filter: blur(8px);
 }
@@ -551,11 +561,11 @@ h1 {
 .roadmap-step::before {
   content: "";
   position: absolute;
-  left: -39px;
-  top: 14px;
+  left: -42px;
+  top: 50%;
   width: 16px;
   height: 16px;
-  background: var(--accent);
+  background: var(--accent-2);
   border-radius: 50%;
   border: 2px solid #0b1220;
 }
@@ -563,9 +573,14 @@ h1 {
   margin: 0 0 6px 0;
   color: #fff;
 }
-.roadmap-step p {
+.roadmap-step .roadmap-step-date {
   margin: 0;
-  font-size: 13px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.roadmap-step .roadmap-step-description {
+  margin: 0;
+  font-size: 16px;
   color: var(--muted);
 }
 /* project links */
@@ -591,14 +606,14 @@ h1 {
   justify-content: center;
   background: linear-gradient(
     145deg,
-    rgba(253, 253, 253, 0.05),
+    rgba(253, 253, 253, 0.1),
     rgba(255, 255, 255, 0.25)
   );
-  border-radius: 16px;
+  border-radius: var(--card-radius);
   text-decoration: none;
   color: #fff;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  height: 150px;
+  height: 120px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
@@ -608,15 +623,15 @@ h1 {
 }
 
 .project-logo {
-  width: 60%;
-  height: auto;
+  aspect-ratio: 5/2;
+  height: 100px;
   object-fit: contain;
   margin-bottom: 12px;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
 }
 
 .project-link-card span {
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
   font-weight: 600;
 }
@@ -628,7 +643,7 @@ h1 {
   justify-content: space-between;
 }
 .contact-link {
-  font-size: 14px;
+  font-size: 16px;
   text-decoration: none;
   color: var(--accent);
   display: flex;
@@ -653,7 +668,7 @@ footer {
   margin-top: 28px;
   text-align: center;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 16px;
 }
 
 /* responsive */
