@@ -156,7 +156,7 @@
           <div class="roadmap-step">
             <h4>Innovator & Software Developer @ MetricDust</h4>
             <p class="roadmap-step-date">
-              July 2022 = Present (3 years 1 month)
+              July 2022 - Present (<span id="experience-duration"></span>)
             </p>
             <p class="roadmap-step-description">
               Contributed to ORCA open source project for STORDIS, developed
@@ -167,7 +167,7 @@
           </div>
           <div class="roadmap-step">
             <h4>Project Intern @ MetricDust</h4>
-            <p class="roadmap-step-date">Oct 2021 = June 2022 (8 months)</p>
+            <p class="roadmap-step-date">Oct 2021 - June 2022 (8 months)</p>
             <p class="roadmap-step-description">
               Designed console dashboard for agents/brokers to create and
               customize tenant websites with authentication and dynamic forms.
@@ -175,7 +175,7 @@
           </div>
           <div class="roadmap-step">
             <h4>Intern @ Let's Grow More</h4>
-            <p class="roadmap-step-date">Sep 2021 = Oct 2021 (1 month)</p>
+            <p class="roadmap-step-date">Sep 2021 - Oct 2021 (1 month)</p>
             <p class="roadmap-step-description">
               Built two websites using HTML, CSS, JS, and React JS as part of
               project tasks, gaining hands-on frontend development experience.
@@ -183,7 +183,7 @@
           </div>
           <div class="roadmap-step">
             <h4>Intern @ Sparks Foundation</h4>
-            <p class="roadmap-step-date">Aug 2021 = Sep 2021 (1 month)</p>
+            <p class="roadmap-step-date">Aug 2021 - Sep 2021 (1 month)</p>
             <p class="roadmap-step-description">
               Developed Barrique Hotel website with secure payment gateway
               integration, enhancing transactions and learning client-focused
@@ -192,7 +192,7 @@
           </div>
           <div class="roadmap-step">
             <h4>Machine Learning Intern @ Prinston Smart Engineers</h4>
-            <p class="roadmap-step-date">Mar 2021 = Apr 2021 (2 months)</p>
+            <p class="roadmap-step-date">Mar 2021 - Apr 2021 (2 months)</p>
             <p class="roadmap-step-description">
               Worked on advanced algorithms for data analysis and predictive
               modeling, from preprocessing to model evaluation, applying ML to
@@ -722,6 +722,23 @@
 
       // small utilities
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Calculate and update experience duration
+      const startDate = new Date("2022-07-01");
+      const currentDate = new Date();
+
+      let years = currentDate.getFullYear() - startDate.getFullYear();
+      let months = currentDate.getMonth() - startDate.getMonth();
+
+      if (months < 0) {
+        years--;
+        months += 12;
+      }
+
+      const durationText = `${years} year${
+        years !== 1 ? "s" : ""
+      } ${months} month${months !== 1 ? "s" : ""}`;
+      document.getElementById("experience-duration").textContent = durationText;
 
       // reveal on scroll
       const reveals = document.querySelectorAll(".reveal");
