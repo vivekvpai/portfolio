@@ -44,7 +44,8 @@
             web & mobile apps.
           </h1>
           <p class="lead">
-            I'm a Software Engineer with 3+ years of crafting things that
+            I'm a Software Engineer with
+            <span id="experience-duration"></span> of crafting things that
             actually work (most of the time). My toolkit? Angular and React for
             the web, React Native Expo for mobile, Django for the backend, and a
             healthy dose of JavaScript, TypeScript, and Python. I've worked with
@@ -765,7 +766,8 @@
       document.getElementById("year").textContent = new Date().getFullYear();
 
       // Calculate and update experience duration
-      const startDate = new Date("2022-07-01");
+      // const startDate = new Date("2022-07-01");
+      const startDate = new Date("2021-10-01");
       const currentDate = new Date();
 
       let years = currentDate.getFullYear() - startDate.getFullYear();
