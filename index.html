@@ -180,7 +180,10 @@
           <div class="roadmap-step">
             <h4>Innovator & Software Developer @ MetricDust</h4>
             <p class="roadmap-step-date">
-              July 2022 - Present (<span id="experience-duration"></span>)
+              July 2022 - Present (<span
+                id="fulltime-experience-duration"
+              ></span
+              >)
             </p>
             <p class="roadmap-step-description">
               Contributed to ORCA open source project for STORDIS, developed
@@ -766,12 +769,11 @@
       document.getElementById("year").textContent = new Date().getFullYear();
 
       // Calculate and update experience duration
-      // const startDate = new Date("2022-07-01");
-      const startDate = new Date("2021-10-01");
+      const startDateFulltime = new Date("2022-07-01");
       const currentDate = new Date();
 
-      let years = currentDate.getFullYear() - startDate.getFullYear();
-      let months = currentDate.getMonth() - startDate.getMonth();
+      let years = currentDate.getFullYear() - startDateFulltime.getFullYear();
+      let months = currentDate.getMonth() - startDateFulltime.getMonth();
 
       if (months < 0) {
         years--;
@@ -781,7 +783,23 @@
       const durationText = `${years} year${
         years !== 1 ? "s" : ""
       } ${months} month${months !== 1 ? "s" : ""}`;
-      document.getElementById("experience-duration").textContent = durationText;
+      document.getElementById("fulltime-experience-duration").textContent =
+        durationText;
+
+      const startDate = new Date("2021-10-01");
+      let years2 = currentDate.getFullYear() - startDate.getFullYear();
+      let months2 = currentDate.getMonth() - startDate.getMonth();
+
+      if (months2 < 0) {
+        years2--;
+        months2 += 12;
+      }
+
+      const durationText2 = `${years2} year${
+        years2 !== 1 ? "s" : ""
+      } ${months2} month${months2 !== 1 ? "s" : ""}`;
+      document.getElementById("experience-duration").textContent =
+        durationText2;
 
       // reveal on scroll
       const reveals = document.querySelectorAll(".reveal");
