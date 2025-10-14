@@ -80,7 +80,10 @@ const Landing = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-2  m-0">
+        <div className="col-md-2 m-0">
+          <div className="nav-item ms-auto me-auto">
+            <img src="/images/PI-logo.png" alt="PI-logo" className="logo" />
+          </div>
           <div className="glass nav-item button-common">Home</div>
           <div className="glass nav-item button-common">Skills</div>
           <div className="glass nav-item button-common">Projects</div>
