@@ -1,15 +1,14 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import Landing from "./components/landing";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </header>
+    <div className="">
+      <div className="blob b1"></div>
+      <div className="blob b2"></div>
+      <Landing />
+      test app
     </div>
   );
 }
