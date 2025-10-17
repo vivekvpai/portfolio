@@ -222,7 +222,7 @@ const WebApps = () => {
                     style={{ fontSize: "16px" }}
                   >
                     {currentText}
-                    <span className="cursor">|</span>
+                    <span className="cursor-search">|</span>
                   </div>
                   <div className="mic-icon">
                     <svg
