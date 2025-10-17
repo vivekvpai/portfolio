@@ -1,9 +1,11 @@
 import "./webApps.css";
 import { FaGlobe } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa6";
 import React, { useEffect, useState } from "react";
 
 // Cast the icon to a React Functional Component type
 const GlobeIcon = FaGlobe as React.FC;
+const ArrowLeftIcon = FaArrowLeft as React.FC;
 
 const WebApps = () => {
   // Add your project logos and links here
@@ -14,27 +16,65 @@ const WebApps = () => {
       url: "https://www.shopprop.com",
       description:
         "ShopProp is a real estate e-commerce platform that allows users to buy and sell properties online.",
-      moredetails: [],
+      pointers: [
+        "Developed and optimized the Property Search Page (V2) — enhanced search functionality with Google address integration, reducing property API load times by 40% and improving map rendering by 71%.",
+        "Implemented a micro frontend architecture — modularized the platform for independent feature deployments, enabling faster builds and easier scalability across teams.",
+        "Enhanced UI/UX performance — introduced lazy loading for images and routes, ensuring faster page rendering and improved overall user experience.",
+      ],
+    },
+    {
+      name: "Metric Realties",
+      logo: "/images/projects/MR_Logo_new.png",
+      url: "https://www.metricrealties.com",
+      description:
+        "Metric Realties is a real estate e-commerce platform that allows users to buy and sell properties online.",
+      pointers: [
+        "Designed and developed the overall architecture and UI/UX of the Web Builder to empower users to create customized websites effortlessly.",
+        "Implemented core drag-and-drop functionality, allowing users to craft layouts by arranging essential elements (e.g., 'About Us,' 'Teams') onto the canvas.",
+        "Engineered features for real-time preview and seamless on-the-go editing, enabling users to update text, upload images, and customize button links with a click.",
+        // "Provided extensive customization options, including a selection of three professional templates and the flexibility to change colors, upload logos, and input basic business details[cite: 110, 111, 112, 113, 118].",
+        // "Utilized a modern tech stack including Angular, TypeScript, and AWS to implement the supporting templates and customization functionalities, culminating in easy, one-click site publishing[cite: 105, 119].",
+      ],
     },
     // {
-    //   name: "Metric Realties",
-    //   logo: "/images/projects/MR_Logo_new.png",
-    //   url: "https://www.metricrealties.com",
+    //   name: "Interview",
+    //   logo: "/images/projects/iw.png",
+    //   url: "https://www.interview.io",
+    //   description:
+    //     "Interview.io is a video interview platform that allows users to conduct virtual interviews with candidates.",
+    //   pointers: [
+    //     "Developed and optimized the Property Search Page (V2) — enhanced search functionality with Google address integration, reducing property API load times by 40% and improving map rendering by 71%.",
+    //     "Implemented a micro frontend architecture — modularized the platform for independent feature deployments, enabling faster builds and easier scalability across teams.",
+    //     "Enhanced UI/UX performance — introduced lazy loading for images and routes, ensuring faster page rendering and improved overall user experience.",
+    //   ],
     // },
-    {
-      name: "Interview",
-      logo: "/images/projects/iw.png",
-      url: "https://www.interview.io",
-    },
     {
       name: "Shoot Shoot Studios",
       logo: "/images/projects/sss.png",
       url: "https://www.shootshootstudios.com",
+      description:
+        "Shoot Shoot Studios is a video interview platform that allows users to conduct virtual interviews with candidates.",
+      pointers: [
+        "Developed a professional website for a film studio, integrating sections for Home, About, Team, Work (Portfolio), and Contact to clearly present the studio’s mission and services.",
+        "Designed and implemented the 'Our Work' section to effectively showcase the studio's films and video content, ensuring a focused and engaging user experience.",
+        "Integrated detailed profiles for the creative team/artists, highlighting individual roles (e.g., Writer, Director, Actor, Editor) and professional background.",
+        // "Ensured clear and accessible contact information, including email and address, and integrated social media follow links to foster community and collaboration with other talents.",
+        // "Focused on a clean, visual design to reflect the studio's passion for cinema, providing information about their goal to collaborate and bring in original, interesting content.",
+      ],
     },
     {
       name: "EasyQ Solutions",
       logo: "/images/projects/eq.png",
       url: "https://www.easyqsolutions.com",
+      description:
+        "EasyQ Solutions and Technologies Private Limited is dedicated to simplifying compliance with quality management systems (QMS) for the medical device industry.",
+      pointers: [
+        "Led the development of the EasyQ Dashboard using React and TypeScript, enabling seamless queue and appointment management for clients and staff.",
+        "Integrated secure authentication and user management using JWT tokens, ensuring reliable access control and session handling.",
+        "Enhanced platform security by implementing SSL enforcement and root detection measures for mobile app integration.",
+        // "Optimized API communication and data fetching with custom hooks and state management, improving response times and overall performance.",
+        // "Collaborated with the mobile team to align dashboard analytics and app data, ensuring consistency and smooth user experience across platforms.",
+      ],
     },
   ];
 
@@ -220,15 +260,11 @@ const WebApps = () => {
             <div className="chrome-content">
               <div className="chrome-search">
                 <div className="search-bar">
-                  <div className="search-icon">
-                    <svg
-                      viewBox="0 0 24 24"
-                      width="20"
-                      height="20"
-                      fill="#9AA0A6"
-                    >
-                      <path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
-                    </svg>
+                  <div
+                    className="search-icon"
+                    onClick={() => setSelectedWebApp("")}
+                  >
+                    <ArrowLeftIcon />
                   </div>
                   <div
                     className="search-input text-start "
@@ -249,24 +285,53 @@ const WebApps = () => {
                   </div>
                 </div>
 
-                <div className="glass ">
-                  <img
-                    className="w-25"
-                    src={selectedWebApp.logo}
-                    alt={selectedWebApp.name}
-                  />
-                  <a
-                    href={selectedWebApp.link}
-                    target="_blank"
-                    style={{
-                      color: "var(--accent)",
-                      fontSize: "16px",
-                      fontWeight: "500",
-                    }}
-                  >
-                    {selectedWebApp.url}
-                  </a>
-                  <div>{selectedWebApp.description}</div>
+                <div className="search-results">
+                  <div className="result-item">
+                    <div className="result-header">
+                      <div className="favicon">
+                        <img
+                          src={selectedWebApp.logo}
+                          alt={selectedWebApp.name}
+                        />
+                      </div>
+                      <div className="result-url">
+                        <a
+                          href={selectedWebApp.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="url-text"
+                        >
+                          {new URL(selectedWebApp.url).hostname}
+                        </a>
+                        <span className="url-arrow">▼</span>
+                      </div>
+                      <h3 className="result-title">
+                        <a
+                          href={selectedWebApp.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {selectedWebApp.name}
+                          <span className="action-icon ms-2">↗</span>
+                        </a>
+                      </h3>
+                    </div>
+                    <div className="result-snippet">
+                      <div className="snippet-text">
+                        {selectedWebApp.description}
+                      </div>
+                    </div>
+
+                    <div className="result-snippet mt-4">
+                      {selectedWebApp.pointers.map(
+                        (points: any, index: number) => (
+                          <div key={index} className="snippet-text">
+                            {points}
+                          </div>
+                        )
+                      )}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -281,6 +346,7 @@ const WebApps = () => {
       <div className="row">
         <div className="col-8">{chromeContainer()}</div>
         <div className="col-4">
+          <div className="section-title"> Tech Stack</div>
           <div className="glass">
             <div className="">Frontend Tech Stack</div>
 
