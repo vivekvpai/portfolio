@@ -2,19 +2,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;
   background-color: transparent;
-  padding: 20px;
 }
 
 .chrome-window {
   width: 100%;
-  max-width: 800px;
+  min-height: 500px;
   background: var(--bg-2);
   border-radius: var(--card-radius);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   overflow: hidden;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial;
   color: var(--color);
   backdrop-filter: blur(var(--glass-blur));
   border: 1px solid var(--glass-2);
@@ -48,9 +47,15 @@
   opacity: 1;
 }
 
-.control.close { background-color: #ff5f56; }
-.control.minimize { background-color: var(--accent-2); }
-.control.maximize { background-color: var(--accent); }
+.control.close {
+  background-color: #ff5f56;
+}
+.control.minimize {
+  background-color: var(--accent-2);
+}
+.control.maximize {
+  background-color: var(--accent);
+}
 
 .chrome-tabs {
   flex: 1;
@@ -95,8 +100,6 @@
   font-size: 42px;
 }
 
-
-
 .search-bar {
   max-width: 600px;
   margin: 0 auto 40px;
@@ -116,7 +119,8 @@
   border-color: var(--accent);
 }
 
-.search-icon, .mic-icon {
+.search-icon,
+.mic-icon {
   display: flex;
   align-items: center;
   padding: 0 8px;
@@ -139,6 +143,10 @@
   opacity: 0.7;
 }
 
+.cursor {
+  font-size: 18px;
+}
+
 .pinned-sites {
   max-width: 600px;
   margin: 0 auto;
@@ -156,8 +164,9 @@
 }
 
 .sites-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
 
@@ -201,7 +210,6 @@
   width: 32px;
   height: 32px;
   object-fit: contain;
-  filter: brightness(0) saturate(100%) invert(85%) sepia(10%) saturate(300%) hue-rotate(180deg) brightness(100%) contrast(95%);
 }
 
 .site-name {

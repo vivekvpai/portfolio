@@ -9,6 +9,7 @@ function App() {
       <div className="blob b2"></div>
       <Landing />
       <WebApps />
+      <div className="mt-4 mb-4"></div>
     </div>
   );
 }
