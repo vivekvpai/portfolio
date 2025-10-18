@@ -48,7 +48,7 @@ const MobileApps = () => {
     },
     {
       img: "/images/projects/easyq-icon.png",
-      name: "EasyQ",
+      name: "EasyQ Solutions",
       description:
         "A secure and efficient dashboard app with biometric login, notifications, and quick access to all modules like QP, QO, RNA. Built with React Native/Expo, it emphasizes security, productivity, and real-time monitoring.",
       linkAppStore: "",
@@ -139,14 +139,14 @@ const MobileApps = () => {
           {selectedProject && (
             <div className="glass">
               <div className="row">
-                <div className="col-md-6">
+                <div className="col-md-4">
                   <img
                     className="app-image"
                     src={process.env.PUBLIC_URL + selectedProject.img}
                     alt={selectedProject.name}
                   />
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-8">
                   <div className="section-title">{selectedProject.name}</div>
 
                   {selectedProject.description && (
