@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vivek V Pai — Portfolio</title>
+    <link rel="icon" type="image/png" href="./images/PI-logo.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="blob b1" aria-hidden></div>
+    <div class="blob b2" aria-hidden></div>
+
+    <main class="container">
+      <header class="site-header">
+        <div class="brand">
+          <img class="logo" src="./images/PI-logo.png" alt="" />
+
+          <div>
+            <div style="font-weight: 700">Vivek V Pai</div>
+            <div style="font-size: 12px; color: var(--muted)">
+              Software Engineer • TypeScript • JavaScript • Python
+            </div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#journey">Journey</a>
+          <a href="#education">Education</a>
+          <a href="#achievements">Achievements</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="menu-toggle" id="mobile-menu">☰</div>
+      </header>
+
+      <section>
+        <section class="glass hero reveal" id="home">
+          <h1>
+            Hi — I'm
+            <span class="flashy-highlights-title" style="font-size: 30px"
+              >Vivek V Pai</span
+            >. An engineer, developer, and freelancer crafting high-performance
+            web & mobile apps.
+          </h1>
+          <p class="lead">
+            I'm a Software Engineer with
+            <span id="experience-duration"></span> of crafting things that
+            actually work (most of the time). My toolkit? Angular and React for
+            the web, React Native Expo for mobile, Django for the backend, and a
+            healthy dose of JavaScript, TypeScript, and Python. I've worked with
+            AWS, and I'm all about building scalable, user-friendly apps that
+            don't just look good—they perform. I write tests too (Pytest,
+            Selenium, Jest) because future-me appreciates past-me's foresight.
+            MSc from Liverpool John Moores University, occasional guest lecturer
+            in Angular at DBIT, fluent in English and Hindi, and always ready to
+            jump into open-source or enterprise challenges.
+          </p>
+          <div class="cta">
+            <a class="btn" href="#projects">See Projects</a>
+            <a
+              class="btn"
+              target="_blank"
+              href="vivek_v_pai_resume.pdf"
+              style="
+                background: transparent;
+                border: 1px solid rgba(255, 255, 255, 0.25);
+                color: var(--accent);
+              "
+              >Download CV</a
+            >
+          </div>
+        </section>
+
+        <section class="glass flashy-highlights" id="latest-highlights">
+          <div class="flashy-highlights-title">Latest Highlights</div>
+          <div class="highlights">
+            <!-- <div class="highlight-item">
+            Currently leading ShopProp mobile app development, building EasyQ
+            app, and delivering innovative tech solutions.
+          </div> -->
+            <div class="highlight-item">
+              Building and maintaining OpenMate, a lightweight NPM CLI tool to
+              instantly open code directories in your preferred IDE, boosting
+              developer productivity.
+            </div>
+            <div class="highlight-item">
+              Currently building and leading the ShopProp mobile app using React
+              Native Expo and Optimized property search with micro-frontend
+              architecture and subscription cancellation.
+            </div>
+            <div class="highlight-item">
+              Currently developing the app, contributing to its architecture
+              Developed dashboard for a consulting project (EQMS)
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="profile tilt reveal">
+        <div class="glass">
+          <div class="avatar">
+            <img
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: var(--card-radius);
+                margin-bottom: 24px;
+              "
+              src="./images/hoodie1.png"
+              alt=""
+            />
+          </div>
+          <div class="meta">
+            <div class="line"><strong>Location:</strong> Bangalore, India</div>
+            <div class="line">
+              <strong>Email:</strong> paivivek002@gmail.com
+            </div>
+            <div class="line">
+              <strong>LinkedIn:</strong>
+              <a
+                href="https://www.linkedin.com/in/vivek-v-pai/"
+                target="_blank"
+                style="color: var(--accent)"
+                >vivekvpai</a
+              >
+            </div>
+            <div class="line">
+              <strong>GitHub:</strong>
+              <a
+                href="https://github.com/vivekvpai"
+                target="_blank"
+                style="color: var(--accent)"
+                >vivekvpai</a
+              >
+            </div>
+            <div>
+              <div class="section-title">Languages</div>
+              <div style="display: flex; gap: 8px; flex-wrap: wrap">
+                <div class="chip">English</div>
+                <div class="chip">Hindi</div>
+                <div class="chip">Kannada</div>
+                <div class="chip">Konkani</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section>
+          <div class="section-title">Coding Languages</div>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="skill-header">
+                <span>JavaScript</span>
+                <span>90%</span>
+              </div>
+              <div class="progress-bar"><div style="width: 90%"></div></div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-header">
+                <span>TypeScript</span>
+                <span>85%</span>
+              </div>
+              <div class="progress-bar"><div style="width: 85%"></div></div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-header">
+                <span>Python</span>
+                <span>50%</span>
+              </div>
+              <div class="progress-bar"><div style="width: 50%"></div></div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="glass reveal" id="journey">
+        <div class="section-title">Professional Journey</div>
+        <div class="roadmap">
+          <div class="roadmap-step">
+            <h4>Innovator & Software Developer @ MetricDust</h4>
+            <p class="roadmap-step-date">
+              July 2022 - Present (<span
+                id="fulltime-experience-duration"
+              ></span
+              >)
+            </p>
+            <p class="roadmap-step-description">
+              Contributed to ORCA open source project for STORDIS, developed
+              ORCAsk AI chatbot, backend & Python library updates. Built
+              MetricRealties SaaS for real estate agents, AWS Lambda API
+              integration, Dashboard 2.0, and optimized AWS S3 storage costs.
+            </p>
+          </div>
+          <div class="roadmap-step">
+            <h4>Project Intern @ MetricDust</h4>
+            <p class="roadmap-step-date">Oct 2021 - June 2022 (8 months)</p>
+            <p class="roadmap-step-description">
+              Designed console dashboard for agents/brokers to create and
+              customize tenant websites with authentication and dynamic forms.
+            </p>
+          </div>
+          <div class="roadmap-step">
+            <h4>Intern @ Let's Grow More</h4>
+            <p class="roadmap-step-date">Sep 2021 - Oct 2021 (1 month)</p>
+            <p class="roadmap-step-description">
+              Built two websites using HTML, CSS, JS, and React JS as part of
+              project tasks, gaining hands-on frontend development experience.
+            </p>
+          </div>
+          <div class="roadmap-step">
+            <h4>Intern @ Sparks Foundation</h4>
+            <p class="roadmap-step-date">Aug 2021 - Sep 2021 (1 month)</p>
+            <p class="roadmap-step-description">
+              Developed Barrique Hotel website with secure payment gateway
+              integration, enhancing transactions and learning client-focused
+              delivery.
+            </p>
+          </div>
+          <div class="roadmap-step">
+            <h4>Machine Learning Intern @ Prinston Smart Engineers</h4>
+            <p class="roadmap-step-date">Mar 2021 - Apr 2021 (2 months)</p>
+            <p class="roadmap-step-description">
+              Worked on advanced algorithms for data analysis and predictive
+              modeling, from preprocessing to model evaluation, applying ML to
+              real-world problems.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="glass reveal" id="skills">
+        <div class="section-title">Technical Skills</div>
+
+        <div class="skills-title">Frontend</div>
+
+        <div style="display: flex; gap: 12px; flex-wrap: wrap">
+          <div class="chip">
+            <img src="./images/react.png" alt="React Native" />
+            React Native
+          </div>
+          <div class="chip">
+            <img src="./images/expo.png" alt="Expo" />
+            Expo
+          </div>
+          <div class="chip">
+            <img src="./images/react.png" alt="React" /> React
+          </div>
+          <!-- <div class="chip">
+            <img src="./images/js.png" alt="JavaScript" /> JavaScript
+          </div> -->
+          <div class="chip">
+            <img src="./images/angular.png" alt="Angular" /> Angular
+          </div>
+          <!-- <div class="chip">
+            <img src="./images/ts.png" alt="TypeScript" /> TypeScript
+          </div> -->
+
+          <div class="chip">
+            <img src="./images/html.png" alt="HTML" /> HTML
+          </div>
+          <div class="chip"><img src="./images/css.png" alt="CSS" /> CSS</div>
+          <div class="chip">
+            <img src="./images/bootstrap.png" alt="Bootstrap" /> Bootstrap
+          </div>
+          <div class="chip">
+            <img src="./images/tailwind.png" alt="Tailwind CSS" /> Tailwind CSS
+          </div>
+        </div>
+
+        <div class="skills-title">Backend</div>
+
+        <div style="display: flex; gap: 12px; flex-wrap: wrap">
+          <div class="chip"><img src="./images/PHP.png" alt="PHP" /> PHP</div>
+          <div class="chip">
+            <img src="./images/mysql.png" alt="MySQL" /> MySQL
+          </div>
+          <div class="chip">
+            <img src="./images/django.png" alt="Django" /> Django
+          </div>
+          <!-- <div class="chip">
+            <img src="./images/python.png" alt="Python" /> Python
+          </div> -->
+        </div>
+
+        <div class="skills-title">Testing</div>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap">
+          <div class="chip">
+            <img src="./images/Selenium.png" alt="Selenium" /> Selenium
+          </div>
+          <div class="chip">
+            <img src="./images/jest.png" alt="Jest" /> Jest
+          </div>
+          <div class="chip">
+            <img src="./images/pytest.png" alt="Pytest" /> Pytest
+          </div>
+        </div>
+
+        <div class="skills-title">AI</div>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap">
+          <div class="chip">
+            <img src="./images/ollama.png" alt="Ollama" /> Ollama
+          </div>
+          <div class="chip">
+            <img src="./images/openai.png" alt="OpenAI" /> OpenAI
+          </div>
+          <div class="chip">
+            <img src="./images/gemini.png" alt="Gemini" /> Gemini
+          </div>
+          <div class="chip">
+            <img src="./images/claude.png" alt="Claude" /> Claude
+          </div>
+        </div>
+
+        <div class="skills-title">Tools and IDEs</div>
+
+        <div style="display: flex; gap: 12px; flex-wrap: wrap">
+          <div class="chip">
+            <img src="./images/postman.png" alt="Postman" /> Postman
+          </div>
+          <div class="chip">
+            <img src="./images/docker.png" alt="Docker" /> Docker
+          </div>
+          <div class="chip"><img src="./images/aws.png" alt="AWS" /> aws</div>
+          <div class="chip"><img src="./images/git.png" alt="Git" /> Git</div>
+          <div class="chip">
+            <img src="./images/gh.png" alt="GitHub" /> GitHub
+          </div>
+          <div class="chip">
+            <img src="./images/gitlab.png" alt="GitLab" /> GitLab
+          </div>
+
+          <div class="chip">
+            <img src="./images/ws.png" alt="Windsurf" /> Windsurf
+          </div>
+          <div class="chip">
+            <img src="./images/vs.png" alt="vsCode" /> VSCode
+          </div>
+        </div>
+      </section>
+
+      <section class="glass reveal" id="projects">
+        <div class="section-title">Selected Projects</div>
+        <div class="projects">
+          <div
+            class="project-card tilt"
+            data-title="Quick Repo IDE"
+            data-desc="Lightweight NPM CLI tool to instantly open repositories in preferred IDEs for faster development."
+            data-link="https://www.npmjs.com/package/openmate"
+          >
+            <h3>OpenMate - NPM CLI for Fast Repo Access</h3>
+            <ul>
+              <li>
+                Built a lightweight CLI tool to quickly open local repositories
+                in VS Code, Windsurf, or Cursor.
+              </li>
+              <li>
+                Implemented commands like <code>om vs &lt;name&gt;</code> and
+                <code>om ws &lt;name&gt;</code> for one-line IDE access.
+              </li>
+              <li>
+                Added features like quick listing, project shortcuts, updated
+                and delete list
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="project-card tilt"
+            data-title="ShopProp"
+            data-desc="Full-stack real estate platform with property search, rebates, 3D tours, maps, and micro-frontends."
+            data-link="https://shopprop.com/"
+          >
+            <h3>ShopProp - Full-stack Real Estate Platform</h3>
+            <ul>
+              <li>
+                Currently leading the development of the ShopProp mobile app.
+              </li>
+              <li>
+                Optimized property search using Google address integration and
+                advanced filters.
+              </li>
+              <li>
+                Designed and built the user dashboard with personalized property
+                management features.
+              </li>
+            </ul>
+          </div>
+
+          <!-- <div
+            class="project-card tilt"
+            data-title="IntView"
+            data-desc="AI agent-based conversation solution platform with customizable question templates for better outcomes."
+            data-link="https://intview.io"
+          >
+            <h3>IntView - AI Agent Conversation Platform</h3>
+            <ul>
+              <li>
+                Built responsive and intuitive UI for seamless user experience.
+              </li>
+              <li>
+                Integrated backend APIs to deliver real-time AI-driven
+                interactions.
+              </li>
+              <li>
+                Developed and maintained test cases for ensuring quality and
+                stability.
+              </li>
+            </ul>
+          </div> -->
+
+          <div
+            class="project-card tilt"
+            data-title="ORCAsk"
+            data-desc="AI-enabled chatbot for ORCA open-source, including Django backend & React frontend."
+            data-link="https://github.com/STORDIS/orca_ui"
+          >
+            <h3>ORCAsk - AI Chatbot for Network Management</h3>
+            <ul>
+              <li>
+                Built natural language processing-based network operations
+                chatbot.
+              </li>
+              <li>
+                Integrated chart and table generation for data visualization.
+              </li>
+              <li>
+                Enhanced backend APIs for better performance and error handling.
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="project-card tilt"
+            data-title="Web Builder"
+            data-desc="Drag-and-drop website creation tool with live preview and customization."
+            data-link="https://builder.metricrealties.com/"
+          >
+            <h3>Web Builder - Custom Website Creation Tool</h3>
+            <ul>
+              <li>Designed drag-and-drop UI with live preview capability.</li>
+              <li>Enabled template, color, and content customization.</li>
+              <li>Integrated easy publishing with AWS hosting.</li>
+            </ul>
+          </div>
+
+          <div
+            class="project-card tilt"
+            data-title="Consulting Project"
+            data-desc="Consulting project with secure authentication, dashboard, and mobile app development."
+            data-link="https://easyqsolutions.com/"
+          >
+            <h3>Consulting Project - Dashboard & Mobile App</h3>
+            <ul>
+              <li>
+                Developed a feature-rich dashboard for EQMS project with a focus
+                on usability and security.
+              </li>
+              <li>Currently building the mobile app using Expo</li>
+              <li>
+                Collaborating on architecture planning to ensure scalability and
+                compliance with security best practices.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="glass reveal" id="project-links">
+        <div class="section-title">Project Links</div>
+        <div class="project-links-grid">
+          <a
+            class="project-link-card"
+            href="https://metricdust.com/"
+            target="_blank"
+          >
+            <img src="./images/md.png" alt="MetricDust" class="project-logo" />
+          </a>
+          <a
+            class="project-link-card"
+            href="https://shopprop.com/"
+            target="_blank"
+          >
+            <img
+              src="./images/shopprop.png"
+              alt="ShopProp"
+              class="project-logo"
+            />
+          </a>
+          <a
+            class="project-link-card"
+            href="https://intview.io/"
+            target="_blank"
+          >
+            <img src="./images/iw.png" alt="MetricDust" class="project-logo" />
+          </a>
+
+          <a
+            class="project-link-card"
+            href="https://github.com/STORDIS/orca_ui"
+            target="_blank"
+          >
+            <img src="./images/orca.png" alt="ORCA" class="project-logo" />
+          </a>
+          <a
+            class="project-link-card"
+            href="https://metricrealties.com/"
+            target="_blank"
+          >
+            <img
+              src="./images/MR_Logo_new.png"
+              alt="MetricRealties"
+              class="project-logo"
+            />
+          </a>
+          <a
+            class="project-link-card"
+            href="https://vivekvpai.github.io/swatkitchen.github.io/"
+            target="_blank"
+          >
+            <img
+              src="./images/sk.jpeg"
+              alt="Swat Kitchen"
+              class="project-logo"
+            />
+          </a>
+          <a
+            class="project-link-card"
+            href="https://www.shootshootstudios.com/"
+            target="_blank"
+          >
+            <img
+              src="./images/sss.png"
+              alt="ShootShootStudios"
+              class="project-logo"
+            />
+          </a>
+          <!-- <a
+            class="project-link-card"
+            href="https://intracrew.com/"
+            target="_blank"
+          >
+            <img
+              src="./images/intracrew.png"
+              alt="IntraCrew"
+              class="project-logo"
+            />
+          </a> -->
+          <!-- <a
+            class="project-link-card"
+            href="https://www.netsandturf.com/"
+            target="_blank"
+          >
+            <img
+              src="./images/nets.png"
+              alt="Nets & Turf"
+              class="project-logo"
+            />
+          </a> -->
+          <a
+            class="project-link-card"
+            href="https://easyqsolutions.com/"
+            target="_blank"
+          >
+            <img
+              src="./images/eq.png"
+              alt="EasyQ Solutions"
+              class="project-logo"
+            />
+          </a>
+        </div>
+      </section>
+
+      <section class="glass reveal" id="achievements">
+        <div class="section-title">Achievements</div>
+        <div class="achievement-cards">
+          <div class="achievement-card">
+            <strong>Guest Lecturer</strong> — Don Bosco Institute of Technology
+            (DBIT)<br />
+            Delivered a session on Angular, covering core concepts, real-world
+            project integration, and best practices for scalable frontend
+            development.
+          </div>
+          <div class="achievement-card">
+            <strong>Research Publication</strong> — Liverpool John Moores
+            University & UpGrad<br />
+            Research On :
+            <em
+              >“Exploring Micro-Frontend Architecture for Scalable Web
+              Applications”</em
+            >. <br />
+            The study delved into modular web design principles, architectural
+            advantages, and real-world performance gains, backed by
+            implementation case studies.
+          </div>
+          <div class="achievement-card">
+            <strong>Silver Medalist & Young Achiever</strong> — DBIT - VTU<br />Honored
+            with Silver medal for excellent performances in academics. Honored
+            as Young Achiever for recognizable achievements at a young age.
+          </div>
+          <div class="achievement-card">
+            <strong>Team Leader</strong> — DBISEL Web Development Team<br />Handled
+            team operations. Gave talks on Git & GitHub, Mini projects using
+            PHP, and hosting websites on domains.
+          </div>
+          <div class="achievement-card">
+            <strong>District Level Winner - 3#</strong> — Ramanagara Jila
+            Panchayat (Bharath)<br />Won 3rd Place in Hindi Speech Competition
+            at District level<br />1st Place at Taluk & Hobli levels.
+          </div>
+          <div class="achievement-card">
+            <strong>Taluk Level Winner - 2#</strong> — Department of
+            Undergraduate Education (Bharath)<br />Won 2nd Place in Volleyball
+            at Taluk level<br />1st Place at Hobli level.
+          </div>
+          <!-- <div class="achievement-card">
+            <strong>National Level Workshop</strong> — National Youth Council of
+            India<br />Participated in React JS workshop co-organized with Brain
+            O Vision Solutions Pvt. Ltd. The workshop was online and hands-on
+            with ReactJS technology.
+          </div> -->
+        </div>
+      </section>
+
+      <section class="glass reveal" id="education">
+        <div class="section-title">Education</div>
+        <div class="education-grid">
+          <div class="edu-card">
+            <h4>MSc, Computer Science</h4>
+            <p>Liverpool John Moores University & UpGrad</p>
+            <p>Percentage: 65%</p>
+            <p class="edu-duration">Sep 2023 - Mar 2025</p>
+          </div>
+          <div class="edu-card">
+            <h4>PG Diploma, Software Development</h4>
+            <p>IIIT Bangalore & UpGrad</p>
+            <p>Percentage: 7.5 CGPA</p>
+            <p class="edu-duration">Sep 2022 - Mar 2023</p>
+          </div>
+          <div class="edu-card">
+            <h4>B.E., Information Science</h4>
+            <p>Don Bosco Institute of Technology</p>
+            <p>Percentage: 8.1 CGPA</p>
+            <p class="edu-duration">Aug 2018 - Jun 2022</p>
+          </div>
+          <div class="edu-card">
+            <h4>Pre-University Course (PUC)</h4>
+            <p>Cambridge PU College</p>
+            <p>Percentage: 86% PCMCs</p>
+            <p class="edu-duration">Apr 2016 - Mar 2018</p>
+          </div>
+          <div class="edu-card">
+            <h4>SSLC (10th Standard)</h4>
+            <p>St Michels English School</p>
+            <p>Percentage: 90%</p>
+            <p class="edu-duration">Apr 2015 - Mar 2016</p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="reveal">
+        © <span id="year"></span> Vivek V Pai — Built with ❤️ and a bit of CSS
+        magic.
+
+        <div class="contact-form" id="contact">
+          <a
+            class="contact-link"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=paivivek002@gmail.com&su=Portfolio Contact&body=Hi Vivek,"
+            target="_blank"
+          >
+            <img class="contact-icons" src="./images/gm.png" alt="" />
+            paivivek002@gmail.com
+          </a>
+
+          <a
+            class="contact-link"
+            href="https://www.linkedin.com/in/vivek-v-pai/"
+            target="_blank"
+          >
+            <img class="contact-icons" src="./images/in.png" alt="" />
+            @vivekvpai
+          </a>
+          <a
+            class="contact-link"
+            href="https://github.com/vivekvpai"
+            target="_blank"
+          >
+            <img class="contact-icons" src="./images/gh.png" alt="" />
+            @vivekvpai
+          </a>
+          <a
+            class="contact-link"
+            href="https://www.instagram.com/i.m_pai_vivek/"
+            target="_blank"
+          >
+            <img class="contact-icons" src="./images/ig.png" alt="" />
+            @i.m_pai_vivek
+          </a>
+        </div>
+      </footer>
+    </main>
+
+    <template id="modalT">
+      <div
+        style="
+          position: fixed;
+          inset: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: rgba(2, 6, 23, 0.6);
+          backdrop-filter: blur(4px);
+        "
+      >
+        <div
+          style="
+            width: min(880px, 92%);
+            max-height: 86vh;
+            overflow: auto;
+            border-radius: 14px;
+            padding: 18px;
+            background: linear-gradient(
+              180deg,
+              rgba(255, 255, 255, 0.2),
+              rgba(255, 255, 255, 0.1)
+            );
+            border: 1px solid rgba(255, 255, 255, 0.04);
+          "
+        >
+          <button
+            id="closeModal"
+            style="
+              float: right;
+              border: 0;
+              background: none;
+              color: var(--muted);
+              font-size: 16px;
+            "
+          >
+            ✕
+          </button>
+          <h2 id="mTitle"></h2>
+          <p id="mDesc" style="color: var(--muted)"></p>
+          <div
+            style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px"
+          >
+            <a id="mLink" href="#" target="_blank" class="btn">View Project</a>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <script>
+      const mobileMenu = document.getElementById("mobile-menu");
+      const nav = document.querySelector(".nav");
+      const navLinks = document.querySelectorAll(".nav a");
+
+      mobileMenu.addEventListener("click", function () {
+        nav.classList.toggle("show");
+      });
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          nav.classList.remove("show");
+        });
+      });
+
+      // small utilities
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Calculate and update experience duration
+      const startDateFulltime = new Date("2022-07-01");
+      const currentDate = new Date();
+
+      let years = currentDate.getFullYear() - startDateFulltime.getFullYear();
+      let months = currentDate.getMonth() - startDateFulltime.getMonth();
+
+      if (months < 0) {
+        years--;
+        months += 12;
+      }
+
+      const durationText = `${years} year${
+        years !== 1 ? "s" : ""
+      } ${months} month${months !== 1 ? "s" : ""}`;
+      document.getElementById("fulltime-experience-duration").textContent =
+        durationText;
+
+      const startDate = new Date("2021-10-01");
+      let years2 = currentDate.getFullYear() - startDate.getFullYear();
+      let months2 = currentDate.getMonth() - startDate.getMonth();
+
+      if (months2 < 0) {
+        years2--;
+        months2 += 12;
+      }
+
+      const durationText2 = `${years2} year${
+        years2 !== 1 ? "s" : ""
+      } ${months2} month${months2 !== 1 ? "s" : ""}`;
+      document.getElementById("experience-duration").textContent =
+        durationText2;
+
+      // reveal on scroll
+      const reveals = document.querySelectorAll(".reveal");
+      const obs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("show");
+          });
+        },
+        { threshold: 0.12 }
+      );
+      reveals.forEach((r) => obs.observe(r));
+
+      // project modal
+      const cards = document.querySelectorAll(".project-card");
+      const tpl = document.getElementById("modalT");
+      cards.forEach((c) =>
+        c.addEventListener("click", () => {
+          const node = tpl.content.cloneNode(true);
+          node.getElementById("mTitle").textContent = c.dataset.title;
+          node.getElementById("mDesc").textContent = c.dataset.desc;
+          node.getElementById("mLink").href = c.dataset.link;
+          document.body.appendChild(node);
+          document
+            .getElementById("closeModal")
+            .addEventListener("click", () =>
+              document.querySelector("body > div[style]").remove()
+            );
+        })
+      );
+    </script>
+  </body>
+</html>

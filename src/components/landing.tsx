@@ -94,6 +94,46 @@ const Landing = () => {
           <div className="glass nav-item button-common">Contact</div>
         </div>
       </div>
+      <div className="row">
+        <div className="section-title">Coding Languages</div>
+
+        <div className="col-md-4">
+          {" "}
+          <div className="glass">
+            <div className="skill-header">
+              <span>JavaScript</span>
+              <span>90%</span>
+            </div>
+            <div className="progress-bar">
+              <div style={{ width: "90%" }}></div>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-4">
+          {" "}
+          <div className="glass">
+            <div className="skill-header">
+              <span>TypeScript</span>
+              <span>85%</span>
+            </div>
+            <div className="progress-bar">
+              <div style={{ width: "85%" }}></div>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-4">
+          {" "}
+          <div className="glass">
+            <div className="skill-header">
+              <span>Python</span>
+              <span>50%</span>
+            </div>
+            <div className="progress-bar">
+              <div style={{ width: "50%" }}></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
   );
 };
