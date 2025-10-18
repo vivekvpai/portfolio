@@ -28,7 +28,7 @@ function App() {
         <Achievements />
       </div>
 
-      <footer className="container" id="footer">
+      <footer className="container mb-48" id="footer">
         © <span id="year"></span> Vivek V Pai — Built with ❤️ and a bit of CSS
         magic.
         <div className="contact-form" id="contact">
