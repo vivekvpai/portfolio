@@ -8,7 +8,7 @@
 .windows-desktop {
   position: relative;
   width: 100%;
-  height: 95vh;
+  min-height: 700px;
   background-color: var(--bg-2);
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AkEEjQY5s1B8gAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAGUlEQVQ4y2NgGAWjYBSMglEwCkYBIwHjKAAAgA0ACQ8R9e4AAAAASUVORK5CYII=");
   background-repeat: repeat;
@@ -27,7 +27,7 @@
   align-items: flex-start;
   gap: 20px;
   padding: 20px;
-  height: calc(100% - 40px);
+  height: calc(700px - 40px);
   box-sizing: border-box;
 }
 

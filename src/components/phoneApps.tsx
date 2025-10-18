@@ -131,8 +131,7 @@ const PhoneApps = () => {
   return (
     <div className="container m-48">
       <div className="row">
-        <div className="col-4">{mobileContainer()}</div>
-        <div className="col-6">
+        <div className="col-lg-6 col-md-12">
           {selectedProject && (
             <div className="glass">
               <div className="d-flex">
@@ -183,14 +182,18 @@ const PhoneApps = () => {
             </div>
           )}
         </div>
-        <div className="col-2">
+        <div className="col-lg-4 col-md-6">{mobileContainer()}</div>
+        <div className="col-lg-2 col-md-6">
           <div className="section-title">Tech Stack</div>
           <div className="glass">
             <div className="stack-category">Mobile Development</div>
             <div className="d-flex flex-wrap gap-2">
               {techStackApp.map((tech, index) => (
                 <div key={index} className="chip my-2">
-                  <img src={process.env.PUBLIC_URL + tech.img} alt={tech.name} />
+                  <img
+                    src={process.env.PUBLIC_URL + tech.img}
+                    alt={tech.name}
+                  />
                   {tech.name}
                 </div>
               ))}

@@ -30,8 +30,10 @@ const CliApps = () => {
             <div className="desktop-icon-img terminal-icon"></div>
             <span>Terminal</span>
           </div>
-          <div className="desktop-icon" onClick={() => openWindow("projects")}>
-            {/* <div className="desktop-icon-img projects-icon"></div> */}
+          <div
+            className="desktop-icon"
+            onClick={() => openWindow("openmateApp")}
+          >
             <img
               className="desktop-icon-img"
               src={process.env.PUBLIC_URL + "/images/projects/om.png"}
@@ -39,9 +41,9 @@ const CliApps = () => {
             />
             <span>OpenMate</span>
           </div>
-          <div className="desktop-icon">
+          <div className="desktop-icon" onClick={() => openWindow("projects")}>
             <div className="desktop-icon-img computer-icon"></div>
-            <span>My Computer</span>
+            <span>My Projects</span>
           </div>
         </div>
 
@@ -121,22 +123,22 @@ const CliApps = () => {
           </div>
         )}
 
-        {activeWindow === "projects" && (
+        {activeWindow === "openmateApp" && (
           <div
             className="window active"
-            onClick={() => setActiveWindow("projects")}
+            onClick={() => setActiveWindow("openmateApp")}
           >
             <div className="title-bar">
               <div className="title-bar-text">My Projects</div>
               <div className="title-bar-controls">
                 <button
                   aria-label="Minimize"
-                  onClick={(e) => closeWindow(e, "projects")}
+                  onClick={(e) => closeWindow(e, "openmateApp")}
                 ></button>
                 <button aria-label="Maximize"></button>
                 <button
                   aria-label="Close"
-                  onClick={(e) => closeWindow(e, "projects")}
+                  onClick={(e) => closeWindow(e, "openmateApp")}
                 ></button>
               </div>
             </div>
@@ -205,6 +207,66 @@ const CliApps = () => {
           </div>
         )}
 
+        {activeWindow === "projects" && (
+          <div
+            className="window active"
+            onClick={() => setActiveWindow("projects")}
+          >
+            <div className="title-bar">
+              <div className="title-bar-text">My Projects</div>
+              <div className="title-bar-controls">
+                <button
+                  aria-label="Minimize"
+                  onClick={(e) => closeWindow(e, "projects")}
+                ></button>
+                <button aria-label="Maximize"></button>
+                <button
+                  aria-label="Close"
+                  onClick={(e) => closeWindow(e, "projects")}
+                ></button>
+              </div>
+            </div>
+            <div className="window-body">
+              <p>My Projects</p>
+              <p>
+                Click on Terminal Icon to open my project Named - OpenMate Cli{" "}
+              </p>
+              <p>or</p>
+              <p>
+                Click here to open OpenMate Cli{" "}
+                <span
+                  className="text-warning"
+                  style={{ cursor: "pointer" }}
+                  onClick={(e) => {
+                    setActiveWindow(null); // Close current window
+                    setTimeout(() => openWindow("terminal"), 0); // Open terminal after state update
+                  }}
+                >
+                  OpenMate Cli
+                </span>{" "}
+              </p>
+              <p>
+                Click on OpenMate Icon to open my project Named - OpenMate
+                Desktop App
+              </p>
+              <p>or</p>
+              <p>
+                Click here to open OpenMate Desktop App{" "}
+                <span
+                  className="text-warning"
+                  style={{ cursor: "pointer" }}
+                  onClick={(e) => {
+                    setActiveWindow(null); // Close current window
+                    setTimeout(() => openWindow("openmateApp"), 0); // Open terminal after state update
+                  }}
+                >
+                  OpenMate Desktop App
+                </span>{" "}
+              </p>
+            </div>
+          </div>
+        )}
+
         {/* Taskbar */}
         <div className="taskbar">
           <button className="start-button" onClick={toggleStartMenu}>
@@ -257,8 +319,8 @@ const CliApps = () => {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-10">{showDesktopScreen()}</div>
-        <div className="col-2"></div>
+        <div className="col-lg-10 col-md-12">{showDesktopScreen()}</div>
+        <div className="col-lg-2 col-md-12"></div>
       </div>
     </div>
   );

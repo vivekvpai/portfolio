@@ -357,8 +357,8 @@ const WebApps = () => {
   return (
     <div className="container m-48">
       <div className="row">
-        <div className="col-8">{chromeContainer()}</div>
-        <div className="col-4">
+        <div className="col-lg-9 col-md-12">{chromeContainer()}</div>
+        <div className="col-lg-3 col-md-12">
           <div className="section-title"> Tech Stack</div>
           <div className="glass">
             <div className="">Frontend Tech Stack</div>
@@ -374,9 +374,8 @@ const WebApps = () => {
                 </div>
               ))}
             </div>
-          </div>
-          <div className="glass mt-2">
-            <div className="">Backend Tech Stack</div>
+
+            <div className="mt-2">Backend Tech Stack</div>
             <div className="d-flex flex-wrap gap-2">
               {techStackBackEnd.map((tech, index) => (
                 <div key={index} className="chip my-2">
@@ -388,9 +387,8 @@ const WebApps = () => {
                 </div>
               ))}
             </div>
-          </div>
-          <div className="glass mt-2">
-            <div className="">Testing Tech Stack</div>
+
+            <div className="mt-2">Testing Tech Stack</div>
             <div className="d-flex flex-wrap gap-2">
               {techStackTesting.map((tech, index) => (
                 <div key={index} className="chip my-2">
