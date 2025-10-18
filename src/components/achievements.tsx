@@ -106,7 +106,7 @@ const Achievements = () => {
     <div className="container mt-48">
       <div className="row">
         <div className="col-lg-7">
-          <h2 className="section-title">Achievements and Recognition</h2>
+          <h2 className="section-title pt-48">Achievements and Recognition</h2>
           <div className="achievement-cards">
             <div className="achievement-card">
               <strong>Guest Lecturer</strong> — Don Bosco Institute of
@@ -168,7 +168,7 @@ const Achievements = () => {
           </div>
         </div>
         <div className="col-lg-5">
-          <div className="section-title">Other Projects</div>
+          <div className="section-title pt-48">Other Projects</div>
 
           <div
             style={{
