@@ -111,8 +111,53 @@ body {
   margin-right: 8px;
 }
 
+.main-title {
+  font-size: 32px;
+  color: var(--accent-2);
+}
+
 .section-title {
   font-size: 24px;
   color: var(--accent);
   margin-bottom: 24px;
+}
+
+.mt-48 {
+  margin-top: 48px;
+}
+
+.mb-48 {
+  margin-bottom: 48px;
+}
+
+.ms-48 {
+  margin-left: 48px;
+}
+
+.me-48 {
+  margin-right: 48px;
+}
+
+.m-48 {
+  margin: 48px 48px 48px 48px;
+}
+
+.pt-48 {
+  padding-top: 48px;
+}
+
+.pb-48 {
+  padding-bottom: 48px;
+}
+
+.ps-48 {
+  padding-left: 48px;
+}
+
+.pe-48 {
+  padding-right: 48px;
+}
+
+.p-48 {
+  padding: 48px 48px 48px 48px;
 }

@@ -129,7 +129,7 @@ const PhoneApps = () => {
   };
 
   return (
-    <div className="container mt-4">
+    <div className="container m-48">
       <div className="row">
         <div className="col-4">{mobileContainer()}</div>
         <div className="col-6">

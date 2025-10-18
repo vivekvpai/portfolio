@@ -9,9 +9,15 @@ function App() {
       <div className="blob b1"></div>
       <div className="blob b2"></div>
       <Landing />
-      <WebApps />
-      <PhoneApps />
-      <div className="mt-4 mb-4"></div>
+
+      <div className="m-48">
+        <div className="container">
+          <div className="main-title">My Projects</div>
+        </div>
+
+        <WebApps />
+        <PhoneApps />
+      </div>
     </div>
   );
 }

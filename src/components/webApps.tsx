@@ -342,7 +342,7 @@ const WebApps = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container m-48">
       <div className="row">
         <div className="col-8">{chromeContainer()}</div>
         <div className="col-4">
