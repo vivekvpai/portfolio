@@ -141,7 +141,7 @@ const Landing = () => {
             }}
           >
             <img
-              src={process.env.PUBLIC_URL + "/images/PI-logo.png"}
+              src={process.env.PUBLIC_URL + "/favicon.png"}
               alt="PI-logo"
               className="logo"
             />
