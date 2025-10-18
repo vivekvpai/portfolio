@@ -548,8 +548,8 @@ const CliApps = () => {
       </h3>
 
       <div className="row">
-        <div className="col-lg-10 col-md-12">{showDesktopScreen()}</div>
-        <div className="col-lg-2 col-md-12">
+        <div className="col-lg-10 col-md-12 pt-4">{showDesktopScreen()}</div>
+        <div className="col-lg-2 col-md-12 pt-4">
           <div className="section-title">Tech Stack</div>
           <div className="glass">
             <div className="d-flex flex-wrap gap-2">
