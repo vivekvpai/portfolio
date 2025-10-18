@@ -1,0 +1,163 @@
+:root {
+  --bg-1: #05060a;
+  --bg-2: #0b1220;
+  --glass-1: rgba(255, 255, 255, 0.06);
+  --glass-2: rgba(255, 255, 255, 0.04);
+  --accent: #4fc3f7; /* light blue */
+  --accent-2: #8e7bff; /* purple */
+  --muted: #9aa4b2;
+  --card-radius: 16px;
+  --glass-blur: 10px;
+  --color: #e6eef8;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  color: var(--color) !important;
+  background: radial-gradient(
+      1200px 600px at 10% 10%,
+      rgba(79, 195, 247, 0.06),
+      transparent
+    ),
+    radial-gradient(
+      900px 500px at 90% 80%,
+      rgba(142, 123, 255, 0.05),
+      transparent
+    ),
+    linear-gradient(180deg, var(--bg-1), var(--bg-2));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.blob {
+  position: fixed;
+  filter: blur(70px);
+  opacity: 0.55;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+.blob.b1 {
+  width: 520px;
+  height: 380px;
+  background: linear-gradient(120deg, var(--accent), transparent);
+  left: -120px;
+  top: -80px;
+  animation: float 10s ease-in-out infinite;
+}
+.blob.b2 {
+  width: 420px;
+  height: 300px;
+  background: linear-gradient(120deg, var(--accent-2), transparent);
+  right: -140px;
+  bottom: -60px;
+  animation: float 12s ease-in-out infinite reverse;
+}
+
+.glass {
+  background: linear-gradient(180deg, var(--glass-1), var(--glass-2));
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--card-radius);
+  padding: 24px;
+}
+
+.button-common {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+
+  border-radius: 12px;
+  color: #051026;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 8px 30px rgba(142, 123, 255, 0.08);
+  transform: translateY(0);
+  transition: transform 0.2s ease, background-position 0.4s ease;
+  text-align: center;
+  background-size: 200% auto;
+  background-position: left center;
+}
+.button-common:hover {
+  background-position: right center;
+  transform: translateY(-2px);
+}
+.button-common:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.chip {
+  font-size: 16px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.25);
+  border-image: initial;
+  width: fit-content;
+}
+.chip img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.main-title {
+  font-size: 32px;
+  color: var(--accent-2);
+}
+
+.section-title {
+  font-size: 24px;
+  color: var(--accent);
+  margin-bottom: 24px;
+}
+
+.mt-48 {
+  margin-top: 48px;
+}
+
+.mb-48 {
+  margin-bottom: 48px;
+}
+
+.ms-48 {
+  margin-left: 48px;
+}
+
+.me-48 {
+  margin-right: 48px;
+}
+
+.m-48 {
+  margin: 48px 48px 48px 48px;
+}
+
+.pt-48 {
+  padding-top: 48px;
+}
+
+.pb-48 {
+  padding-bottom: 48px;
+}
+
+.ps-48 {
+  padding-left: 48px;
+}
+
+.pe-48 {
+  padding-right: 48px;
+}
+
+.p-48 {
+  padding: 48px 48px 48px 48px;
+}

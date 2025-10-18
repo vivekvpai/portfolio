@@ -1,0 +1,90 @@
+.slider-container {
+  height: 70vh;
+  width: 100%;
+  object-fit: cover;
+}
+.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  object-fit: contain;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+  font-size: 36px;
+}
+
+@keyframes blink {
+  from,
+  to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.nav-item {
+  text-align: center;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.heading-1 {
+  font-size: 26px;
+}
+
+.flashy-highlights-title {
+  font-size: 34px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #00f5ff, #a855f7, #ff0080);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: hueShift 4s linear infinite;
+}
+@keyframes hueShift {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.highlight-item {
+  padding: 10px 12px;
+  border-radius: var(--card-radius);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+}
+.progress-bar div {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+}
