@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Landing from "./components/landing";
 import WebApps from "./components/webApps";
-import PhoneApps from "./components/phoneApps";
+import MobileApps from "./components/mobileApps";
 import CliApps from "./components/cliApps";
 import Journey from "./components/journey";
 import Achievements from "./components/achievements";
@@ -21,7 +21,7 @@ function App() {
       </div>
       <div id="projects">
         <WebApps />
-        <PhoneApps />
+        <MobileApps />
         <CliApps />
       </div>
       <div id="achievements">

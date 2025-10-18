@@ -2,18 +2,27 @@ import "./journey.css";
 import { useState, useEffect } from "react";
 
 const Journey = () => {
+
+    const startDate = new Date("2022-07-01");
+    const endDate = new Date();
+    const diffTime = Math.abs(endDate.getTime() - startDate.getTime());
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    const diffYears = Math.floor(diffDays / 365);
+    const diffMonths = Math.floor((diffDays % 365) / 30);
+    const experianceTime = `${diffYears} years ${diffMonths} months`;
+
   return (
     <div className="container mt-48 ">
-      <div className="pt-48"></div>
+      
       <div className="row">
-        <div className="col-lg-7" id="journey">
+        <div className="col-lg-7 pt-48" id="journey">
           <div className="section-title">Professional Journey</div>
           <div className="roadmap">
             <div className="roadmap-step">
               <h5>Innovator & Software Developer @ MetricDust</h5>
               <p className="roadmap-step-date">
                 July 2022 - Present (
-                <span id="fulltime-experience-duration"></span>)
+                <span id="fulltime-experience-duration">{experianceTime}</span>)
               </p>
               <p className="roadmap-step-description">
                 Leading the shopprop UI Team. Working on MCP servers.
@@ -66,7 +75,7 @@ const Journey = () => {
           </div>
         </div>
 
-        <div className="col-lg-5" id="education">
+        <div className="col-lg-5 pt-48" id="education">
           <div className="section-title">Education</div>
           <div className="education-grid">
             <div className="edu-card">

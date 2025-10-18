@@ -8,6 +8,14 @@ const Landing = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
+  const startDate = new Date("2021-10-01");
+  const endDate = new Date();
+  const diffTime = Math.abs(endDate.getTime() - startDate.getTime());
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  const diffYears = Math.floor(diffDays / 365);
+  const diffMonths = Math.floor((diffDays % 365) / 30);
+  const experianceTime = `${diffYears} years ${diffMonths} months`;
+
   const texts = ["an Engineer", "a Developer", "a Freelancer"];
 
   useEffect(() => {
@@ -109,7 +117,7 @@ const Landing = () => {
             <span className="cursor">|</span>
           </div>
           <div className="glass mt-4">
-            I'm a Software Engineer with 4 years 0 months of crafting things
+            I'm a Software Engineer with {experianceTime} of crafting things
             that actually work (most of the time). My toolkit? Angular and React
             for the web, React Native Expo for mobile, Django for the backend,
             and a healthy dose of JavaScript, TypeScript, and Python. I've
@@ -200,8 +208,7 @@ const Landing = () => {
         <div className="section-title">Coding Languages</div>
 
         <div className="col-md-4">
-          {" "}
-          <div className="glass">
+          <div className="glass mb-2">
             <div className="skill-header">
               <span>JavaScript</span>
               <span>90%</span>
@@ -211,8 +218,7 @@ const Landing = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-4">
-          {" "}
+        <div className="col-md-4 mb-2">
           <div className="glass">
             <div className="skill-header">
               <span>TypeScript</span>
@@ -223,8 +229,7 @@ const Landing = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-4">
-          {" "}
+        <div className="col-md-4 mb-2">
           <div className="glass">
             <div className="skill-header">
               <span>Python</span>

@@ -361,8 +361,8 @@ const WebApps = () => {
       </h3>
 
       <div className="row">
-        <div className="col-lg-9 col-md-12">{chromeContainer()}</div>
-        <div className="col-lg-3 col-md-12">
+        <div className="col-lg-9 col-md-12 pt-4">{chromeContainer()}</div>
+        <div className="col-lg-3 col-md-12 pt-4">
           <div className="section-title"> Tech Stack</div>
           <div className="glass">
             <div className="">Frontend Tech Stack</div>

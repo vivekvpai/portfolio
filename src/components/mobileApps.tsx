@@ -1,11 +1,11 @@
-import "./phoneApps.css";
+import "./mobileApps.css";
 import { FaPhone } from "react-icons/fa6";
 import { FaMessage } from "react-icons/fa6";
 import { useState } from "react";
 const PhoneIcon = FaPhone as React.FC;
 const MessageIcon = FaMessage as React.FC;
 
-const PhoneApps = () => {
+const MobileApps = () => {
   const techStackApp = [
     {
       img: "/images/tech/js.png",
@@ -135,16 +135,18 @@ const PhoneApps = () => {
       </h3>
 
       <div className="row">
-        <div className="col-lg-6 col-md-12">
+        <div className="col-lg-6 col-md-12 pt-4">
           {selectedProject && (
             <div className="glass">
-              <div className="d-flex">
-                <img
-                  className="app-image"
-                  src={process.env.PUBLIC_URL + selectedProject.img}
-                  alt={selectedProject.name}
-                />
-                <div className="ps-2">
+              <div className="row">
+                <div className="col-md-6">
+                  <img
+                    className="app-image"
+                    src={process.env.PUBLIC_URL + selectedProject.img}
+                    alt={selectedProject.name}
+                  />
+                </div>
+                <div className="col-md-6">
                   <div className="section-title">{selectedProject.name}</div>
 
                   {selectedProject.description && (
@@ -154,8 +156,8 @@ const PhoneApps = () => {
               </div>
 
               <div className="app-content">
-                <div className="d-flex gap-2">
-                  <p>
+                <div className="row justify-content-center align-items-center">
+                  <div className="col-md-6 text-center">
                     <a href={selectedProject.linkAppStore}>
                       <img
                         className="store-logo"
@@ -163,9 +165,9 @@ const PhoneApps = () => {
                         alt=""
                       />
                     </a>
-                  </p>
+                  </div>
 
-                  <p>
+                  <div className="col-md-6 text-center">
                     <a href={selectedProject.linkPlayStore}>
                       <img
                         className="store-logo"
@@ -173,7 +175,7 @@ const PhoneApps = () => {
                         alt=""
                       />
                     </a>
-                  </p>
+                  </div>
                 </div>
                 <ul>
                   {selectedProject.pointers.map(
@@ -186,8 +188,8 @@ const PhoneApps = () => {
             </div>
           )}
         </div>
-        <div className="col-lg-4 col-md-6">{mobileContainer()}</div>
-        <div className="col-lg-2 col-md-6">
+        <div className="col-lg-4 col-md-6 pt-4">{mobileContainer()}</div>
+        <div className="col-lg-2 col-md-6 pt-4">
           <div className="section-title">Tech Stack</div>
           <div className="glass">
             <div className="d-flex flex-wrap gap-2">
@@ -208,4 +210,4 @@ const PhoneApps = () => {
   );
 };
 
-export default PhoneApps;
+export default MobileApps;
