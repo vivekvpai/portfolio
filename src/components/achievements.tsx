@@ -4,16 +4,16 @@ import "./achievements.css";
 const Achievements = () => {
   const techStackAI = [
     {
-      img: "/images/tech/claude.png",
-      name: "Claude",
+      img: "/images/tech/ollama.png",
+      name: "Ollama",
     },
     {
       img: "/images/tech/openai.png",
       name: "OpenAI",
     },
     {
-      img: "/images/tech/ollama.png",
-      name: "Ollama",
+      img: "/images/tech/claude.png",
+      name: "Claude",
     },
     {
       img: "/images/tech/gemini.png",
@@ -23,12 +23,12 @@ const Achievements = () => {
 
   const techStackCloud = [
     {
-      img: "/images/tech/gh.png",
-      name: "GitHub",
-    },
-    {
       img: "/images/tech/aws.png",
       name: "AWS",
+    },
+    {
+      img: "/images/tech/gh.png",
+      name: "GitHub",
     },
     {
       img: "/images/tech/gitlab.png",
@@ -37,6 +37,10 @@ const Achievements = () => {
   ];
 
   const devTools = [
+    {
+      img: "/images/tech/ubuntu.png",
+      name: "Ubuntu",
+    },
     {
       img: "/images/tech/docker.png",
       name: "Docker",
@@ -50,20 +54,20 @@ const Achievements = () => {
       name: "Swagger",
     },
     {
-      img: "/images/tech/git.png",
-      name: "Git",
+      img: "/images/tech/mcp.png",
+      name: "MCP",
     },
     {
-      img: "/images/tech/loveable.ico",
-      name: "Loveable",
+      img: "/images/tech/git.png",
+      name: "Git",
     },
     {
       img: "/images/tech/figma.png",
       name: "Figma",
     },
     {
-      img: "/images/tech/mcp.png",
-      name: "MCP",
+      img: "/images/tech/loveable.ico",
+      name: "Loveable",
     },
     {
       img: "/images/tech/ws.png",
