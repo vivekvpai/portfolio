@@ -46,12 +46,58 @@ const Landing = () => {
     <header className="container" style={{ marginTop: "24px" }}>
       <div className="row">
         <div className="col-md-4 m-0">
-          <div className="glass">
+          {/* <div className="glass">
             <img
               src={process.env.PUBLIC_URL + "/images/hoodiet.png"}
               alt="Profile"
               className="slider-container"
             />
+          </div> */}
+          <div className="glass">
+            <div className="avatar">
+              <img
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  borderRadius: "var(--card-radius)",
+                  marginBottom: "24px",
+                }}
+                src={process.env.PUBLIC_URL + "/images/hoodiet.png"}
+                alt="Profile"
+              />
+            </div>
+            <div className="meta">
+              <div className="my-2">
+                <strong>Location:</strong> Bangalore, India
+              </div>
+              <div className="my-2">
+                <strong>Email:</strong> paivivek002@gmail.com
+              </div>
+              <div className="my-2">
+                <strong>LinkedIn:</strong>
+                <a
+                  href="https://www.linkedin.com/in/vivek-v-pai/"
+                  target="_blank"
+                  style={{ color: "var(--accent)", marginLeft: "8px" }}
+                >
+                  vivekvpai
+                </a>
+              </div>
+              <div className="my-2">
+                <strong>GitHub:</strong>
+                <a
+                  href="https://github.com/vivekvpai"
+                  target="_blank"
+                  style={{ color: "var(--accent)", marginLeft: "8px" }}
+                >
+                  vivekvpai
+                </a>
+              </div>
+              <div className="my-2">
+                <strong>Languages:</strong> English, Hindi, Kannada, Konkani
+              </div>
+            </div>
           </div>
         </div>
         <div className="col-md-6 p-0 m-0">
@@ -75,8 +121,12 @@ const Landing = () => {
           <div className="m-4 ">
             <div className="flashy-highlights-title">Latest Highlights</div>
             <div className="highlight-item mt-4">
-              Building and maintaining OpenMate / Cooking MCP / Leading the
-              ShopProp Development / Architecting EQMS Dashboard and App
+              Learning to cook MCP Servers. Building and maintaining OpenMate
+              open source project.
+            </div>
+            <div className="highlight-item mt-4">
+              Currently building and leading the ShopProp UI Team. Contributing
+              in architecture and Development for a consulting project (EQMS)
             </div>
           </div>
         </div>
