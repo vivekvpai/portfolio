@@ -48,10 +48,6 @@
   color: var(--accent);
 }
 
-.desktop-icon:active {
-  background-color: rgba(0, 120, 215, 0.3);
-}
-
 .desktop-icon-img {
   width: 32px;
   height: 32px;
@@ -289,7 +285,7 @@
 }
 
 .taskbar-icon.active {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--accent);
   border: 1px solid var(--button-shadow);
 }
 

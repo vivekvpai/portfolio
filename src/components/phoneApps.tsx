@@ -186,7 +186,6 @@ const PhoneApps = () => {
         <div className="col-lg-2 col-md-6">
           <div className="section-title">Tech Stack</div>
           <div className="glass">
-            <div className="stack-category">Mobile Development</div>
             <div className="d-flex flex-wrap gap-2">
               {techStackApp.map((tech, index) => (
                 <div key={index} className="chip my-2">
