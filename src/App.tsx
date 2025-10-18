@@ -3,6 +3,8 @@ import "./App.css";
 import Landing from "./components/landing";
 import WebApps from "./components/webApps";
 import PhoneApps from "./components/phoneApps";
+import CliApps from "./components/cliApps";
+
 function App() {
   return (
     <div className="">
@@ -17,6 +19,7 @@ function App() {
 
         <WebApps />
         <PhoneApps />
+        <CliApps />
       </div>
     </div>
   );
