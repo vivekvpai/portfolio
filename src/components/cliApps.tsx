@@ -521,13 +521,18 @@ const CliApps = () => {
               />
             </div>
           </div>
+
+          <div className="me-4">Click on any icon to open it</div>
         </div>
       </div>
     );
   };
 
   return (
-    <div className="container">
+    <div className="container m-48">
+      <h3 className="section-title pt-48 pb-48">
+        CLI / Electron Apps / MCP Servers
+      </h3>
       <div className="row">
         <div className="col-lg-10 col-md-12">{showDesktopScreen()}</div>
         <div className="col-lg-2 col-md-12">

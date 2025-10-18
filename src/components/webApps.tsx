@@ -356,6 +356,8 @@ const WebApps = () => {
 
   return (
     <div className="container m-48">
+      <h3 className="section-title pb-48">Web Apps</h3>
+
       <div className="row">
         <div className="col-lg-9 col-md-12">{chromeContainer()}</div>
         <div className="col-lg-3 col-md-12">

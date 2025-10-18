@@ -8,7 +8,7 @@
 .windows-desktop {
   position: relative;
   width: 100%;
-  min-height: 700px;
+  min-height: 675px;
   background-color: var(--bg-2);
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AkEEjQY5s1B8gAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAGUlEQVQ4y2NgGAWjYBSMglEwCkYBIwHjKAAAgA0ACQ8R9e4AAAAASUVORK5CYII=");
   background-repeat: repeat;
@@ -27,7 +27,7 @@
   align-items: flex-start;
   gap: 20px;
   padding: 20px;
-  height: calc(700px - 40px);
+  height: calc(675px - 40px);
   box-sizing: border-box;
 }
 
@@ -195,6 +195,7 @@
   background-color: #252526;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   border-top: 1px solid #3c3c3c;
   z-index: 1000;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);

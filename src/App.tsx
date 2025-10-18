@@ -13,9 +13,7 @@ function App() {
       <Landing />
 
       <div className="m-48">
-        <div className="container">
-          <div className="main-title">My Projects</div>
-        </div>
+        <div className="main-title text-center">My Projects</div>
 
         <WebApps />
         <PhoneApps />
