@@ -4,6 +4,7 @@ import Landing from "./components/landing";
 import WebApps from "./components/webApps";
 import PhoneApps from "./components/phoneApps";
 import CliApps from "./components/cliApps";
+import Journey from "./components/journey";
 
 function App() {
   return (
@@ -12,8 +13,10 @@ function App() {
       <div className="blob b2"></div>
       <Landing />
 
+      <Journey />
+
       <div className="m-48">
-        <div className="main-title text-center">My Projects</div>
+        <h3 className="main-title text-center">My Projects</h3>
 
         <WebApps />
         <PhoneApps />
