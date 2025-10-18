@@ -78,6 +78,7 @@ const Landing = () => {
                 <strong>LinkedIn:</strong>
                 <a
                   href="https://www.linkedin.com/in/vivek-v-pai/"
+                  rel="noreferrer"
                   target="_blank"
                   style={{ color: "var(--accent)", marginLeft: "8px" }}
                 >
@@ -88,6 +89,7 @@ const Landing = () => {
                 <strong>GitHub:</strong>
                 <a
                   href="https://github.com/vivekvpai"
+                  rel="noreferrer"
                   target="_blank"
                   style={{ color: "var(--accent)", marginLeft: "8px" }}
                 >
@@ -138,10 +140,38 @@ const Landing = () => {
               className="logo"
             />
           </div>
-          <div className="glass nav-item button-common">Home</div>
-          <div className="glass nav-item button-common">Skills</div>
-          <div className="glass nav-item button-common">Projects</div>
-          <div className="glass nav-item button-common">Contact</div>
+          <div
+            className="glass nav-item button-common"
+            onClick={() => window.scrollTo(0, 0)}
+          >
+            Journey
+          </div>
+          <div
+            className="glass nav-item button-common"
+            onClick={() => window.scrollTo(0, 0)}
+          >
+            Projects
+          </div>
+          <div
+            className="glass nav-item button-common"
+            onClick={() => window.scrollTo(0, 0)}
+          >
+            Achievements
+          </div>
+          <div
+            className="glass nav-item button-common"
+            onClick={() => window.scrollTo(0, 0)}
+          >
+            Contact
+          </div>
+          <div
+            className="glass nav-item button-common"
+            onClick={()=> {
+              window.open(process.env.PUBLIC_URL + "/vivek_v_pai_resume_ind.pdf", "_blank");
+            }}
+          >
+            Download CV
+          </div>
         </div>
       </div>
       <div className="row">

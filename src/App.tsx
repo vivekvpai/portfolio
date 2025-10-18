@@ -12,16 +12,23 @@ function App() {
     <div className="">
       <div className="blob b1"></div>
       <div className="blob b2"></div>
-      <Landing />
+      <div id="home">
+        <Landing />
+      </div>
 
-      <Journey />
+      <div id="journey">
+        <Journey />
+      </div>
+      <div id="projects">
+        <WebApps />
+        <PhoneApps />
+        <CliApps />
+      </div>
+      <div id="achievements">
+        <Achievements />
+      </div>
 
-      <WebApps />
-      <PhoneApps />
-      <CliApps />
-      <Achievements />
-
-      <footer className="container">
+      <footer className="container" id="footer">
         © <span id="year"></span> Vivek V Pai — Built with ❤️ and a bit of CSS
         magic.
         <div className="contact-form" id="contact">
