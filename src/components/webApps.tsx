@@ -93,17 +93,19 @@ const WebApps = () => {
 
   const techStackFrontEnd = [
     {
-      img: "/images/tech/react.png",
-      name: "React",
+      img: "/images/tech/ts.png",
+      name: "TypeScript",
     },
+
     {
-      img: "/images/tech/angular.png",
-      name: "Angular",
+      img: "/images/tech/js.png",
+      name: "JavaScript",
     },
     {
       img: "/images/tech/html.png",
       name: "HTML",
     },
+
     {
       img: "/images/tech/css.png",
       name: "CSS",
@@ -115,6 +117,14 @@ const WebApps = () => {
     {
       img: "/images/tech/tailwind.png",
       name: "Tailwind",
+    },
+    {
+      img: "/images/tech/angular.png",
+      name: "Angular",
+    },
+    {
+      img: "/images/tech/react.png",
+      name: "React",
     },
   ];
 
@@ -248,7 +258,10 @@ const WebApps = () => {
                       className="site-item"
                     >
                       <div className="site-logo">
-                        <img src={site.logo} alt={site.name} />
+                        <img
+                          src={process.env.PUBLIC_URL + site.logo}
+                          alt={site.name}
+                        />
                       </div>
                       <div className="site-name">{site.name}</div>
                     </div>
@@ -290,7 +303,7 @@ const WebApps = () => {
                     <div className="result-header">
                       <div className="favicon">
                         <img
-                          src={selectedWebApp.logo}
+                          src={process.env.PUBLIC_URL + selectedWebApp.logo}
                           alt={selectedWebApp.name}
                         />
                       </div>
@@ -353,7 +366,10 @@ const WebApps = () => {
             <div className="d-flex flex-wrap gap-2">
               {techStackFrontEnd.map((tech, index) => (
                 <div key={index} className="chip my-2">
-                  <img src={tech.img} alt={tech.name} />
+                  <img
+                    src={process.env.PUBLIC_URL + tech.img}
+                    alt={tech.name}
+                  />
                   {tech.name}
                 </div>
               ))}
@@ -364,7 +380,10 @@ const WebApps = () => {
             <div className="d-flex flex-wrap gap-2">
               {techStackBackEnd.map((tech, index) => (
                 <div key={index} className="chip my-2">
-                  <img src={tech.img} alt={tech.name} />
+                  <img
+                    src={process.env.PUBLIC_URL + tech.img}
+                    alt={tech.name}
+                  />
                   {tech.name}
                 </div>
               ))}
@@ -375,7 +394,10 @@ const WebApps = () => {
             <div className="d-flex flex-wrap gap-2">
               {techStackTesting.map((tech, index) => (
                 <div key={index} className="chip my-2">
-                  <img src={tech.img} alt={tech.name} />
+                  <img
+                    src={process.env.PUBLIC_URL + tech.img}
+                    alt={tech.name}
+                  />
                   {tech.name}
                 </div>
               ))}

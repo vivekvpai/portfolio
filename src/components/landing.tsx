@@ -48,7 +48,7 @@ const Landing = () => {
         <div className="col-md-4 m-0">
           <div className="glass">
             <img
-              src="/images/hoodiet.png"
+              src={process.env.PUBLIC_URL + "/images/hoodiet.png"}
               alt="Profile"
               className="slider-container"
             />
@@ -82,7 +82,11 @@ const Landing = () => {
         </div>
         <div className="col-md-2 m-0">
           <div className="nav-item ms-auto me-auto">
-            <img src="/images/PI-logo.png" alt="PI-logo" className="logo" />
+            <img
+              src={process.env.PUBLIC_URL + "/images/PI-logo.png"}
+              alt="PI-logo"
+              className="logo"
+            />
           </div>
           <div className="glass nav-item button-common">Home</div>
           <div className="glass nav-item button-common">Skills</div>

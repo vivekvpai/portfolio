@@ -97,7 +97,7 @@ const PhoneApps = () => {
                 <div className="app-icon-placeholder">
                   <img
                     className="img-fluid p-2"
-                    src={project.img}
+                    src={process.env.PUBLIC_URL + project.img}
                     alt={project.name}
                   />
                 </div>
@@ -138,7 +138,7 @@ const PhoneApps = () => {
               <div className="d-flex">
                 <img
                   className="app-image"
-                  src={selectedProject.img}
+                  src={process.env.PUBLIC_URL + selectedProject.img}
                   alt={selectedProject.name}
                 />
                 <div className="ps-2">
@@ -156,7 +156,7 @@ const PhoneApps = () => {
                     <a href={selectedProject.linkAppStore}>
                       <img
                         className="store-logo"
-                        src="/images/app-store.svg"
+                        src={process.env.PUBLIC_URL + "/images/app-store.svg"}
                         alt=""
                       />
                     </a>
@@ -166,7 +166,7 @@ const PhoneApps = () => {
                     <a href={selectedProject.linkPlayStore}>
                       <img
                         className="store-logo"
-                        src="/images/play-store.png"
+                        src={process.env.PUBLIC_URL + "/images/play-store.png"}
                         alt=""
                       />
                     </a>
@@ -190,7 +190,7 @@ const PhoneApps = () => {
             <div className="d-flex flex-wrap gap-2">
               {techStackApp.map((tech, index) => (
                 <div key={index} className="chip my-2">
-                  <img src={tech.img} alt={tech.name} />
+                  <img src={process.env.PUBLIC_URL + tech.img} alt={tech.name} />
                   {tech.name}
                 </div>
               ))}
