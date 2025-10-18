@@ -21,6 +21,18 @@
   font-size: 16px;
 }
 
+.more-projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+@media (max-width: 768px) {
+    .more-projects {
+        grid-template-columns: 1fr;
+    }
+}
+
 .project-logo {
     aspect-ratio: 5 / 2;
     height: 75px;

@@ -170,20 +170,14 @@ const Achievements = () => {
         <div className="col-lg-5">
           <div className="section-title pt-48">Other Projects</div>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "16px",
-            }}
-          >
+          <div className="more-projects">
             {otherProjects.map((project, index) => (
               <a
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 key={index}
-                className="glass my-2"
+                className="glass my-2 d-flex align-items-center justify-content-center"
               >
                 <img
                   className="project-logo"

@@ -45,7 +45,7 @@ const Landing = () => {
   return (
     <header className="container" style={{ marginTop: "24px" }}>
       <div className="row">
-        <div className="col-md-4 m-0">
+        <div className="col-lg-4 col-md-12 m-0">
           {/* <div className="glass">
             <img
               src={process.env.PUBLIC_URL + "/images/hoodiet.png"}
@@ -102,7 +102,7 @@ const Landing = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-6 p-0 m-0">
+        <div className="col-lg-6 col-md-8 p-0 m-0">
           <div className="glass">
             <span className="heading-1">Hi — I'm Vivek V Pai. I am </span>
             <span className="flashy-highlights-title">{displayedText}</span>
@@ -132,7 +132,7 @@ const Landing = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-2 m-0">
+        <div className="col-lg-2 col-md-4 m-0">
           <div
             className="nav-item ms-auto me-auto"
             onClick={() => {
