@@ -133,41 +133,63 @@ const Landing = () => {
           </div>
         </div>
         <div className="col-md-2 m-0">
-          <div className="nav-item ms-auto me-auto">
+          <div
+            className="nav-item ms-auto me-auto"
+            onClick={() => {
+              const element = document.getElementById("home");
+              element?.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
             <img
               src={process.env.PUBLIC_URL + "/images/PI-logo.png"}
               alt="PI-logo"
               className="logo"
             />
           </div>
+
           <div
             className="glass nav-item button-common"
-            onClick={() => window.scrollTo(0, 0)}
+            onClick={() => {
+              const element = document.getElementById("journey");
+              element?.scrollIntoView({ behavior: "smooth" });
+            }}
           >
             Journey
           </div>
           <div
             className="glass nav-item button-common"
-            onClick={() => window.scrollTo(0, 0)}
+            onClick={() => {
+              const element = document.getElementById("projects");
+              element?.scrollIntoView({ behavior: "smooth" });
+            }}
           >
             Projects
           </div>
           <div
             className="glass nav-item button-common"
-            onClick={() => window.scrollTo(0, 0)}
+            onClick={() => {
+              const element = document.getElementById("achievements");
+              element?.scrollIntoView({ behavior: "smooth" });
+            }}
           >
             Achievements
           </div>
           <div
             className="glass nav-item button-common"
-            onClick={() => window.scrollTo(0, 0)}
+            onClick={() => {
+              const element = document.getElementById("contact");
+              element?.scrollIntoView({ behavior: "smooth" });
+            }}
           >
             Contact
           </div>
           <div
             className="glass nav-item button-common"
-            onClick={()=> {
-              window.open(process.env.PUBLIC_URL + "/vivek_v_pai_resume_ind.pdf", "_blank");
+            onClick={() => {
+              window.open(
+                process.env.PUBLIC_URL + "/vivek_v_pai_resume_ind.pdf",
+                "_blank"
+              );
             }}
           >
             Download CV
