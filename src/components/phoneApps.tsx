@@ -130,7 +130,9 @@ const PhoneApps = () => {
 
   return (
     <div className="container m-48">
-      <h3 className="section-title pt-48 pb-48">Android Apps / iOS Apps</h3>
+      <h3 className="section-title pt-48 pb-48">
+        <span className="main-title">Projects</span> - Mobile App Development
+      </h3>
 
       <div className="row">
         <div className="col-lg-6 col-md-12">

@@ -72,7 +72,7 @@
 /* Windows */
 .window {
   position: absolute;
-  top: 50px;
+  top: 30px;
   left: 150px;
   width: 80%;
   height: 85%;
@@ -97,7 +97,6 @@
   background: linear-gradient(90deg, var(--bg-2), #1a3d5c);
   color: var(--color);
   font-weight: bold;
-  cursor: move;
   user-select: none;
 }
 

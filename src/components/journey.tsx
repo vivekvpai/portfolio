@@ -4,10 +4,7 @@ import { useState, useEffect } from "react";
 const Journey = () => {
   return (
     <div className="container mt-48 ">
-      <h3 className="main-title text-center pt-48 pb-48">
-        Professional and Education Journey
-      </h3>
-
+      <div className="pt-48"></div>
       <div className="row">
         <div className="col-lg-7" id="journey">
           <div className="section-title">Professional Journey</div>

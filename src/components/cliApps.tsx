@@ -192,6 +192,8 @@ const CliApps = () => {
                 Install openmate cli from npm
                 <a
                   className="ms-2"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   href="https://www.npmjs.com/package/openmate"
                 >
                   https://www.npmjs.com/package/openmate
@@ -270,6 +272,7 @@ const CliApps = () => {
                   <div>
                     <a
                       className="my-2"
+                      rel="noopener noreferrer"
                       href="https://github.com/vivekvpai/OpenMate"
                       target="_blank"
                     >
@@ -279,6 +282,7 @@ const CliApps = () => {
                   <div>
                     <a
                       className="my-2"
+                      rel="noopener noreferrer"
                       href="https://github.com/vivekvpai/OpenMate/releases/tag/v1.4.0"
                       target="_blank"
                     >
@@ -345,12 +349,17 @@ const CliApps = () => {
                 organize and quickly access their code projects across multiple
                 IDEs.
               </p>
-              <a href="https://www.npmjs.com/package/openmcp" target="_blank">
+              <a
+                rel="noopener noreferrer"
+                href="https://www.npmjs.com/package/openmcp"
+                target="_blank"
+              >
                 NPM : OpenMate MCP
               </a>
               <br />
               <a
                 href="https://github.com/vivekvpai/OpenMate-MCP"
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 GitHub : OpenMate MCP
@@ -376,6 +385,7 @@ const CliApps = () => {
               </p>
               <a
                 href="https://github.com/vivek-metricdust/property-search-mcp"
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 GitHub : Property Search MCP
@@ -403,6 +413,7 @@ const CliApps = () => {
               </p>
               <a
                 href="https://github.com/vivekvpai/coin-dcx-mcp"
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 GitHub : CoinDCX MCP
@@ -427,9 +438,11 @@ const CliApps = () => {
 
         {/* Taskbar */}
         <div className="taskbar">
-          <button className="start-button" onClick={toggleStartMenu}>
-            <span>Start</span>
-          </button>
+          <div style={{ width: "145px", textAlign: "start" }}>
+            <button className="start-button ms-4" onClick={toggleStartMenu}>
+              <span>Start</span>
+            </button>
+          </div>
 
           {startMenuOpen && (
             <div className="start-menu">
@@ -531,8 +544,9 @@ const CliApps = () => {
   return (
     <div className="container m-48">
       <h3 className="section-title pt-48 pb-48">
-        CLI / Electron Apps / MCP Servers
+        <span className="main-title">Projects</span> - CLI / Electron Apps / MCP Servers
       </h3>
+
       <div className="row">
         <div className="col-lg-10 col-md-12">{showDesktopScreen()}</div>
         <div className="col-lg-2 col-md-12">

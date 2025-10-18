@@ -5,6 +5,7 @@ import WebApps from "./components/webApps";
 import PhoneApps from "./components/phoneApps";
 import CliApps from "./components/cliApps";
 import Journey from "./components/journey";
+import Achievements from "./components/achievements";
 
 function App() {
   return (
@@ -15,13 +16,70 @@ function App() {
 
       <Journey />
 
-      <div className="m-48">
-        <h3 className="main-title text-center">My Projects</h3>
+      <WebApps />
+      <PhoneApps />
+      <CliApps />
+      <Achievements />
 
-        <WebApps />
-        <PhoneApps />
-        <CliApps />
-      </div>
+      <footer className="container">
+        © <span id="year"></span> Vivek V Pai — Built with ❤️ and a bit of CSS
+        magic.
+        <div className="contact-form" id="contact">
+          <a
+            className="contact-link"
+            rel="noreferrer"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=paivivek002@gmail.com&su=Portfolio Contact&body=Hi Vivek,"
+            target="_blank"
+          >
+            <img
+              className="contact-icons"
+              src={process.env.PUBLIC_URL + "/images/gm.png"}
+              alt=""
+            />
+            paivivek002@gmail.com
+          </a>
+
+          <a
+            className="contact-link"
+            rel="noreferrer"
+            href="https://www.linkedin.com/in/vivek-v-pai/"
+            target="_blank"
+          >
+            <img
+              className="contact-icons"
+              src={process.env.PUBLIC_URL + "/images/in.png"}
+              alt=""
+            />
+            @vivekvpai
+          </a>
+          <a
+            className="contact-link"
+            rel="noreferrer"
+            href="https://github.com/vivekvpai"
+            target="_blank"
+          >
+            <img
+              className="contact-icons"
+              src={process.env.PUBLIC_URL + "/images/gh.png"}
+              alt=""
+            />
+            @vivekvpai
+          </a>
+          <a
+            className="contact-link"
+            rel="noreferrer"
+            href="https://www.instagram.com/i.m_pai_vivek/"
+            target="_blank"
+          >
+            <img
+              className="contact-icons"
+              src={process.env.PUBLIC_URL + "/images/ig.png"}
+              alt=""
+            />
+            @i.m_pai_vivek
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }
