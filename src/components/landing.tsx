@@ -16,7 +16,13 @@ const Landing = () => {
   const diffMonths = Math.floor((diffDays % 365) / 30);
   const experianceTime = `${diffYears} years ${diffMonths} months`;
 
-  const texts = ["an Engineer", "a Developer", "a Freelancer"];
+  const texts = [
+    "a Software Engineer. ",
+    "a Web and App Developer. ",
+    "a Freelancer and Tech Speaker. ",
+    "an Open Source Contributor. ",
+    "currently working on MCP. ",
+  ];
 
   useEffect(() => {
     const handleTyping = () => {
@@ -54,13 +60,6 @@ const Landing = () => {
     <header className="container" style={{ marginTop: "24px" }}>
       <div className="row">
         <div className="col-lg-4 col-md-12 m-0">
-          {/* <div className="glass">
-            <img
-              src={process.env.PUBLIC_URL + "/images/hoodiet.png"}
-              alt="Profile"
-              className="slider-container"
-            />
-          </div> */}
           <div className="glass">
             <div className="avatar">
               <img
@@ -90,7 +89,7 @@ const Landing = () => {
                   target="_blank"
                   style={{ color: "var(--accent)", marginLeft: "8px" }}
                 >
-                  vivekvpai
+                  vivek-v-pai
                 </a>
               </div>
               <div className="my-2">
@@ -105,16 +104,20 @@ const Landing = () => {
                 </a>
               </div>
               <div className="my-2">
-                <strong>Languages:</strong> English, Hindi, Kannada, Konkani
+                <strong> Communication Languages:</strong> <br /> English,
+                Hindi, Kannada, Konkani
               </div>
             </div>
           </div>
         </div>
         <div className="col-lg-6 col-md-8 p-0 m-0">
           <div className="glass">
-            <span className="heading-1">Hi — I'm Vivek V Pai. I am </span>
-            <span className="flashy-highlights-title">{displayedText}</span>
-            <span className="cursor">|</span>
+            <p className="heading-1 p-0">Hi — I'm Vivek V Pai. </p>
+            <p className="heading-1 p-0">
+              I'm
+              <span className="flashy-highlights-title"> {displayedText}</span>
+              <span className="cursor">|</span>
+            </p>
           </div>
           <div className="glass mt-4">
             I'm a Software Engineer with {experianceTime} of crafting things
