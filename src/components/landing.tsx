@@ -104,9 +104,9 @@ const Landing = () => {
                 </a>
               </div>
               <div className="my-2">
-                <strong> Communication Languages:</strong> <br /> English,
-                Hindi, Kannada, Konkani
+                <strong> Communication Languages:</strong>
               </div>
+              <div className="my-2">English, Hindi, Kannada, Konkani </div>
             </div>
           </div>
         </div>

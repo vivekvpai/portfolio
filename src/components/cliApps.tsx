@@ -351,7 +351,7 @@ const CliApps = () => {
               </p>
               <a
                 rel="noopener noreferrer"
-                href="https://www.npmjs.com/package/openmcp"
+                href="https://www.npmjs.com/package/openmate-mcp"
                 target="_blank"
               >
                 NPM : OpenMate MCP
