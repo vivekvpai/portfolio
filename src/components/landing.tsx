@@ -112,8 +112,8 @@ const Landing = () => {
         </div>
         <div className="col-lg-6 col-md-8 p-0 m-0">
           <div className="glass">
-            <p className="heading-1 p-0">Hi — I'm Vivek V Pai. </p>
-            <p className="heading-1 p-0">
+            <p className="heading-1 m-0">Hi — I'm Vivek V Pai. </p>
+            <p className="heading-1 m-0">
               I'm
               <span className="flashy-highlights-title"> {displayedText}</span>
               <span className="cursor">|</span>
