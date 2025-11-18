@@ -6,6 +6,7 @@ import MobileApps from "./components/mobileApps";
 import CliApps from "./components/cliApps";
 import Journey from "./components/journey";
 import Achievements from "./components/achievements";
+import Blogs from "./components/blogs";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <CliApps />
       </div>
       <div id="achievements">
+        <Blogs />
         <Achievements />
       </div>
 
