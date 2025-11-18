@@ -14,7 +14,7 @@ const Landing = () => {
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
   const diffYears = Math.floor(diffDays / 365);
   const diffMonths = Math.floor((diffDays % 365) / 30);
-  const experianceTime = `${diffYears} years ${diffMonths} months`;
+  const experienceTime = `${diffYears} years ${diffMonths} months`;
 
   const texts = [
     "a Software Engineer. ",
@@ -120,7 +120,7 @@ const Landing = () => {
             </p>
           </div>
           <div className="glass mt-4">
-            I'm a Software Engineer with {experianceTime} of crafting things
+            I'm a Software Engineer with {experienceTime} of crafting things
             that actually work (most of the time). My toolkit? Angular and React
             for the web, React Native Expo for mobile, Django for the backend,
             and a healthy dose of JavaScript, TypeScript, and Python. I've
