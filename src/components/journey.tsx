@@ -2,76 +2,105 @@ import "./journey.css";
 import { useState, useEffect } from "react";
 
 const Journey = () => {
-
-    const startDate = new Date("2022-07-01");
-    const endDate = new Date();
-    const diffTime = Math.abs(endDate.getTime() - startDate.getTime());
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    const diffYears = Math.floor(diffDays / 365);
-    const diffMonths = Math.floor((diffDays % 365) / 30);
-    const experianceTime = `${diffYears} years ${diffMonths} months`;
+  const startDate = new Date("2022-07-01");
+  const endDate = new Date();
+  const diffTime = Math.abs(endDate.getTime() - startDate.getTime());
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  const diffYears = Math.floor(diffDays / 365);
+  const diffMonths = Math.floor((diffDays % 365) / 30);
+  const experianceTime = `${diffYears} years ${diffMonths} months`;
 
   return (
     <div className="container mt-48 ">
-      
       <div className="row">
         <div className="col-lg-7 pt-48" id="journey">
           <div className="section-title">Professional Journey</div>
-          <div className="roadmap">
-            <div className="roadmap-step">
-              <h5>Innovator & Software Developer @ MetricDust</h5>
-              <p className="roadmap-step-date">
-                July 2022 - Present (
-                <span id="fulltime-experience-duration">{experianceTime}</span>)
-              </p>
-              <p className="roadmap-step-description">
-                Leading the shopprop UI Team. Working on MCP servers.
-                Contributed to ORCA open source project for STORDIS, developed
-                ORCAsk AI chatbot, backend & Python library updates. Built
-                MetricRealties SaaS for real estate agents, AWS Lambda API
-                integration, Dashboard 2.0, and optimized AWS S3 storage costs.
-              </p>
-            </div>
-            <div className="roadmap-step">
-              <h5>Project Intern @ MetricDust</h5>
-              <p className="roadmap-step-date">
-                Oct 2021 - June 2022 (8 months)
-              </p>
-              <p className="roadmap-step-description">
-                Designed console dashboard for agents/brokers to create and
-                customize tenant websites with authentication and dynamic forms.
-                Contributed to MetricRealties SAAS platform for realestate
-                agents.
-              </p>
-            </div>
-            <div className="roadmap-step">
-              <h5>Intern @ Let's Grow More</h5>
-              <p className="roadmap-step-date">Sep 2021 - Oct 2021 (1 month)</p>
-              <p className="roadmap-step-description">
-                Built two websites using HTML, CSS, JS, and React JS as part of
-                project tasks, gaining hands-on frontend development experience.
-              </p>
-            </div>
-            <div className="roadmap-step">
-              <h5>Intern @ Sparks Foundation</h5>
-              <p className="roadmap-step-date">Aug 2021 - Sep 2021 (1 month)</p>
-              <p className="roadmap-step-description">
-                Developed Barrique Hotel website with secure payment gateway
-                integration, enhancing transactions and learning client-focused
-                delivery.
-              </p>
-            </div>
-            <div className="roadmap-step">
-              <h5>Machine Learning Intern @ Prinston Smart Engineers</h5>
-              <p className="roadmap-step-date">
-                Mar 2021 - Apr 2021 (2 months)
-              </p>
-              <p className="roadmap-step-description">
-                Worked on advanced algorithms for data analysis and predictive
-                modeling, from preprocessing to model evaluation, applying ML to
-                real-world problems.
-              </p>
-            </div>
+          <div className="git-log-container">
+            <div className="git-branch-line"></div>
+            {[
+              {
+                role: "Software Developer",
+                company: "MetricDust",
+                date: "July 2022 - Present",
+                duration: experianceTime,
+                description:
+                  "Currently leading the ShopProp team and working on MCP servers. Built the ShopProp app for both Android and iOS, developed and maintain the user and agent dashboards, and optimized AWS S3 storage costs. Also contributed to the ORCA open-source project for STORDIS.",
+                techStack: [
+                  "MCP",
+                  "Python",
+                  "React",
+                  "React Native",
+                  "Expo",
+                  "Angular",
+                  "AWS",
+                ],
+                hash: "j22pre",
+              },
+              {
+                role: "Project Intern",
+                company: "MetricDust",
+                date: "Oct 2021 - June 2022",
+                duration: "8 months",
+                description:
+                  "Designed console dashboard for agents/brokers to create and customize tenant websites with authentication and dynamic forms. Contributed to MetricRealties SAAS platform for realestate agents.",
+                techStack: ["Angular", "Authentication", "Dynamic Forms"],
+                hash: "o21j22",
+              },
+              {
+                role: "Intern",
+                company: "Let's Grow More",
+                date: "Sep 2021 - Oct 2021",
+                duration: "1 month",
+                description:
+                  "Built two websites using HTML, CSS, JS, and React JS as part of project tasks, gaining hands-on frontend development experience.",
+                techStack: ["HTML", "CSS", "JavaScript", "React JS"],
+                hash: "s21o21",
+              },
+              {
+                role: "Intern",
+                company: "Sparks Foundation",
+                date: "Aug 2021 - Sep 2021",
+                duration: "1 month",
+                description:
+                  "Developed Barrique Hotel website with secure payment gateway integration, enhancing transactions and learning client-focused delivery.",
+                techStack: ["Web Dev", "Payment Gateway"],
+                hash: "a21s21",
+              },
+              {
+                role: "Machine Learning Intern",
+                company: "Prinston Smart Engineers",
+                date: "Mar 2021 - Apr 2021",
+                duration: "2 months",
+                description:
+                  "Worked on advanced algorithms for data analysis and predictive modeling, from preprocessing to model evaluation, applying ML to real-world problems.",
+                techStack: ["Machine Learning", "Python", "Data Analysis"],
+                hash: "m21a21",
+              },
+            ].map((item, index) => (
+              <div className="git-commit-item" key={index}>
+                <div className="commit-hash">{item.hash}</div>
+                <div className="commit-dot"></div>
+                <div className="commit-card glass-card">
+                  <div className="commit-header">
+                    <h5 className="commit-title">
+                      {item.role} <span className="at-symbol">@</span>{" "}
+                      {item.company}
+                    </h5>
+                    <span className="commit-date">
+                      {item.date} ({item.duration})
+                    </span>
+                  </div>
+                  <p className="commit-description">{item.description}</p>
+                  <div className="commit-tech-stack">
+                    {item.techStack.map((tech, i) => (
+                      <span className="tech-tag" key={i}>
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 

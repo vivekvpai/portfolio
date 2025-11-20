@@ -1,48 +1,145 @@
-/* Roadmap styles */
-.roadmap {
+/* Git Log Journey Styles */
+.git-log-container {
   position: relative;
-  padding-left: 30px;
-  border-left: 2px solid var(--accent-2);
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 32px;
+  padding-left: 10px;
 }
-.roadmap-step {
+
+.git-branch-line {
+  position: absolute;
+  left: 82px; /* Aligned with the dot */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent), var(--accent-2));
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.git-commit-item {
+  display: flex;
+  gap: 24px;
   position: relative;
+  align-items: center;
+}
+
+.commit-hash {
+  font-family: "Courier New", Courier, monospace;
+  color: var(--accent);
+  font-size: 14px;
+  min-width: 60px;
+  opacity: 0.8;
+  text-align: right;
+}
+
+.commit-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--bg-1);
+  border: 2px solid var(--accent);
+  z-index: 1;
+  box-shadow: 0 0 8px var(--accent);
+  flex-shrink: 0;
+}
+
+.commit-card {
+  flex: 1;
   background: linear-gradient(180deg, var(--glass-1), var(--glass-2));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: var(--card-radius);
-  padding: 14px;
-  backdrop-filter: blur(8px);
+  padding: 20px;
+  transition: all 0.3s ease;
 }
-.roadmap-step:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(8, 12, 24, 0.6);
+
+.commit-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  border-color: rgba(79, 195, 247, 0.3);
 }
-.roadmap-step::before {
-  content: "";
-  position: absolute;
-  left: -40px;
-  top: 50%;
-  width: 16px;
-  height: 16px;
-  background: var(--accent-2);
-  border-radius: 50%;
-  border: 2px solid #0b1220;
+
+.commit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
 }
-.roadmap-step h4 {
-  margin: 0 0 6px 0;
+
+.commit-title {
+  margin: 0;
+  font-size: 18px;
   color: #fff;
+  font-weight: 600;
+  line-height: 1.4;
 }
-.roadmap-step .roadmap-step-date {
-  margin: 0;
-  font-size: 14px;
-  color: var(--muted);
+
+.at-symbol {
+  color: var(--accent-2);
 }
-.roadmap-step .roadmap-step-description {
-  margin: 0;
-  font-size: 16px;
+
+.commit-date {
+  font-size: 12px;
   color: var(--muted);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  white-space: nowrap;
+}
+
+.commit-description {
+  margin: 0;
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.commit-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.tech-tag {
+  font-size: 12px;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 4px 10px;
+  border-radius: var(--card-radius);
+  background: rgba(79, 195, 247, 0.05);
+  font-family: "Courier New", Courier, monospace;
+  transition: all 0.2s ease;
+}
+
+.tech-tag:hover {
+  background: rgba(79, 195, 247, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .git-branch-line {
+    left: 25px;
+  }
+  .commit-hash {
+    display: none;
+  }
+  .git-commit-item {
+    gap: 16px;
+  }
+  .commit-header {
+    flex-direction: column;
+  }
+  .commit-date {
+    margin-top: 4px;
+  }
 }
 
 /* Education card styles */
