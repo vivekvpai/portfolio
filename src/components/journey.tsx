@@ -14,7 +14,7 @@ const Journey = () => {
     <div className="container mt-48 ">
       <div className="row">
         <div className="col-lg-7 pt-48" id="journey">
-          <div className="section-title">Professional Journey</div>
+          <div className="section-title">Professional Commits</div>
           <div className="git-log-container">
             <div className="git-branch-line"></div>
             {[
@@ -66,16 +66,16 @@ const Journey = () => {
                 techStack: ["Web Dev", "Payment Gateway"],
                 hash: "a21s21",
               },
-              {
-                role: "Machine Learning Intern",
-                company: "Prinston Smart Engineers",
-                date: "Mar 2021 - Apr 2021",
-                duration: "2 months",
-                description:
-                  "Worked on advanced algorithms for data analysis and predictive modeling, from preprocessing to model evaluation, applying ML to real-world problems.",
-                techStack: ["Machine Learning", "Python", "Data Analysis"],
-                hash: "m21a21",
-              },
+              // {
+              //   role: "Machine Learning Intern",
+              //   company: "Prinston Smart Engineers",
+              //   date: "Mar 2021 - Apr 2021",
+              //   duration: "2 months",
+              //   description:
+              //     "Worked on advanced algorithms for data analysis and predictive modeling, from preprocessing to model evaluation, applying ML to real-world problems.",
+              //   techStack: ["Machine Learning", "Python", "Data Analysis"],
+              //   hash: "m21a21",
+              // },
             ].map((item, index) => (
               <div className="git-commit-item" key={index}>
                 <div className="commit-hash">{item.hash}</div>
@@ -105,48 +105,51 @@ const Journey = () => {
         </div>
 
         <div className="col-lg-5 pt-48" id="education">
-          <div className="section-title">Education</div>
-          <div className="education-grid">
-            <div className="edu-card">
-              <h5>MSc, Computer Science</h5>
-              <p>Liverpool John Moores University & UpGrad</p>
-              <p className="d-flex justify-content-between">
-                Percentage: 65%
-                <span className="edu-duration">Sep 2023 - Mar 2025</span>
-              </p>
-            </div>
-            <div className="edu-card">
-              <h5>PG Diploma, Software Development</h5>
-              <p>IIIT Bangalore & UpGrad</p>
-              <p className="d-flex justify-content-between">
-                Percentage: 7.5 CGPA
-                <span className="edu-duration">Sep 2022 - Mar 2023</span>
-              </p>
-            </div>
-            <div className="edu-card">
-              <h5>B.E., Information Science</h5>
-              <p>Don Bosco Institute of Technology</p>
-              <p className="d-flex justify-content-between">
-                Percentage: 8.1 CGPA
-                <span className="edu-duration">Aug 2018 - Jun 2022</span>
-              </p>
-            </div>
-            <div className="edu-card">
-              <h5>Pre-University Course (PUC)</h5>
-              <p>Cambridge PU College</p>
-              <p className="d-flex justify-content-between">
-                Percentage: 86% PCMCs
-                <span className="edu-duration">Apr 2016 - Mar 2018</span>
-              </p>
-            </div>
-            <div className="edu-card">
-              <h5>SSLC (10th Standard)</h5>
-              <p>St Michels English School</p>
-              <p className="d-flex justify-content-between">
-                Percentage: 90%
-                <span className="edu-duration">Apr 2015 - Mar 2016</span>
-              </p>
-            </div>
+          <div className="section-title">Education </div>
+          <div className="education-timeline">
+            <div className="education-line"></div>
+            {[
+              {
+                degree: "MSc, Computer Science",
+                institution: "Liverpool John Moores University & UpGrad",
+                score: "Percentage: 65%",
+                duration: "Sep 2023 - Mar 2025",
+              },
+              {
+                degree: "PG Diploma, Software Development",
+                institution: "IIIT Bangalore & UpGrad",
+                score: "Percentage: 7.5 CGPA",
+                duration: "Sep 2022 - Mar 2023",
+              },
+              {
+                degree: "B.E., Information Science",
+                institution: "Don Bosco Institute of Technology",
+                score: "Percentage: 8.1 CGPA",
+                duration: "Aug 2018 - Jun 2022",
+              },
+              {
+                degree: "Pre-University Course (PUC)",
+                institution: "Cambridge PU College",
+                score: "Percentage: 86% PCMCs",
+                duration: "Apr 2016 - Mar 2018",
+              },
+              {
+                degree: "SSLC (10th Standard)",
+                institution: "St Michels English School",
+                score: "Percentage: 90%",
+                duration: "Apr 2015 - Mar 2016",
+              },
+            ].map((edu, index) => (
+              <div className="education-item" key={index}>
+                <div className="education-dot"></div>
+                <div className="education-card glass-card">
+                  <h5 className="edu-degree">{edu.degree}</h5>
+                  <p className="edu-duration">{edu.duration}</p>
+                  <p className="edu-institution">{edu.institution}</p>
+                  <p className="edu-score">{edu.score}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
