@@ -283,7 +283,7 @@ const CliApps = () => {
                     <a
                       className="my-2"
                       rel="noopener noreferrer"
-                      href="https://github.com/vivekvpai/OpenMate/releases/tag/v1.4.0"
+                      href="https://github.com/vivekvpai/OpenMate/releases"
                       target="_blank"
                     >
                       <h3> Release </h3>
@@ -544,7 +544,8 @@ const CliApps = () => {
   return (
     <div className="container m-48">
       <h3 className="section-title pt-48 pb-48">
-        <span className="main-title">Projects</span> - CLI / Electron Apps / MCP Servers
+        <span className="main-title">Projects</span> - CLI / Electron Apps / MCP
+        Servers
       </h3>
 
       <div className="row">

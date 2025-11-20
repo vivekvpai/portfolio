@@ -43,6 +43,21 @@
   z-index: 1;
   box-shadow: 0 0 8px var(--accent);
   flex-shrink: 0;
+  position: relative;
+}
+
+.commit-dot::before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  width: 12px;
+  height: 20px;
+  border-top: 2px solid var(--accent);
+  border-left: 2px solid var(--accent);
+  border-top-left-radius: 12px;
+  transform: translateY(-1px);
+  opacity: 0.5;
 }
 
 .commit-card {
