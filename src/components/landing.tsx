@@ -213,7 +213,7 @@ const Landing = () => {
         <div className="col-md-4">
           <div className="glass mb-2">
             <div className="skill-header">
-              <span>JavaScript</span>
+              <span>Learning JavaScript . . .</span>
               <span>90%</span>
             </div>
             <div className="progress-bar">
@@ -224,7 +224,7 @@ const Landing = () => {
         <div className="col-md-4 mb-2">
           <div className="glass">
             <div className="skill-header">
-              <span>TypeScript</span>
+              <span>Learning TypeScript . . .</span>
               <span>85%</span>
             </div>
             <div className="progress-bar">
@@ -235,7 +235,7 @@ const Landing = () => {
         <div className="col-md-4 mb-2">
           <div className="glass">
             <div className="skill-header">
-              <span>Python</span>
+              <span>Learning Python . . .</span>
               <span>50%</span>
             </div>
             <div className="progress-bar">
