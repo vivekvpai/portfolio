@@ -1,11 +1,12 @@
 import "./webApps.css";
 import { FaGlobe } from "react-icons/fa";
-import { FaArrowLeft } from "react-icons/fa6";
+import { FaArrowLeft, FaTag } from "react-icons/fa6";
 import React, { useEffect, useState } from "react";
 
 // Cast the icon to a React Functional Component type
 const GlobeIcon = FaGlobe as React.FC;
 const ArrowLeftIcon = FaArrowLeft as React.FC;
+const TagIcon = FaTag as React.FC;
 
 const WebApps = () => {
   // Add your project logos and links here
@@ -357,7 +358,10 @@ const WebApps = () => {
   return (
     <div className="container m-48">
       <h3 className="section-title pt-48 pb-48">
-        <span className="main-title">Projects</span> - Web Development
+        <span className="main-title">
+          <TagIcon /> Tag Projects :
+        </span>{" "}
+        Web Development
       </h3>
 
       <div className="row">

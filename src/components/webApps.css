@@ -48,13 +48,13 @@
 }
 
 .control.close {
-  background-color: #ff5f56;
+  background: #ff5f56;
 }
 .control.minimize {
-  background-color: var(--accent-2);
+  background: #ffbd2e;
 }
 .control.maximize {
-  background-color: var(--accent);
+  background: #27c93f;
 }
 
 .chrome-tabs {
@@ -113,8 +113,6 @@
   background: var(--glass-1);
   backdrop-filter: blur(var(--glass-blur));
 }
-
-
 
 /* .search-bar:hover {
   box-shadow: 0 0 0 2px var(--accent-2);
@@ -261,7 +259,6 @@
 .result-actions a:hover {
   text-decoration: underline;
 }
-
 
 .pinned-sites {
   max-width: 600px;

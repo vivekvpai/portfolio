@@ -1,9 +1,11 @@
 import "./mobileApps.css";
 import { FaPhone } from "react-icons/fa6";
-import { FaMessage } from "react-icons/fa6";
+import { FaMessage, FaTag } from "react-icons/fa6";
+
 import { useState } from "react";
 const PhoneIcon = FaPhone as React.FC;
 const MessageIcon = FaMessage as React.FC;
+const TagIcon = FaTag as React.FC;
 
 const MobileApps = () => {
   const techStackApp = [
@@ -131,7 +133,10 @@ const MobileApps = () => {
   return (
     <div className="container m-48">
       <h3 className="section-title pt-48 pb-48">
-        <span className="main-title">Projects</span> - Mobile App Development
+        <span className="main-title">
+          <TagIcon /> Tag Projects :
+        </span>{" "}
+        - Mobile App Development
       </h3>
 
       <div className="row">

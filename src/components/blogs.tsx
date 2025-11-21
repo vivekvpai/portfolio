@@ -28,7 +28,10 @@ const Blogs = () => {
   return (
     <div className="container mt-48">
       <div className="section-title pt-48">
-        <span className="comment-style">// My Technical Writings</span>
+        <span className="comment-style">
+          <span style={{ color: "var(--accent-2)" }}>// &nbsp;</span>
+          My Technical Writings
+        </span>
       </div>
 
       <div className="blogs">
@@ -42,9 +45,9 @@ const Blogs = () => {
           >
             <div className="window-header">
               <div className="window-dots">
-                <span className="dot red"></span>
-                <span className="dot yellow"></span>
-                <span className="dot green"></span>
+                <span className="dot close"></span>
+                <span className="dot minimize"></span>
+                <span className="dot maximize"></span>
               </div>
               <div className="window-title">post_{index + 1}.md</div>
             </div>

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./cliApps.css";
+import { FaTag } from "react-icons/fa6";
+const TagIcon = FaTag as React.FC;
 
 const CliApps = () => {
   const [startMenuOpen, setStartMenuOpen] = useState(false);
@@ -544,8 +546,10 @@ const CliApps = () => {
   return (
     <div className="container m-48">
       <h3 className="section-title pt-48 pb-48">
-        <span className="main-title">Projects</span> - CLI / Electron Apps / MCP
-        Servers
+        <span className="main-title">
+          <TagIcon /> Tag Projects :
+        </span>{" "}
+        CLI / Electron Apps / MCP Servers
       </h3>
 
       <div className="row">

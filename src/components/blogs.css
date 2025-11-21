@@ -43,13 +43,13 @@
   border-radius: 50%;
 }
 
-.dot.red {
+.dot.close {
   background: #ff5f56;
 }
-.dot.yellow {
+.dot.minimize {
   background: #ffbd2e;
 }
-.dot.green {
+.dot.maximize {
   background: #27c93f;
 }
 
@@ -141,7 +141,7 @@
 
 .comment-style {
   font-family: "Consolas", "Monaco", monospace;
-  color: #6a9955;
+  color: var(--accent);
   font-size: 24px;
   font-weight: bold;
 }
