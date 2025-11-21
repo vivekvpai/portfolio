@@ -159,24 +159,57 @@
 
 /* Education card styles */
 /* Education Timeline Styles */
+/* Education Timeline Styles */
 .education-timeline {
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 32px;
-  padding-left: 10px;
+  padding-left: 80px; /* Increased padding for branches */
   margin-top: 24px;
+  overflow: hidden; /* Clip the long vertical lines */
+  padding-bottom: 20px;
 }
 
-.education-line {
+.education-line,
+.education-dot {
+  display: none;
+}
+
+.education-branch {
   position: absolute;
-  left: 15px;
-  top: 12px;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(to bottom, var(--accent), var(--accent-2));
-  opacity: 0.3;
+  top: 50%;
+  right: 100%;
+  height: 2000px; /* Long enough to reach the bottom */
   z-index: 0;
+  margin-right: 16px;
+  opacity: 0.6;
+  transform: translateY(1px); /* Align with text center roughly */
+}
+
+.education-branch::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px 0 0 0;
+  padding: 2px 0 0 2px; /* Top and Left border width */
+  background: linear-gradient(to bottom, var(--accent), var(--accent-2));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.education-branch::after {
+  content: "";
+  position: absolute;
+  right: -6px;
+  top: -5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--bg-1);
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 10px var(--accent);
 }
 
 .education-item {
@@ -184,17 +217,6 @@
   gap: 24px;
   position: relative;
   align-items: center;
-}
-
-.education-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--bg-1);
-  border: 2px solid var(--accent);
-  z-index: 1;
-  box-shadow: 0 0 8px var(--accent);
-  flex-shrink: 0;
 }
 
 .education-card {
@@ -245,8 +267,8 @@
 
 /* Mobile responsiveness for Education */
 @media (max-width: 768px) {
-  .education-line {
-    left: 15px;
+  .education-timeline {
+    padding-left: 40px;
   }
   .education-item {
     gap: 16px;

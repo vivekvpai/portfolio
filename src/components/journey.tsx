@@ -42,7 +42,7 @@ const Journey = () => {
                 date: "Oct 2021 - June 2022",
                 duration: "8 months",
                 description:
-                  "Designed console dashboard for agents/brokers to create and customize tenant websites with authentication and dynamic forms. Contributed to MetricRealties SAAS platform for realestate agents.",
+                  "Contributed to the MetricRealties SaaS platform, enabling real estate builders to create customizable websites with dedicated user and agent dashboards. Built the console dashboard for managing these sites and developed a drag-and-drop website builder that allows tenants to easily design and edit their content.",
                 techStack: ["Angular", "Authentication", "Dynamic Forms"],
                 hash: "o21j22",
               },
@@ -105,9 +105,8 @@ const Journey = () => {
         </div>
 
         <div className="col-lg-5 pt-48" id="education">
-          <div className="section-title">Education </div>
+          <div className="section-title">Education Branch Out</div>
           <div className="education-timeline">
-            <div className="education-line"></div>
             {[
               {
                 degree: "MSc, Computer Science",
@@ -139,9 +138,12 @@ const Journey = () => {
                 score: "Percentage: 90%",
                 duration: "Apr 2015 - Mar 2016",
               },
-            ].map((edu, index) => (
+            ].map((edu, index, arr) => (
               <div className="education-item" key={index}>
-                <div className="education-dot"></div>
+                <div
+                  className="education-branch"
+                  style={{ width: `${20 + (arr.length - 1 - index) * 10}px` }}
+                ></div>
                 <div className="education-card glass-card">
                   <h5 className="edu-degree">{edu.degree}</h5>
                   <p className="edu-duration">{edu.duration}</p>
