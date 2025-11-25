@@ -20,14 +20,20 @@ function App() {
       <div id="journey">
         <Journey />
       </div>
-      <div id="projects">
+      <div id="webapps">
         <WebApps />
+      </div>
+      <div id="mobileapps">
         <MobileApps />
+      </div>
+      <div id="cliapps">
         <CliApps />
       </div>
       <div id="achievements">
-        <Blogs />
         <Achievements />
+      </div>
+      <div id="blogs">
+        <Blogs />
       </div>
 
       <footer className="container mb-48" id="footer">

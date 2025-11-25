@@ -1,0 +1,72 @@
+.file-tree-container {
+  padding: 16px;
+  font-family: "Consolas", "Monaco", "Courier New", monospace;
+  color: #e6eef8;
+  font-size: 14px;
+  user-select: none;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.file-tree-header {
+  font-size: 11px;
+  font-weight: bold;
+  color: var(--muted);
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.file-tree-item {
+  display: flex;
+  align-items: center;
+  padding: 4px 0;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.1s;
+  color: #d4d4d4;
+  white-space: nowrap;
+}
+
+.file-tree-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  margin-right: 6px;
+  flex-shrink: 0;
+}
+
+.chevron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  font-size: 14px;
+  color: var(--muted);
+  transition: transform 0.1s;
+}
+
+.chevron-spacer {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+
+.folder-icon {
+  color: #dcb67a; /* VS Code folder colorish */
+  font-size: 18px;
+}
+
+.file-icon {
+  color: #4fc3f7; /* Light blue for files */
+  font-size: 16px;
+}
+
+.label {
+  margin-left: 6px;
+}

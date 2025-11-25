@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./landing.css";
+import FileTree from "./FileTree";
 
 const Landing = () => {
   const [displayedText, setDisplayedText] = useState("");
@@ -232,52 +233,8 @@ const Landing = () => {
             />
           </div>
 
-          <div
-            className="glass nav-item button-common"
-            onClick={() => {
-              const element = document.getElementById("journey");
-              element?.scrollIntoView({ behavior: "smooth" });
-            }}
-          >
-            Journey
-          </div>
-          <div
-            className="glass nav-item button-common"
-            onClick={() => {
-              const element = document.getElementById("projects");
-              element?.scrollIntoView({ behavior: "smooth" });
-            }}
-          >
-            Projects
-          </div>
-          <div
-            className="glass nav-item button-common"
-            onClick={() => {
-              const element = document.getElementById("achievements");
-              element?.scrollIntoView({ behavior: "smooth" });
-            }}
-          >
-            Achievements
-          </div>
-          <div
-            className="glass nav-item button-common"
-            onClick={() => {
-              const element = document.getElementById("contact");
-              element?.scrollIntoView({ behavior: "smooth" });
-            }}
-          >
-            Contact
-          </div>
-          <div
-            className="glass nav-item button-common"
-            onClick={() => {
-              window.open(
-                process.env.PUBLIC_URL + "/vivek_v_pai_resume_ind.pdf",
-                "_blank"
-              );
-            }}
-          >
-            Download CV
+          <div className="mt-4">
+            <FileTree />
           </div>
         </div>
       </div>

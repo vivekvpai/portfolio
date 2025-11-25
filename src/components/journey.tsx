@@ -13,7 +13,7 @@ const Journey = () => {
   return (
     <div className="container mt-48 ">
       <div className="row">
-        <div className="col-lg-7 pt-48" id="journey">
+        <div className="col-lg-7 pt-48">
           <div className="section-title">Professional Commits</div>
           <div className="git-log-container">
             <div className="git-branch-line"></div>
