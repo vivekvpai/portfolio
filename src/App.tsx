@@ -7,6 +7,7 @@ import CliApps from "./components/cliApps";
 import Journey from "./components/journey";
 import Achievements from "./components/achievements";
 import Blogs from "./components/blogs";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
@@ -95,6 +96,7 @@ function App() {
           </a>
         </div>
       </footer>
+      <ScrollToTop />
     </div>
   );
 }
