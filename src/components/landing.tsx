@@ -60,6 +60,60 @@ const Landing = () => {
   return (
     <header className="container" style={{ marginTop: "24px" }}>
       <div className="row">
+        <div className="col-lg-2 col-md-4 m-0">
+          <div
+            className="nav-item ms-auto me-auto"
+            onClick={() => {
+              const element = document.getElementById("home");
+              element?.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            <img
+              src={process.env.PUBLIC_URL + "/images/PI-logo.png"}
+              alt="PI-logo"
+              className="logo"
+            />
+          </div>
+
+          <div className="mt-4">
+            <FileTree />
+          </div>
+        </div>
+
+        <div className="col-lg-6 col-md-8 p-0 m-0">
+          <div className="glass">
+            <p className="heading-1 m-0">Hi — I'm Vivek V Pai. </p>
+            <p className="heading-1 m-0">
+              I'm
+              <span className="flashy-highlights-title"> {displayedText}</span>
+              <span className="cursor">|</span>
+            </p>
+          </div>
+          <div className="glass mt-4">
+            I'm a Software Engineer with {experienceTime} of crafting things
+            that actually work (most of the time). My toolkit? Angular and React
+            for the web, React Native Expo for mobile, Django for the backend,
+            and a healthy dose of JavaScript, TypeScript, and Python. I've
+            worked with AWS, and I'm all about building scalable, user-friendly
+            apps that don't just look good—they perform. I write tests too
+            (Pytest, Selenium, Jest) because future-me appreciates past-me's
+            foresight. MSc from Liverpool John Moores University, occasional
+            guest lecturer in Angular at DBIT, fluent in English and Hindi, and
+            always ready to jump into open-source or enterprise challenges.
+          </div>
+          <div className="m-4 ">
+            <div className="flashy-highlights-title">Latest Highlights</div>
+            <div className="highlight-item mt-4">
+              Learning to cook MCP Servers. Building and maintaining OpenMate
+              open source project.
+            </div>
+            <div className="highlight-item mt-4">
+              Currently building and leading the ShopProp UI Team. Contributing
+              in architecture and Development for a consulting project (EQMS)
+            </div>
+          </div>
+        </div>
+
         <div className="col-lg-4 col-md-12 m-0">
           <div className="profile-card">
             <div className="avatar-wrapper">
@@ -183,58 +237,6 @@ const Landing = () => {
               <span className="tech-badge">Kannada</span>
               <span className="tech-badge">Konkani</span>
             </div>
-          </div>
-        </div>
-        <div className="col-lg-6 col-md-8 p-0 m-0">
-          <div className="glass">
-            <p className="heading-1 m-0">Hi — I'm Vivek V Pai. </p>
-            <p className="heading-1 m-0">
-              I'm
-              <span className="flashy-highlights-title"> {displayedText}</span>
-              <span className="cursor">|</span>
-            </p>
-          </div>
-          <div className="glass mt-4">
-            I'm a Software Engineer with {experienceTime} of crafting things
-            that actually work (most of the time). My toolkit? Angular and React
-            for the web, React Native Expo for mobile, Django for the backend,
-            and a healthy dose of JavaScript, TypeScript, and Python. I've
-            worked with AWS, and I'm all about building scalable, user-friendly
-            apps that don't just look good—they perform. I write tests too
-            (Pytest, Selenium, Jest) because future-me appreciates past-me's
-            foresight. MSc from Liverpool John Moores University, occasional
-            guest lecturer in Angular at DBIT, fluent in English and Hindi, and
-            always ready to jump into open-source or enterprise challenges.
-          </div>
-          <div className="m-4 ">
-            <div className="flashy-highlights-title">Latest Highlights</div>
-            <div className="highlight-item mt-4">
-              Learning to cook MCP Servers. Building and maintaining OpenMate
-              open source project.
-            </div>
-            <div className="highlight-item mt-4">
-              Currently building and leading the ShopProp UI Team. Contributing
-              in architecture and Development for a consulting project (EQMS)
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-2 col-md-4 m-0">
-          <div
-            className="nav-item ms-auto me-auto"
-            onClick={() => {
-              const element = document.getElementById("home");
-              element?.scrollIntoView({ behavior: "smooth" });
-            }}
-          >
-            <img
-              src={process.env.PUBLIC_URL + "/images/PI-logo.png"}
-              alt="PI-logo"
-              className="logo"
-            />
-          </div>
-
-          <div className="mt-4">
-            <FileTree />
           </div>
         </div>
       </div>

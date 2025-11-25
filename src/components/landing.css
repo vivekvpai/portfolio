@@ -7,13 +7,18 @@
   width: 150px;
   height: 150px;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.25);
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
   object-fit: contain;
   padding: 12px;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  transform: rotate(3deg);
+  filter: drop-shadow(0 0 15px rgba(79, 195, 247, 0.8));
 }
 
 .cursor {
@@ -119,7 +124,7 @@
 /* Modern Tech Profile Card Styles */
 .profile-card {
   position: relative;
-  background: rgba(11, 18, 32, 0.6);
+  background: var(--glass-2);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-radius: var(--card-radius);
@@ -140,7 +145,7 @@
   margin: 0 auto 20px;
   border-radius: 50%;
   padding: 3px;
-  background: linear-gradient(135deg, #00f5ff, #a855f7);
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
   box-shadow: 0 0 25px rgba(79, 195, 247, 0.4);
 }
 
@@ -158,7 +163,7 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: 4px;
-  background: linear-gradient(90deg, #fff, #e6eef8);
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -255,14 +260,14 @@
   font-size: 11px;
   padding: 6px 12px;
   border-radius: 20px;
-  background: rgba(142, 123, 255, 0.1);
-  border: 1px solid rgba(142, 123, 255, 0.2);
+  background: rgba(143, 123, 255, 0.1);
+  border: 1px solid var(--accent-2);
   color: #e6eef8;
   font-weight: 500;
   transition: all 0.2s;
 }
 
 .tech-badge:hover {
-  background: rgba(142, 123, 255, 0.2);
+  background: rgba(143, 123, 255, 0.25);
   transform: translateY(-2px);
 }
