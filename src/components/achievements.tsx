@@ -100,6 +100,11 @@ const Achievements = () => {
       link: "https://github.com/STORDIS/",
     },
     {
+      img: "/images/projects/ppa.jpg",
+      name: "+PPA",
+      link: "https://vivekvpai.github.io/swatkitchen.github.io/",
+    },
+    {
       img: "/images/projects/sk.jpeg",
       name: "SwatKithen",
       link: "https://vivekvpai.github.io/swatkitchen.github.io/",
@@ -109,67 +114,127 @@ const Achievements = () => {
   return (
     <div className="container mt-48">
       <div className="row">
-        <div className="col-lg-7">
+        <div className="col-lg-8">
           <h2 className="section-title pt-48">
             <span style={{ color: "var(--accent-2)" }}>// &nbsp;</span>
             Achievements and Recognition
           </h2>
           <div className="achievement-cards">
-            <div className="achievement-card">
-              <strong>Guest Lecturer</strong> — Don Bosco Institute of
-              Technology (DBIT)
-              <br />
-              Delivered a session on Angular, covering core concepts, real-world
-              project integration, and best practices for scalable frontend
-              development.
-            </div>
-            <div className="achievement-card">
-              <strong>Research Publication</strong> — Liverpool John Moores
-              University & UpGrad
-              <br />
-              Research On :
-              <em>
-                “Exploring Micro-Frontend Architecture for Scalable Web
-                Applications”
-              </em>
-              . <br />
-              The study delved into modular web design principles, architectural
-              advantages, and real-world performance gains, backed by
-              implementation case studies.
-            </div>
-            <div className="achievement-card">
-              <strong>Silver Medalist & Young Achiever</strong> — DBIT - VTU
-              <br />
-              Honored with Silver medal for excellent performances in academics.
-              Honored as Young Achiever for recognizable achievements at a young
-              age.
-            </div>
-            <div className="achievement-card">
-              <strong>Team Leader</strong> — DBISEL Web Development Team
-              <br />
-              Handled team operations. Gave talks on Git & GitHub, Mini projects
-              using PHP, and hosting websites on domains.
-            </div>
-            <div className="achievement-card">
-              <strong>District Level Winner - 3#</strong> — Ramanagara Jila
-              Panchayat (Bharath)
-              <br />
-              Won 3rd Place in Hindi Speech Competition at District level
-              <br />
-              1st Place at Taluk & Hobli levels.
-            </div>
-            <div className="achievement-card">
-              <strong>Taluk Level Winner - 2#</strong> — Department of
-              Undergraduate Education (Bharath)
-              <br />
-              Won 2nd Place in Volleyball at Taluk level
-              <br />
-              1st Place at Hobli level.
-            </div>
+            {[
+              {
+                title: "Guest Lecturer",
+                org: "Don Bosco Institute of Technology (DBIT)",
+                content: (
+                  <>
+                    Delivered a session on Angular, covering core concepts,
+                    real-world project integration, and best practices for
+                    scalable frontend development.
+                  </>
+                ),
+                tag: "Education",
+              },
+              {
+                title: "Research Publication",
+                org: "Liverpool John Moores University & UpGrad",
+                content: (
+                  <>
+                    Research On :{" "}
+                    <em>
+                      “Exploring Micro-Frontend Architecture for Scalable Web
+                      Applications”
+                    </em>
+                    . <br />
+                    The study delved into modular web design principles,
+                    architectural advantages, and real-world performance gains,
+                    backed by implementation case studies.
+                  </>
+                ),
+                tag: "Research",
+              },
+              {
+                title: "Silver Medalist & Young Achiever",
+                org: "DBIT - VTU",
+                content: (
+                  <>
+                    Honored with Silver medal for excellent performances in
+                    academics. Honored as Young Achiever for recognizable
+                    achievements at a young age.
+                  </>
+                ),
+                tag: "Award",
+              },
+              {
+                title: "Team Leader",
+                org: "DBISEL Web Development Team",
+                content: (
+                  <>
+                    Handled team operations. Gave talks on Git & GitHub, Mini
+                    projects using PHP, and hosting websites on domains.
+                  </>
+                ),
+                tag: "Leadership",
+              },
+              {
+                title: "District Level Winner - 3#",
+                org: "Ramanagara Jila Panchayat (Bharath)",
+                content: (
+                  <>
+                    Won 3rd Place in Hindi Speech Competition at District level
+                    <br />
+                    1st Place at Taluk & Hobli levels.
+                  </>
+                ),
+                tag: "Competition",
+              },
+              {
+                title: "Taluk Level Winner - 2#",
+                org: "Department of Undergraduate Education (Bharath)",
+                content: (
+                  <>
+                    Won 2nd Place in Volleyball at Taluk level
+                    <br />
+                    1st Place at Hobli level.
+                  </>
+                ),
+                tag: "Sports",
+              },
+            ].map((item, index) => (
+              <div className="achievement-card" key={index}>
+                <div className="window-header">
+                  <div className="window-dots">
+                    <div className="dot close"></div>
+                    <div className="dot minimize"></div>
+                    <div className="dot maximize"></div>
+                  </div>
+                  <div className="window-title">
+                    {item.tag.toLowerCase()}.json
+                  </div>
+                </div>
+                <div className="achievement-content">
+                  <div className="code-line">
+                    <span className="keyword">const</span>{" "}
+                    <span className="variable">achievement</span> = {"{"}
+                  </div>
+                  <div className="code-line indent">
+                    <span className="property">role:</span>{" "}
+                    <span className="string">"{item.title}"</span>,
+                  </div>
+                  <div className="code-line indent">
+                    <span className="property">at:</span>{" "}
+                    <span className="string">"{item.org}"</span>,
+                  </div>
+                  <div className="code-line indent">
+                    <span className="property">desc:</span>{" "}
+                    <span className="comment">// {item.content}</span>
+                  </div>
+                  <div className="code-line">{"}"};</div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
-        <div className="col-lg-5">
+        <div className="col-lg-4">
           <div className="section-title pt-48">
             <span style={{ color: "var(--accent-2)" }}>// &nbsp;</span>
             Other Projects
@@ -182,7 +247,7 @@ const Achievements = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 key={index}
-                className="glass my-2 d-flex align-items-center justify-content-center"
+                className="glass my-4 d-flex align-items-center justify-content-center"
               >
                 <img
                   className="project-logo"
