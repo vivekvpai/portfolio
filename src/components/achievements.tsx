@@ -106,12 +106,14 @@ const Achievements = () => {
     },
   ];
 
-
   return (
     <div className="container mt-48">
       <div className="row">
         <div className="col-lg-7">
-          <h2 className="section-title pt-48">Achievements and Recognition</h2>
+          <h2 className="section-title pt-48">
+            <span style={{ color: "var(--accent-2)" }}>// &nbsp;</span>
+            Achievements and Recognition
+          </h2>
           <div className="achievement-cards">
             <div className="achievement-card">
               <strong>Guest Lecturer</strong> — Don Bosco Institute of
@@ -164,17 +166,14 @@ const Achievements = () => {
               <br />
               1st Place at Hobli level.
             </div>
-            {/* <div className="achievement-card">
-            <strong>National Level Workshop</strong> — National Youth Council of
-            India<br />Participated in React JS workshop co-organized with Brain
-            O Vision Solutions Pvt. Ltd. The workshop was online and hands-on
-            with ReactJS technology.
-          </div>  */}
           </div>
         </div>
 
         <div className="col-lg-5">
-          <div className="section-title pt-48">Other Projects</div>
+          <div className="section-title pt-48">
+            <span style={{ color: "var(--accent-2)" }}>// &nbsp;</span>
+            Other Projects
+          </div>
 
           <div className="more-projects">
             {otherProjects.map((project, index) => (
@@ -194,7 +193,10 @@ const Achievements = () => {
             ))}
           </div>
 
-          <div className="section-title mt-4">Other Technical Skills</div>
+          <div className="section-title mt-4">
+            <span style={{ color: "var(--accent-2)" }}>// &nbsp;</span>
+            Other Technical Skills
+          </div>
           <div className="glass">
             <div className="my-2">AI Technologies</div>
             <div className="d-flex flex-wrap gap-2">

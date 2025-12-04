@@ -14,7 +14,10 @@ const Journey = () => {
     <div className="container mt-48 ">
       <div className="row">
         <div className="col-lg-7 pt-48">
-          <div className="section-title">Professional Commits</div>
+          <div className="section-title">
+            <span style={{ color: "var(--accent-2)" }}>// &nbsp;</span>
+            Professional Commits
+          </div>
           <div className="git-log-container">
             <div className="git-branch-line"></div>
             {[
@@ -105,7 +108,10 @@ const Journey = () => {
         </div>
 
         <div className="col-lg-5 pt-48" id="education">
-          <div className="section-title">Education Branch Out</div>
+          <div className="section-title">
+            <span style={{ color: "var(--accent-2)" }}>// &nbsp;</span>
+            Education Branch Out
+          </div>
           <div className="education-timeline">
             {[
               {

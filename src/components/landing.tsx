@@ -60,7 +60,7 @@ const Landing = () => {
   return (
     <header className="container" style={{ marginTop: "24px" }}>
       <div className="row">
-        <div className="col-lg-2 col-md-4 m-0">
+        <div className="col-lg-2 col-md-4 m-0 d-flex flex-column">
           <div
             className="nav-item ms-auto me-auto"
             onClick={() => {
@@ -75,7 +75,7 @@ const Landing = () => {
             />
           </div>
 
-          <div className="mt-4">
+          <div className="mb-3 flex-grow-1">
             <FileTree />
           </div>
         </div>
@@ -241,7 +241,10 @@ const Landing = () => {
         </div>
       </div>
       <div className="row">
-        <div className="section-title">Coding Languages</div>
+        <div className="section-title">
+          <span style={{ color: "var(--accent-2)" }}>// &nbsp;</span>
+          Coding Languages
+        </div>
 
         <div className="col-md-4">
           <div className="glass mb-2">
