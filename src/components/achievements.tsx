@@ -102,7 +102,7 @@ const Achievements = () => {
     {
       img: "/images/projects/ppa.jpg",
       name: "+PPA",
-      link: "https://vivekvpai.github.io/swatkitchen.github.io/",
+      link: "https://plus-ppa.com/",
     },
     {
       img: "/images/projects/sk.jpeg",
