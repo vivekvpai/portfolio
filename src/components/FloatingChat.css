@@ -111,6 +111,26 @@
   flex-shrink: 0;
 }
 
+.clear-btn {
+  position: absolute;
+  right: 16px;
+  background: transparent;
+  border: none;
+  color: #ff5f56;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s, transform 0.2s;
+  border-radius: 4px;
+}
+
+.clear-btn:hover {
+  color: white;
+  background-color: #ff5f56;
+}
+
 .window-controls {
   position: absolute;
   left: 16px;
