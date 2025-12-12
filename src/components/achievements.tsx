@@ -38,22 +38,6 @@ const Achievements = () => {
 
   const devTools = [
     {
-      img: "/images/tech/ubuntu.png",
-      name: "Ubuntu",
-    },
-    {
-      img: "/images/tech/docker.png",
-      name: "Docker",
-    },
-    {
-      img: "/images/tech/postman.png",
-      name: "Postman",
-    },
-    {
-      img: "/images/tech/swagger.png",
-      name: "Swagger",
-    },
-    {
       img: "/images/tech/mcp.png",
       name: "MCP",
     },
@@ -62,12 +46,31 @@ const Achievements = () => {
       name: "Git",
     },
     {
+      img: "/images/tech/ubuntu.png",
+      name: "Ubuntu",
+    },
+    {
+      img: "/images/tech/docker.png",
+      name: "Docker",
+    },
+
+    {
+      img: "/images/tech/postman.png",
+      name: "Postman",
+    },
+    {
+      img: "/images/tech/swagger.png",
+      name: "Swagger",
+    },
+
+    {
       img: "/images/tech/figma.png",
       name: "Figma",
     },
+
     {
-      img: "/images/tech/loveable.ico",
-      name: "Loveable",
+      img: "/images/tech/ag.png",
+      name: "Antigravity",
     },
     {
       img: "/images/tech/ws.png",
@@ -80,6 +83,10 @@ const Achievements = () => {
     {
       img: "/images/tech/intellij.png",
       name: "Intellij",
+    },
+    {
+      img: "/images/tech/loveable.ico",
+      name: "Loveable",
     },
   ];
 
