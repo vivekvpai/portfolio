@@ -1,0 +1,125 @@
+{
+  "profile": {
+    "name": "Vivek V Pai",
+    "title": "Software Engineer",
+    "location": "Bangalore, India",
+    "contact": {
+      "email": "paivivek002@gmail.com",
+      "phone": "+91 861 869 1497",
+      "portfolio": "https://vivekvpai.github.io/portfolio/",
+      "linkedin": "https://www.linkedin.com/in/vivek-v-pai/",
+      "github": "https://github.com/vivekvpai"
+    },
+    "summary": "Software Engineer with 4+ years of experience across frontend, backend, mobile, and AI systems. Skilled in Angular, React, React Native Expo, and Django, with strong proficiency in JavaScript, TypeScript, Python, and essential AWS services. Hands-on experience building AI-driven applications using MCP servers, locally hosted LLMs via Ollama, and integrating intelligent automation into scalable web and mobile solutions. Experienced in writing effective test cases using Pytest, Selenium, and Jest."
+  },
+  "skills": {
+    "languages": [
+      "JavaScript (ES6+)",
+      "TypeScript",
+      "Python",
+      "HTML5",
+      "SCSS",
+      "SQL"
+    ],
+    "frameworks_and_libraries": [
+      "React.js",
+      "React Native (Expo)",
+      "Angular",
+      "Django",
+      "Node.js",
+      "Jest",
+      "Selenium",
+      "Pytest",
+      "PHP"
+    ],
+    "ai_and_cloud": [
+      "AWS (S3, Lambda)",
+      "LLM Integration (Ollama)",
+      "Model Context Protocol (MCP)",
+      "Fastmcp"
+    ],
+    "tools": ["Git", "GitHub", "GitLab", "Postman", "Figma"]
+  },
+  "experience": [
+    {
+      "role": "Software Engineer",
+      "company": "MetricDust",
+      "location": "Remote, IN",
+      "duration": "Jun '22 - Present",
+      "responsibilities": [
+        "Leading the complete ShopProp development team, overseeing mobile app development (React Native Expo), dashboard maintenance, architectural decisions, and feature rollout.",
+        "Enhanced product usability across Hireko & ShopProp by deploying Fastmcp Python to build MCP servers and integrating locally hosted LLMs via Ollama for AI-driven insights.",
+        "Integrated the ORCAsk AI chatbot into the ORCA platform and contributed to the Python SDK.",
+        "Developed automated frontend & backend test suites with Pytest & Selenium to achieve 85% code coverage.",
+        "Optimized V2.0 of the Property Search Page & Dashboard, achieving a 40% reduction in property API load times and a 71% decrease in map rendering times.",
+        "Significantly improved S3 storage and cost efficiency by 10% using AWS S3 technology."
+      ]
+    },
+    {
+      "role": "Angular Development Intern",
+      "company": "MetricDust",
+      "location": "Remote, IN",
+      "duration": "Nov '21 - Jun '22",
+      "responsibilities": [
+        "Designed and developed MetricRealties, a SaaS product for real estate agents using Angular and AWS APIs, increasing agent productivity by 20%.",
+        "Integrated diverse REST APIs like AWS Lambda to drastically improve user experience and reduce load time.",
+        "Collaborated on the enhancement of a public page for a leading US real estate firm, increasing user engagement by 20%."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Openmate",
+      "type": "Open Source / NPM Package",
+      "description": "Engineered a cross-platform Node.js CLI tool and MCP server that accelerates developer workflows via keyword-based shortcuts. Achieved 1,500+ downloads on npm."
+    },
+    {
+      "name": "Shoot Shoot Studios",
+      "type": "Freelance",
+      "description": "Refactored the frontend using Bootstrap to implement a fully responsive, mobile-first layout with Glassmorphism design principles."
+    },
+    {
+      "name": "IoT Based Smart Surveillance",
+      "type": "Final Year Project",
+      "description": "Developed an intelligent surveillance system integrating Python and Computer Vision for face recognition, weapon detection, and motion tracking."
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Science",
+      "institution": "Liverpool John Moores University & upgrad",
+      "date": "Sep '23 - Mar '25",
+      "notes": "Conducted research on the efficiency and scalability of Micro Frontends. Secured Merit."
+    },
+    {
+      "degree": "PG Diploma in Software Development",
+      "institution": "IIIT Bangalore & upgrad",
+      "date": "Sep '22 - Mar '23",
+      "notes": "Secured 7.5 CGPA"
+    },
+    {
+      "degree": "B.E. in Computer Science",
+      "institution": "Don Bosco Institution of Technology",
+      "date": "Aug '18 - Jun '22",
+      "notes": "Secured 8.24 CGPA"
+    }
+  ],
+  "certifications": [
+    "JavaScript Algorithms and Data Structures (freeCodeCamp)",
+    "Angular Basics (HackerRank)",
+    "React: The Complete Guide (Udemy)",
+    "Front-End Web UI Frameworks and Tools: Bootstrap 4 (Coursera)",
+    "Practical PHP (Udemy)",
+    "Step into Robotic Process Automation (GUVI)"
+  ],
+  "awards": [
+    "Silver medal in academics (Visvesvaraya Technological University)",
+    "2nd place in Taluk Level Volleyball sports",
+    "3rd Place District level Hindi speech competition"
+  ],
+  "leadership": [
+    "Tech speaker/resource person for multiple colleges on Real-world Development and AI workflows.",
+    "Guest Lecturer for Angular subject at DBIT.",
+    "Team Leader for Web development team at DBISEL innovation lab."
+  ]
+}

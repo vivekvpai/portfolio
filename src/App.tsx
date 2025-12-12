@@ -8,10 +8,12 @@ import Journey from "./components/journey";
 import Achievements from "./components/achievements";
 import Blogs from "./components/blogs";
 import ScrollToTop from "./components/ScrollToTop";
+import FloatingChat from "./components/FloatingChat";
 
 function App() {
   return (
     <div className="">
+      <FloatingChat />
       <div className="blob b1"></div>
       <div className="blob b2"></div>
       <div id="home">
@@ -37,7 +39,11 @@ function App() {
         <Blogs />
       </div>
 
-      <footer className="container mb-48" id="footer">
+      <footer
+        className="container mb-48"
+        style={{ paddingBottom: "72px" }}
+        id="footer"
+      >
         © <span id="year"></span> Vivek V Pai — Built with ❤️ and a bit of CSS
         magic.
         <div className="contact-form" id="contact">
