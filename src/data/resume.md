@@ -5,10 +5,9 @@
 * **Title:** Software Engineer
 * **Location:** Bangalore, India
 * **Email:** paivivek002@gmail.com
-* **Phone:** +91 861 869 1497
-* **Portfolio:** https://vivekvpai.github.io/portfolio/
-* **LinkedIn:** https://www.linkedin.com/in/vivek-v-pai/
-* **GitHub:** https://github.com/vivekvpai
+* **Portfolio:** [portfolio](https://vivekvpai.github.io/portfolio/)
+* **LinkedIn:** [linkedin](https://www.linkedin.com/in/vivek-v-pai/)
+* **GitHub:** [vivekvpai](https://github.com/vivekvpai)
 
 ## 2. PROFESSIONAL SUMMARY
 Software Engineer with 4+ years of experience across frontend, backend, mobile, and AI systems.
