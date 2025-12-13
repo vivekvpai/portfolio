@@ -1,6 +1,7 @@
 .blogs {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 24px;
   padding-bottom: 48px;
 }
@@ -15,6 +16,9 @@
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  /* Flexbox sizing to mimic grid behavior but allow centering of orphans */
+  flex: 1 1 300px;
+  max-width: 450px; /* Prevent single items from stretching too wide */
 }
 
 .dev-blog-card:hover {
@@ -148,6 +152,7 @@
 
 @media (max-width: 768px) {
   .blogs {
-    grid-template-columns: 1fr;
+    /* Flexbox wrap handles this, but we can ensure centering */
+    justify-content: center;
   }
 }

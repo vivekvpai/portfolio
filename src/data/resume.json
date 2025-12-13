@@ -3,7 +3,6 @@
     "name": "Vivek V Pai",
     "title": "Software Engineer",
     "location": "Bangalore, India",
-    "gender": "Male",
     "contact": {
       "email": "paivivek002@gmail.com",
       "phone": "+91 861 869 1497",
@@ -11,7 +10,7 @@
       "linkedin": "https://www.linkedin.com/in/vivek-v-pai/",
       "github": "https://github.com/vivekvpai"
     },
-    "summary": "Software Engineer with 4+ years of experience across frontend, backend, mobile, and AI systems. Skilled in Angular, React, React Native Expo, and Django, with strong proficiency in JavaScript, TypeScript, Python, and essential AWS services. Hands-on experience building AI-driven applications using MCP servers, locally hosted LLMs via Ollama, and integrating intelligent automation into scalable web and mobile solutions. Experienced in writing effective test cases using Pytest, Selenium, and Jest."
+    "summary": "Software Engineer with 4+ years of experience specializing in Full Stack Development and AI Engineering. Proven track record in leading teams and architecting scalable solutions using Angular, React, and Django. Expert in bridging traditional software with modern AI capability, specifically through Model Context Protocol (MCP) servers and local LLM integration (Ollama). Fluent in English and Hindi."
   },
   "skills": {
     "languages": [
@@ -22,105 +21,123 @@
       "SCSS",
       "SQL"
     ],
-    "frameworks_and_libraries": [
+    "frameworks": [
       "React.js",
       "React Native (Expo)",
       "Angular",
       "Django",
       "Node.js",
+      "Express"
+    ],
+    "ai_engineering": [
+      "Model Context Protocol (MCP)",
+      "Fastmcp",
+      "Ollama (Local LLMs)",
+      "AI-driven Automation",
+      "AWS S3",
+      "AWS Lambda"
+    ],
+    "testing_and_tools": [
       "Jest",
       "Selenium",
       "Pytest",
-      "PHP"
+      "Git",
+      "Postman",
+      "Figma"
     ],
-    "ai_and_cloud": [
-      "AWS (S3, Lambda)",
-      "LLM Integration (Ollama)",
-      "Model Context Protocol (MCP)",
-      "Fastmcp"
-    ],
-    "tools": ["Git", "GitHub", "GitLab", "Postman", "Figma"]
+    "spoken_languages": ["English", "Hindi"]
   },
   "experience": [
     {
-      "role": "Software Engineer",
       "company": "MetricDust",
+      "role": "Software Engineer",
       "location": "Remote, IN",
-      "duration": "Jun '22 - Present",
-      "responsibilities": [
-        "Leading the complete ShopProp development team, overseeing mobile app development (React Native Expo), dashboard maintenance, architectural decisions, and feature rollout.",
-        "Enhanced product usability across Hireko & ShopProp by deploying Fastmcp Python to build MCP servers and integrating locally hosted LLMs via Ollama for AI-driven insights.",
-        "Integrated the ORCAsk AI chatbot into the ORCA platform and contributed to the Python SDK.",
-        "Developed automated frontend & backend test suites with Pytest & Selenium to achieve 85% code coverage.",
-        "Optimized V2.0 of the Property Search Page & Dashboard, achieving a 40% reduction in property API load times and a 71% decrease in map rendering times.",
-        "Significantly improved S3 storage and cost efficiency by 10% using AWS S3 technology."
+      "startDate": "2022-06",
+      "endDate": "Present",
+      "highlights": [
+        "**Technical Leadership:** Lead the ShopProp development team, overseeing React Native architecture, feature rollouts, and mobile app performance[cite: 21].",
+        "**AI Integration:** Enhanced Hireko & ShopProp by deploying Fastmcp Python servers and integrating locally hosted LLMs via Ollama for business insights[cite: 20].",
+        "**Chatbot Development:** Integrated ORCAsk AI chatbot into the ORCA platform and contributed to the Python SDK development[cite: 22].",
+        "**Testing & QA:** Established automated test suites using Pytest & Selenium, achieving 85% code coverage and significantly reducing regression bugs[cite: 22].",
+        "**Performance Optimization:** Revamped Property Search & Dashboard (V2.0), reducing API load times by 40% and map rendering times by 71%[cite: 22].",
+        "**Cloud Efficiency:** Optimized AWS S3 usage, improving storage cost efficiency by 10%[cite: 23]."
       ]
     },
     {
-      "role": "Angular Development Intern",
       "company": "MetricDust",
+      "role": "Angular Development Intern",
       "location": "Remote, IN",
-      "duration": "Nov '21 - Jun '22",
-      "responsibilities": [
-        "Designed and developed MetricRealties, a SaaS product for real estate agents using Angular and AWS APIs, increasing agent productivity by 20%.",
-        "Integrated diverse REST APIs like AWS Lambda to drastically improve user experience and reduce load time.",
-        "Collaborated on the enhancement of a public page for a leading US real estate firm, increasing user engagement by 20%."
+      "startDate": "2021-11",
+      "endDate": "2022-06",
+      "highlights": [
+        "**SaaS Development:** Built 'MetricRealties' from scratch using Angular and AWS APIs, directly contributing to a 20% increase in real estate agent productivity[cite: 28].",
+        "**API Integration:** Integrated AWS Lambda and REST APIs to streamline data fetching, drastically reducing page load times[cite: 29].",
+        "**Frontend Optimization:** Enhanced the public-facing portal for a major US real estate firm, boosting user engagement by 20%[cite: 30]."
       ]
     }
   ],
   "projects": [
     {
       "name": "Openmate",
-      "type": "Open Source / NPM Package",
-      "description": "Engineered a cross-platform Node.js CLI tool and MCP server that accelerates developer workflows via keyword-based shortcuts. Achieved 1,500+ downloads on npm."
+      "role": "Creator & Maintainer",
+      "tech_stack": ["Node.js", "CLI", "Model Context Protocol (MCP)", "NPM"],
+      "description": "Engineered a cross-platform CLI tool and MCP server to accelerate developer workflows via keyword shortcuts. Achieved 1,500+ downloads on NPM[cite: 48, 49, 50]."
     },
     {
       "name": "Shoot Shoot Studios",
-      "type": "Freelance",
-      "description": "Refactored the frontend using Bootstrap to implement a fully responsive, mobile-first layout with Glassmorphism design principles."
+      "role": "Frontend Developer",
+      "tech_stack": ["Bootstrap", "CSS3", "Glassmorphism UI"],
+      "description": "Refactored legacy frontend code into a mobile-first, responsive layout using Bootstrap and modern Glassmorphism design principles[cite: 51, 52]."
     },
     {
       "name": "IoT Based Smart Surveillance",
-      "type": "Final Year Project",
-      "description": "Developed an intelligent surveillance system integrating Python and Computer Vision for face recognition, weapon detection, and motion tracking."
+      "role": "Core Developer",
+      "tech_stack": ["Python", "Computer Vision", "IoT", "Face Recognition"],
+      "description": "Developed a safety monitoring system capable of face recognition, weapon detection, and motion tracking[cite: 53, 54]."
     }
   ],
   "education": [
     {
-      "degree": "Master of Science",
-      "institution": "Liverpool John Moores University & upgrad",
-      "date": "Sep '23 - Mar '25",
-      "notes": "Conducted research on the efficiency and scalability of Micro Frontends. Secured Merit."
+      "institution": "Liverpool John Moores University",
+      "degree": "MSc in Computer Science",
+      "date": "2023-09 - 2025-03",
+      "details": "Research focused on Micro Frontends efficiency. Secured Merit[cite: 32, 33, 34]."
     },
     {
+      "institution": "IIIT Bangalore",
       "degree": "PG Diploma in Software Development",
-      "institution": "IIIT Bangalore & upgrad",
-      "date": "Sep '22 - Mar '23",
-      "notes": "Secured 7.5 CGPA"
+      "date": "2022-09 - 2023-03",
+      "details": "Secured 7.5 CGPA[cite: 37, 38, 39]."
     },
     {
-      "degree": "B.E. in Computer Science",
       "institution": "Don Bosco Institution of Technology",
-      "date": "Aug '18 - Jun '22",
-      "notes": "Secured 8.24 CGPA"
+      "degree": "B.E. in Computer Science",
+      "date": "2018-08 - 2022-06",
+      "details": "Secured 8.24 CGPA[cite: 40, 41, 42]."
     }
   ],
   "certifications": [
-    "JavaScript Algorithms and Data Structures (freeCodeCamp)",
-    "Angular Basics (HackerRank)",
-    "React: The Complete Guide (Udemy)",
-    "Front-End Web UI Frameworks and Tools: Bootstrap 4 (Coursera)",
-    "Practical PHP (Udemy)",
-    "Step into Robotic Process Automation (GUVI)"
+    "JavaScript Algorithms and Data Structures (freeCodeCamp) [cite: 56]",
+    "Angular Basics (HackerRank) [cite: 57]",
+    "React: The Complete Guide (Udemy) [cite: 58]",
+    "Bootstrap 4 UI Frameworks (Coursera) [cite: 59]",
+    "Practical PHP (Udemy) [cite: 60]"
   ],
-  "awards": [
-    "Silver medal in academics (Visvesvaraya Technological University)",
-    "2nd place in Taluk Level Volleyball sports",
-    "3rd Place District level Hindi speech competition"
-  ],
-  "leadership": [
-    "Tech speaker/resource person for multiple colleges on Real-world Development and AI workflows.",
-    "Guest Lecturer for Angular subject at DBIT.",
-    "Team Leader for Web development team at DBISEL innovation lab."
+  "volunteering_and_leadership": [
+    {
+      "role": "Guest Lecturer",
+      "organization": "Don Bosco Institute of Technology (DBIT)",
+      "description": "Delivered lectures on Angular and modern frontend engineering[cite: 68]."
+    },
+    {
+      "role": "Tech Speaker",
+      "organization": "Various Colleges",
+      "description": "Conducted sessions on AI workflows, GitHub, and real-world software development[cite: 67, 71]."
+    },
+    {
+      "role": "Team Leader",
+      "organization": "DBISEL Innovation Lab",
+      "description": "Led the web development team and coordinated hands-on DBMS workshops[cite: 69, 70]."
+    }
   ]
 }

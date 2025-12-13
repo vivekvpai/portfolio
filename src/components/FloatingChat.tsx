@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./FloatingChat.css";
-import { GoogleGenerativeAI } from "@google/generative-ai";
-import resumeData from "../data/resume.json";
+import Groq from "groq-sdk";
+// import resumeData from "../data/resume.json";
+import resumeUrl from "../data/resume.md";
 import { FaPaperPlane, FaRobot, FaTrash } from "react-icons/fa";
 import ReactMarkdown from "react-markdown";
 
@@ -22,10 +23,13 @@ const FloatingChat: React.FC = () => {
       timestamp: new Date(),
     },
   ]);
+  const [resumeContext, setResumeContext] = useState("");
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const chatWindowRef = useRef<HTMLDivElement>(null);
+  const islandRef = useRef<HTMLFormElement>(null);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -56,6 +60,14 @@ const FloatingChat: React.FC = () => {
     checkModels();
   }, []);
 
+  // Load resume context
+  useEffect(() => {
+    fetch(resumeUrl)
+      .then((res) => res.text())
+      .then((text) => setResumeContext(text))
+      .catch((err) => console.error("Failed to load resume context", err));
+  }, []);
+
   // Prevent body scroll when chat is open
   useEffect(() => {
     if (isOpen) {
@@ -65,6 +77,26 @@ const FloatingChat: React.FC = () => {
     }
     return () => {
       document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
+
+  // Close chat when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        isOpen &&
+        chatWindowRef.current &&
+        !chatWindowRef.current.contains(event.target as Node) &&
+        islandRef.current &&
+        !islandRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isOpen]);
 
@@ -88,14 +120,10 @@ const FloatingChat: React.FC = () => {
     if (!isOpen) setIsOpen(true);
 
     try {
-      const apiKey = process.env.REACT_APP_GEMINI_API_KEY;
-      if (!apiKey) {
-        throw new Error("API Key not found in environment variables");
-      }
+      const apiKey = process.env.REACT_APP_GROQ_API_KEY;
 
-      const genAI = new GoogleGenerativeAI(apiKey);
+      const groq = new Groq({ apiKey, dangerouslyAllowBrowser: true });
 
-      // System prompt configuration
       const systemPrompt = `
         You are the AI Assistant for Vivek V Pai's portfolio. You are professional, friendly, and concise, but you also have a "Creative Mode."
 
@@ -132,34 +160,33 @@ const FloatingChat: React.FC = () => {
         3. **Malicious Content:** Do not generate code that is malicious, and do not engage in hate speech or controversial topics.        
         
         --- RESUME CONTEXT ---
-        ${JSON.stringify(resumeData)}
+        ${resumeContext}
         --- END CONTEXT ---
-        
-        USER QUESTION: ${textToSend}
-        
+
+        IMPORTANT: At the end of every response, you must append the following disclaimer on a new line:
+        ---
+        > Note: AI can make mistakes
       `;
 
-      let text = "";
+      const completion = await groq.chat.completions.create({
+        messages: [
+          {
+            role: "system",
+            content: systemPrompt,
+          },
+          {
+            role: "user",
+            content: textToSend,
+          },
+        ],
+        model: "llama-3.3-70b-versatile",
+        temperature: 0.6,
+        max_tokens: 1024,
+      });
 
-      try {
-        // Try Gemini 1.5 Flash first
-        const model = genAI.getGenerativeModel({
-          model: "gemini-1.5-flash",
-        });
-        const result = await model.generateContent(systemPrompt);
-        const response = await result.response;
-        text = response.text();
-      } catch (flashError: any) {
-        console.warn("gemini-2.5-flash failed:", flashError.message);
-
-        // Fallback to Gemini Pro
-        const model = genAI.getGenerativeModel({
-          model: "gemini-2.5-flash-lite",
-        });
-        const result = await model.generateContent(systemPrompt);
-        const response = await result.response;
-        text = response.text();
-      }
+      const text =
+        completion.choices[0]?.message?.content ||
+        "I couldn't generate a response.";
 
       const aiMessage: Message = {
         id: (Date.now() + 1).toString(),
@@ -208,7 +235,11 @@ const FloatingChat: React.FC = () => {
 
   return (
     <>
-      <form className="floating-prompt-island" onSubmit={handleFormSubmit}>
+      <form
+        className="floating-prompt-island"
+        onSubmit={handleFormSubmit}
+        ref={islandRef}
+      >
         <div className="island-container">
           <input
             ref={inputRef}
@@ -217,7 +248,8 @@ const FloatingChat: React.FC = () => {
             placeholder="Ask me anything... (AI can make mistakes)"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            // Input remains enabled so user can type next question while waiting
+            onFocus={() => setIsOpen(true)}
+            onClick={() => setIsOpen(true)}
           />
           <button
             type="submit"
@@ -230,7 +262,7 @@ const FloatingChat: React.FC = () => {
       </form>
 
       {isOpen && (
-        <div className="chat-window">
+        <div className="chat-window" ref={chatWindowRef}>
           <div className="chat-header">
             <div className="window-controls">
               <button

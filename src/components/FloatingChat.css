@@ -304,3 +304,72 @@
 .chat-messages::-webkit-scrollbar-track {
   background-color: transparent;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .floating-prompt-island {
+    width: 92vw;
+    bottom: 20px;
+  }
+
+  .island-container {
+    height: 50px;
+    padding: 5px 8px 5px 15px;
+  }
+
+  .island-input {
+    font-size: 16px; /* Prevent IOS zoom */
+  }
+
+  .island-submit-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .chat-window {
+    width: 92vw;
+    height: 70vh; /* Slightly smaller to fit above keyboard/controls */
+    bottom: 80px; /* 20px (bottom) + 50px (island) + 10px gap */
+    border-radius: 20px;
+  }
+
+  .chat-header {
+    padding: 10px 12px;
+  }
+
+  .chat-header h3 {
+    font-size: 13px;
+    max-width: 180px; /* Truncate if too long */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .chat-header h3 span {
+    /* The red warning text */
+    display: none; /* Hide on small mobile to save space */
+  }
+
+  .window-controls {
+    gap: 6px;
+    left: 12px;
+  }
+
+  .clear-btn {
+    right: 12px;
+  }
+
+  .message {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .chat-header h3 span {
+    display: inline; /* Show on tablets/large phones */
+  }
+  .chat-header h3 {
+    max-width: none;
+  }
+}
